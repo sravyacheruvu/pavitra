@@ -1,0 +1,118 @@
+{
+  "id": "raksha-bandhan-2027",
+  "slug": "raksha-bandhan",
+  "schema_version": 1,
+  "year": 2027,
+  "type": "festival",
+  "name": {
+    "en": "Raksha Bandhan (Rakhi)",
+    "te": "రక్షా బంధన్ (రాఖీ)",
+    "sa": "रक्षाबन्धन"
+  },
+  "deity": {
+    "en": "The bond of protection; blessed by Lakshmi-Narayana. Also Jandhyala Purnima (Upakarma) in Telugu tradition",
+    "te": "రక్షా బంధం; జంధ్యాల పూర్ణిమ (ఉపాకర్మ)",
+    "sa": "श्री लक्ष्मीनारायण / रक्षाबन्धनम्"
+  },
+  "observed_on": {
+    "date": "2027-08-17",
+    "weekday": "Tuesday",
+    "masa": "Shravana",
+    "paksha": "Shukla",
+    "tithi": "Purnima",
+    "nakshatra": "Dhanishta",
+    "rule": "Shravana Purnima; the rakhi is tied during the aparahna, avoiding the Bhadra period. In Telugu/Andhra tradition the same day is Jandhyala Purnima (Rig-vedic Upakarma), when the sacred thread (yajnopavitam) is renewed.",
+    "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946.",
+    "note": "A festival of the brother–sister bond: a sister ties a protective thread (rakhi) on her brother's wrist and he vows to protect her. On the same Shravana Purnima, Brahmins perform Upakarma / Avani Avittam."
+  },
+  "significance": {
+    "en": "Raksha Bandhan, 'the bond of protection', celebrates the love between siblings: a sister ties a sacred thread (rakhi) on her brother's wrist, praying for his wellbeing, and he offers a gift and a lifelong vow of protection. The raksha sutra recalls the ancient blessing thread once tied on kings and devotees. In the Telugu lands the same Shravana Purnima is Jandhyala Purnima, the day the sacred thread (yajnopavitam) is ritually renewed through Upakarma.",
+    "te": "రక్షా బంధన్ అన్నదమ్ముల, అక్కాచెల్లెళ్ల అనుబంధానికి ప్రతీక. సోదరి సోదరుని మణికట్టుకు రక్షా సూత్రం (రాఖీ) కట్టి క్షేమం కోరుతుంది, సోదరుడు రక్షణ వాగ్దానం చేస్తాడు. తెలుగు సంప్రదాయంలో ఇదే శ్రావణ పూర్ణిమ జంధ్యాల పూర్ణిమ — యజ్ఞోపవీతం (జంధ్యం) మార్చే ఉపాకర్మ రోజు.",
+    "sa": "श्रावणपूर्णिमायां भगिन्या भ्रातुः रक्षासूत्रबन्धनम्; उपाकर्म च।"
+  },
+  "regions": ["Andhra Pradesh", "Telangana", "North India", "Maharashtra", "All India"],
+  "languages": ["en", "te", "sa"],
+  "samagri": [
+    { "id": "rakhi", "name": { "en": "Rakhi (raksha sutra / sacred thread)", "te": "రాఖీ (రక్షా సూత్రం)" }, "quantity": "1 per brother", "category": "auspicious", "essential": true },
+    { "id": "aarti-thali", "name": { "en": "Aarti thali: lamp, kumkum, akshata, sweets", "te": "హారతి పళ్ళెం: దీపం, కుంకుమ, అక్షతలు, స్వీట్లు" }, "quantity": "1", "category": "puja", "essential": true },
+    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, sandalwood, akshata", "te": "పసుపు, కుంకుమ, గంధం, అక్షతలు" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "sweets", "name": { "en": "Sweets to exchange", "te": "పంచుకునే స్వీట్లు" }, "quantity": "as available", "category": "naivedya", "essential": true },
+    { "id": "yajnopavitam", "name": { "en": "New yajnopavitam (sacred thread) for Upakarma", "te": "కొత్త యజ్ఞోపవీతం (జంధ్యం)" }, "quantity": "as needed", "category": "upakarma", "essential": false },
+    { "id": "flowers", "name": { "en": "Flowers & garland", "te": "పూలు, మాల" }, "quantity": "assorted", "category": "flowers", "essential": true },
+    { "id": "lamp", "name": { "en": "Oil lamp, camphor, incense", "te": "దీపం, కర్పూరం, అగరవత్తులు" }, "quantity": "1 set", "category": "light", "essential": true },
+    { "id": "coconut-fruits", "name": { "en": "Coconut, betel, fruits", "te": "కొబ్బరికాయ, తాంబూలం, పండ్లు" }, "quantity": "assorted", "category": "offering", "essential": true }
+  ],
+  "vidhi": {
+    "sankshipta": {
+      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "duration_minutes": 15,
+      "description": { "en": "The core rakhi ceremony with the raksha mantra and aarti." },
+      "steps": [
+        { "order": 1, "title": { "en": "Sankalpam & Lamp", "te": "సంకల్పం & దీపం" }, "instruction": { "en": "Bathe, prepare the aarti thali, light the lamp and take a brief sankalpa for the sibling bond.", "te": "స్నానం చేసి, హారతి పళ్ళెం సిద్ధం చేసి, దీపం వెలిగించి సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Tilak & Aarti", "te": "తిలకం & హారతి" }, "instruction": { "en": "The sister applies kumkum-akshata tilak to the brother and waves the aarti.", "te": "సోదరుని నుదుటిన కుంకుమ-అక్షతలతో తిలకం దిద్ది హారతి ఇవ్వండి." } },
+        { "order": 3, "title": { "en": "Raksha Bandhanam", "te": "రక్షా బంధనం" }, "instruction": { "en": "Tie the rakhi on the brother's right wrist while chanting the raksha mantra.", "te": "రక్షా మంత్రం చదువుతూ సోదరుని కుడి మణికట్టుకు రాఖీ కట్టండి." }, "mantra": { "sa": "येन बद्धो बली राजा दानवेन्द्रो महाबलः । तेन त्वाम् अनुबध्नामि रक्षे मा चल मा चल ॥", "transliteration": "Yena Baddho Bali Raja Danavendro Mahabalah | Tena Tvaam Anubadhnami Rakshe Maa Chala Maa Chala ||", "meaning": { "en": "With the same thread by which the mighty king Bali was bound, I bind you; O protection, waver not, waver not." } } },
+        { "order": 4, "title": { "en": "Sweets & Blessing", "te": "స్వీట్లు & ఆశీర్వాదం" }, "instruction": { "en": "Exchange sweets and gifts; elders bless the siblings.", "te": "స్వీట్లు, బహుమతులు పంచుకొని, పెద్దల ఆశీర్వాదం తీసుకోండి." } }
+      ]
+    },
+    "sampurna": {
+      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "duration_minutes": 45,
+      "description": { "en": "The full observance with Lakshmi-Narayana puja, rakhi ceremony and (optionally) Upakarma." },
+      "steps": [
+        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean the space, perform achamana, and take the Shravana Purnima sankalpa.", "te": "స్థలం శుభ్రపరచి, ఆచమనం చేసి, శ్రావణ పూర్ణిమ సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Lakshmi-Narayana Puja", "te": "లక్ష్మీనారాయణ పూజ" }, "instruction": { "en": "Worship Lakshmi-Narayana for the family's protection and prosperity.", "te": "కుటుంబ రక్షణ, సౌభాగ్యం కోసం లక్ష్మీనారాయణ పూజ చేయండి." }, "mantra": { "sa": "ॐ नमो नारायणाय", "transliteration": "Om Namo Narayanaya", "meaning": { "en": "Salutations to Lord Narayana, the protector." } } },
+        { "order": 3, "title": { "en": "Consecrate the Rakhis", "te": "రాఖీల ప్రోక్షణ" }, "instruction": { "en": "Place the rakhis before the deity, sprinkle akshata and let them receive the blessing.", "te": "రాఖీలను దేవుని ముందు ఉంచి, అక్షతలు చల్లి ఆశీర్వదించండి." } },
+        { "order": 4, "title": { "en": "Tilak & Aarti", "te": "తిలకం & హారతి" }, "instruction": { "en": "The sister applies tilak, offers akshata and waves the aarti to the brother.", "te": "సోదరుని నుదుటిన తిలకం దిద్ది, అక్షతలు వేసి, హారతి ఇవ్వండి." } },
+        { "order": 5, "title": { "en": "Raksha Bandhanam", "te": "రక్షా బంధనం" }, "instruction": { "en": "Tie the rakhi on the right wrist with the raksha mantra; the brother vows protection.", "te": "రక్షా మంత్రంతో కుడి మణికట్టుకు రాఖీ కట్టండి; సోదరుడు రక్షణ వాగ్దానం చేస్తాడు." } },
+        { "order": 6, "title": { "en": "Gifts & Sweets", "te": "బహుమతులు & స్వీట్లు" }, "instruction": { "en": "The brother offers a gift; siblings exchange sweets and feed each other.", "te": "సోదరుడు బహుమతి ఇచ్చి, స్వీట్లు పంచుకుంటారు." } },
+        { "order": 7, "title": { "en": "Jandhyala Purnima — Upakarma (optional)", "te": "జంధ్యాల పూర్ణిమ — ఉపాకర్మ" }, "instruction": { "en": "Those observing Upakarma perform the rishi tarpanam and don a freshly renewed yajnopavitam.", "te": "ఉపాకర్మ చేసేవారు ఋషి తర్పణం చేసి కొత్త జంధ్యం ధరిస్తారు." } },
+        { "order": 8, "title": { "en": "Mangala Harati & Blessings", "te": "మంగళ హారతి & ఆశీర్వాదం" }, "instruction": { "en": "Offer the camphor aarti and receive the blessings of elders.", "te": "కర్పూర హారతి ఇచ్చి పెద్దల ఆశీర్వాదం తీసుకోండి." } }
+      ]
+    }
+  },
+  "prasadam": [
+    {
+      "id": "kaju-katli",
+      "name": { "en": "Kaju Katli (cashew fudge)", "te": "జీడిపప్పు కాట్లి" },
+      "type": "sweet",
+      "serves": "makes ~20 pieces",
+      "ingredients": [
+        { "item": { "en": "Cashews (powdered)", "te": "జీడిపప్పు (పొడి)" }, "quantity": "1 cup" },
+        { "item": { "en": "Sugar", "te": "పంచదార" }, "quantity": "1/2 cup" },
+        { "item": { "en": "Cardamom, ghee, edible silver leaf", "te": "యాలకులు, నెయ్యి, వెండి తునక" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Make a one-string sugar syrup and stir in fine cashew powder with cardamom." },
+        { "en": "Cook to a soft dough, knead smooth with a little ghee." },
+        { "en": "Roll thin, apply silver leaf, and cut into diamonds." }
+      ],
+      "offering_note": { "en": "A favourite festive sweet to exchange between siblings." }
+    },
+    {
+      "id": "coconut-barfi",
+      "name": { "en": "Kobbari Louz (coconut barfi)", "te": "కొబ్బరి లౌజు" },
+      "type": "sweet",
+      "serves": "makes ~16",
+      "ingredients": [
+        { "item": { "en": "Grated coconut", "te": "కొబ్బరి తురుము" }, "quantity": "2 cups" },
+        { "item": { "en": "Sugar", "te": "పంచదార" }, "quantity": "1 cup" },
+        { "item": { "en": "Milk/khoya, cardamom, ghee", "te": "పాలు/ఖోవా, యాలకులు, నెయ్యి" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Cook grated coconut with sugar and a little milk till it thickens." },
+        { "en": "Add cardamom and ghee; cook till it leaves the pan." },
+        { "en": "Spread on a greased tray and cut into squares when set." }
+      ],
+      "offering_note": { "en": "A simple home sweet shared on Rakhi." }
+    }
+  ],
+  "primary_mantra": {
+    "sa": "येन बद्धो बली राजा दानवेन्द्रो महाबलः । तेन त्वाम् अनुबध्नामि रक्षे मा चल मा चल ॥",
+    "transliteration": "Yena Baddho Bali Raja Danavendro Mahabalah | Tena Tvaam Anubadhnami Rakshe Maa Chala Maa Chala ||",
+    "meaning": { "en": "The raksha-sutra mantra tying the thread of protection, invoking the binding of King Bali." }
+  },
+  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the raksha bandhan / Upakarma narration." },
+  "source": "Compiled for the Pavitra app; covers Raksha Bandhan and the Telugu Jandhyala Purnima (Upakarma) on Shravana Purnima.",
+  "disclaimer": "Regional and family practices vary. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
+  "created_at": "2026-09-25T00:00:00Z"
+}

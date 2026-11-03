@@ -1,0 +1,150 @@
+{
+  "id": "sharad-navratri-dussehra-2026",
+  "slug": "sharad-navratri-dussehra",
+  "schema_version": 1,
+  "year": 2026,
+  "type": "festival_series",
+  "name": {
+    "en": "Sharad Navratri & Dussehra",
+    "te": "శరన్నవరాత్రులు & విజయదశమి",
+    "sa": "शरद नवरात्रि एवं विजयदशमी"
+  },
+  "deity": {
+    "en": "Goddess Durga in her nine forms (Navadurga); Vijayadashami honours Devi's victory over Mahishasura and Rama's victory over Ravana",
+    "te": "నవదుర్గలు; విజయదశమి",
+    "sa": "नवदुर्गा / विजयदशमी"
+  },
+  "observed_on": {
+    "date": "2026-10-11",
+    "end_date": "2026-10-20",
+    "masa": "Ashwina",
+    "paksha": "Shukla",
+    "rule": "Ghatasthapana on Ashwina Shukla Pratipada; nine nights of Devi worship; Vijayadashami on Dashami.",
+    "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946",
+    "key_days": [
+      { "name": "Ghatasthapana / Kalash Sthapana", "date": "2026-10-11", "tithi": "Pratipada" },
+      { "name": "Durga Ashtami", "date": "2026-10-18", "tithi": "Ashtami" },
+      { "name": "Maha Navami (Ayudha & Saraswati Puja)", "date": "2026-10-19", "tithi": "Navami" },
+      { "name": "Vijayadashami / Dussehra", "date": "2026-10-20", "tithi": "Dashami", "note": "Dashami prevails in aparahna on 20 Oct." }
+    ],
+    "note": "In the South celebrated as Dasara / Bommala Koluvu (doll display), with Saraswati and Ayudha Puja."
+  },
+  "significance": {
+    "en": "Sharad Navratri is nine nights of worship of the Divine Mother in her nine forms, celebrating the triumph of good over evil. It culminates in Vijayadashami (Dussehra), marking Durga's slaying of Mahishasura and Rama's victory over Ravana — an auspicious day for new beginnings, Vidyarambham (start of learning) and Ayudha Puja (worship of tools).",
+    "te": "శరన్నవరాత్రులలో తొమ్మిది రూపాలలో అమ్మవారిని ఆరాధిస్తారు. విజయదశమి చెడుపై మంచి సాధించిన విజయానికి, కొత్త ప్రారంభాలకు శుభదినం.",
+    "sa": "नवरात्रौ नवदुर्गा-आराधनं; विजयादशम्यां शुभारम्भः, विद्यारम्भः, आयुधपूजा च।"
+  },
+  "regions": ["Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu", "West Bengal", "Maharashtra", "Gujarat", "North India"],
+  "languages": ["en", "te", "sa"],
+  "nine_nights": [
+    { "day": 1, "date": "2026-10-11", "tithi": "Pratipada", "form": { "en": "Shailaputri", "sa": "शैलपुत्री" }, "color": "Orange / Yellow", "naivedya": { "en": "Ghee (health)", "te": "నెయ్యి" } },
+    { "day": 2, "date": "2026-10-12", "tithi": "Dwitiya", "form": { "en": "Brahmacharini", "sa": "ब्रह्मचारिणी" }, "color": "White", "naivedya": { "en": "Sugar (longevity)", "te": "చక్కెర" } },
+    { "day": 3, "date": "2026-10-13", "tithi": "Tritiya", "form": { "en": "Chandraghanta", "sa": "चन्द्रघण्टा" }, "color": "Red", "naivedya": { "en": "Kheer / milk sweets", "te": "పాయసం" } },
+    { "day": 4, "date": "2026-10-14", "tithi": "Chaturthi", "form": { "en": "Kushmanda", "sa": "कूष्माण्डा" }, "color": "Royal Blue", "naivedya": { "en": "Malpua", "te": "మాల్పువా" } },
+    { "day": 5, "date": "2026-10-15", "tithi": "Panchami", "form": { "en": "Skandamata", "sa": "स्कन्दमाता" }, "color": "Yellow", "naivedya": { "en": "Banana", "te": "అరటిపండు" } },
+    { "day": 6, "date": "2026-10-16", "tithi": "Shashti", "form": { "en": "Katyayani", "sa": "कात्यायनी" }, "color": "Green", "naivedya": { "en": "Honey", "te": "తేనె" } },
+    { "day": 7, "date": "2026-10-17", "tithi": "Saptami", "form": { "en": "Kalaratri", "sa": "कालरात्रि" }, "color": "Grey", "naivedya": { "en": "Jaggery", "te": "బెల్లం" } },
+    { "day": 8, "date": "2026-10-18", "tithi": "Ashtami", "form": { "en": "Mahagauri", "sa": "महागौरी" }, "color": "Purple", "naivedya": { "en": "Coconut", "te": "కొబ్బరికాయ" }, "note": { "en": "Durga Ashtami; Kanya Pujan." } },
+    { "day": 9, "date": "2026-10-19", "tithi": "Navami", "form": { "en": "Siddhidatri", "sa": "सिद्धिदात्री" }, "color": "Peacock Green", "naivedya": { "en": "Sesame / til", "te": "నువ్వులు" }, "note": { "en": "Maha Navami; Ayudha & Saraswati Puja, Kanya Pujan." } }
+  ],
+  "samagri": [
+    { "id": "kalasham", "name": { "en": "Kalasham (copper/clay) for Ghatasthapana", "te": "కలశం" }, "quantity": "1", "category": "vessel", "essential": true },
+    { "id": "barley", "name": { "en": "Barley/nine-grain seeds & clean soil for sowing (Jayanti)", "te": "నవధాన్యాలు, మట్టి" }, "quantity": "1 set", "category": "grain", "essential": true, "notes": { "en": "Sown at Ghatasthapana; sprouts blessed on Dashami." } },
+    { "id": "devi-idol", "name": { "en": "Durga idol / picture (and Kolu dolls in the South)", "te": "దుర్గా విగ్రహం / బొమ్మల కొలువు" }, "quantity": "1", "category": "idol", "essential": true },
+    { "id": "red-chunri", "name": { "en": "Red chunri / saree & bangles for the Goddess", "te": "ఎర్ర చీర, గాజులు" }, "quantity": "1", "category": "vastra", "essential": true },
+    { "id": "coconut", "name": { "en": "Coconut, mango leaves, betel, areca", "te": "కొబ్బరికాయ, మామిడాకులు, తమలపాకులు" }, "quantity": "as needed", "category": "offering", "essential": true },
+    { "id": "flowers", "name": { "en": "Flowers & garlands (red hibiscus, lotus, marigold)", "te": "పూలు, దండలు" }, "quantity": "assorted", "category": "flowers", "essential": true },
+    { "id": "kumkum", "name": { "en": "Turmeric, kumkum, sandalwood, akshata", "te": "పసుపు, కుంకుమ, గంధం, అక్షతలు" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "lamp", "name": { "en": "Akhand jyoti lamp, ghee, wicks, camphor, incense", "te": "అఖండ దీపం, నెయ్యి, వత్తులు, కర్పూరం" }, "quantity": "1 set", "category": "light", "essential": true },
+    { "id": "fruits", "name": { "en": "Fruits, jaggery, dry fruits, sweets", "te": "పండ్లు, బెల్లం, డ్రైఫ్రూట్స్, స్వీట్లు" }, "quantity": "assorted", "category": "offering", "essential": true },
+    { "id": "kanya-gifts", "name": { "en": "Gifts for Kanya Pujan (girls): halwa-puri-chana, coins, bangles", "te": "కన్యా పూజ కోసం" }, "quantity": "per girl", "category": "dana", "essential": false },
+    { "id": "ayudha", "name": { "en": "Tools/books/instruments for Ayudha & Saraswati Puja", "te": "ఆయుధాలు, పుస్తకాలు" }, "quantity": "as available", "category": "ayudha", "essential": false }
+  ],
+  "vidhi": {
+    "sankshipta": {
+      "label": { "en": "Sankshipta (Daily quick puja)", "te": "సంక్షిప్త దైనిక పూజ" },
+      "duration_minutes": 20,
+      "description": { "en": "A short daily observance across the nine nights." },
+      "steps": [
+        { "order": 1, "title": { "en": "Deepa & Sankalpa", "te": "దీపం & సంకల్పం" }, "instruction": { "en": "Light the lamp before the Goddess, take water and resolve the day's worship of that night's Devi form.", "te": "దీపం వెలిగించి, ఆనాటి దేవి రూపానికి సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Devi Avahana", "te": "దేవి ఆవాహన" }, "instruction": { "en": "Invoke the day's form of Durga with flowers and the dhyana sloka.", "te": "ఆనాటి దుర్గా రూపాన్ని ఆవాహన చేయండి." }, "mantra": { "sa": "ॐ ऐं ह्रीं क्लीं चामुण्डायै विच्चे", "transliteration": "Om Aim Hreem Kleem Chamundaye Vichche", "meaning": { "en": "The Navarna mantra invoking the Divine Mother." } } },
+        { "order": 3, "title": { "en": "Pancha Upachara", "te": "పంచోపచార పూజ" }, "instruction": { "en": "Offer gandha, pushpa, dhupa, deepa and the day's naivedya.", "te": "గంధం, పుష్పం, ధూపం, దీపం, నైవేద్యం సమర్పించండి." } },
+        { "order": 4, "title": { "en": "Aarti & Prasad", "te": "హారతి & ప్రసాదం" }, "instruction": { "en": "Sing the Durga aarti, offer camphor, and share prasadam.", "te": "దుర్గా హారతి పాడి, ప్రసాదం పంచండి." } }
+      ]
+    },
+    "sampurna": {
+      "label": { "en": "Sampurna (Full — Ghatasthapana to Vijayadashami)", "te": "సంపూర్ణ విధి" },
+      "duration_minutes": 90,
+      "description": { "en": "The complete series from Kalash sthapana through the nine nights to Vijayadashami." },
+      "steps": [
+        { "order": 1, "title": { "en": "Ghatasthapana (Day 1)", "te": "కలశ స్థాపన (1వ రోజు)" }, "instruction": { "en": "In the morning muhurat, sow nine grains in soil, place the water-filled kalasham (with coin, betel, coconut, mango leaves) upon it, and invoke the Goddess. Light the akhand jyoti to burn through all nine days.", "te": "శుభ ముహూర్తంలో నవధాన్యాలు విత్తి, కలశం స్థాపించి, అమ్మవారిని ఆవాహన చేసి, అఖండ దీపం వెలిగించండి." } },
+        { "order": 2, "title": { "en": "Daily Navadurga Puja (Days 1-9)", "te": "నవదుర్గా దైనిక పూజ" }, "instruction": { "en": "Each day worship the corresponding form of the Goddess with shodashopachara, that day's color and naivedya, and recite Durga Saptashati / Lalita Sahasranama as able.", "te": "ప్రతిరోజు ఆనాటి దేవి రూపాన్ని షోడశోపచారాలతో పూజించి, దుర్గా సప్తశతి/లలితా సహస్రనామం పఠించండి." }, "detailsRef": "navadurga" },
+        { "order": 3, "title": { "en": "Durga Ashtami & Kanya Pujan (Day 8)", "te": "దుర్గాష్టమి & కన్యా పూజ" }, "instruction": { "en": "Perform special Ashtami puja; worship young girls (kanya/kumari) as the Goddess, wash their feet, and offer food and gifts.", "te": "అష్టమినాడు ప్రత్యేక పూజ చేసి, కన్యలను దేవిగా భావించి పూజించండి." } },
+        { "order": 4, "title": { "en": "Maha Navami — Ayudha & Saraswati Puja (Day 9)", "te": "మహా నవమి — ఆయుధ & సరస్వతీ పూజ" }, "instruction": { "en": "Worship tools, vehicles, books and instruments (Ayudha Puja) and Goddess Saraswati; complete the homa/final naivedya.", "te": "ఆయుధ పూజ, సరస్వతీ పూజ చేసి, హోమం/నైవేద్యం సమర్పించండి." } },
+        { "order": 5, "title": { "en": "Vijayadashami (Day 10)", "te": "విజయదశమి (10వ రోజు)" }, "instruction": { "en": "Worship the sprouted grains (jayanti) and Shami tree, perform Vidyarambham for children, take up new ventures in the vijaya muhurat, and (in some regions) enact Ravana dahan.", "te": "పైరు (జయంతి), శమీ వృక్షాన్ని పూజించి, పిల్లలకు విద్యారంభం చేసి, విజయ ముహూర్తంలో కొత్త పనులు ప్రారంభించండి." }, "mantra": { "sa": "शमी शमयते पापं शमी शत्रुविनाशिनी । अर्जुनस्य धनुर्धारी रामस्य प्रियदर्शिनी ॥", "transliteration": "Shami shamayate paapam shami shatru-vinashini | Arjunasya dhanurdhaari Ramasya priyadarshini ||", "meaning": { "en": "The Shami tree quells sin and destroys enemies; it bore Arjuna's bow and was dear to Rama." } } }
+      ]
+    }
+  },
+  "prasadam": [
+    {
+      "id": "sundal",
+      "name": { "en": "Sundal (seasoned chickpeas)", "te": "సుండల్ / గుగ్గిళ్ళు" },
+      "type": "savory",
+      "serves": "4",
+      "ingredients": [
+        { "item": { "en": "Chickpeas / black chana (soaked, boiled)", "te": "శనగలు" }, "quantity": "1 cup" },
+        { "item": { "en": "Grated coconut", "te": "కొబ్బరి తురుము" }, "quantity": "3 tbsp" },
+        { "item": { "en": "Mustard, urad dal, green chilli, curry leaves, hing, oil", "te": "ఆవాలు, మినప్పప్పు, పచ్చిమిర్చి, కరివేపాకు, ఇంగువ, నూనె" }, "quantity": "for tempering" }
+      ],
+      "steps": [
+        { "en": "Boil the soaked chana until soft; drain." },
+        { "en": "Temper mustard, urad dal, chilli, curry leaves and hing in oil." },
+        { "en": "Add the chana and salt, toss, and finish with grated coconut." }
+      ],
+      "offering_note": { "en": "The classic Navratri Kolu offering in the South." }
+    },
+    {
+      "id": "payasam",
+      "name": { "en": "Paravannam / Sweet Pongal", "te": "పరవాన్నం / చక్కెర పొంగలి" },
+      "type": "sweet",
+      "serves": "4-6",
+      "ingredients": [
+        { "item": { "en": "Rice & moong dal", "te": "బియ్యం, పెసరపప్పు" }, "quantity": "1 cup total" },
+        { "item": { "en": "Jaggery", "te": "బెల్లం" }, "quantity": "3/4 cup" },
+        { "item": { "en": "Milk, ghee, cashews, raisins, cardamom", "te": "పాలు, నెయ్యి, జీడిపప్పు, ద్రాక్ష, యాలకులు" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Cook rice and moong dal soft (with a little milk)." },
+        { "en": "Melt jaggery, strain, and mix into the cooked rice." },
+        { "en": "Add cardamom and ghee-fried cashews and raisins." }
+      ],
+      "offering_note": { "en": "Offered on Navami / Vijayadashami." }
+    },
+    {
+      "id": "halwa-puri-chana",
+      "name": { "en": "Halwa, Puri & Chana (Kanya Pujan thali)", "te": "హల్వా, పూరి, శనగలు" },
+      "type": "combo",
+      "serves": "for kanya pujan",
+      "ingredients": [
+        { "item": { "en": "Semolina, sugar, ghee (halwa)", "te": "రవ్వ, చక్కెర, నెయ్యి" }, "quantity": "1 set" },
+        { "item": { "en": "Wheat flour (puri)", "te": "గోధుమ పిండి" }, "quantity": "1 cup" },
+        { "item": { "en": "Black chana (kala chana)", "te": "నల్ల శనగలు" }, "quantity": "1 cup" }
+      ],
+      "steps": [
+        { "en": "Roast semolina in ghee, add sugar syrup and cook to a soft halwa." },
+        { "en": "Knead wheat dough and fry puris." },
+        { "en": "Boil and lightly temper black chana; serve the three together to the kanyas." }
+      ],
+      "offering_note": { "en": "Traditional food offered to young girls on Ashtami/Navami." }
+    }
+  ],
+  "primary_mantra": {
+    "sa": "या देवी सर्वभूतेषु शक्तिरूपेण संस्थिता । नमस्तस्यै नमस्तस्यै नमस्तस्यै नमो नमः ॥",
+    "transliteration": "Ya Devi Sarvabhuteshu Shakti-rupena Samsthita | Namastasyai Namastasyai Namastasyai Namo Namaha ||",
+    "meaning": { "en": "To the Goddess who abides in all beings as power — salutations, again and again." }
+  },
+  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with Supabase Storage paths for the daily Devi stotras / Durga Saptashati narration." },
+  "source": "Compiled for the Pavitra app; combines pan-Indian Navadurga worship with South-Indian Dasara (Bommala Koluvu, Ayudha & Saraswati Puja).",
+  "disclaimer": "Regional traditions differ (e.g., Bengali Durga Puja, Gujarati Garba, North-Indian Ramlila). Treat as a respectful general guide.",
+  "created_at": "2026-08-14T00:00:00Z"
+}

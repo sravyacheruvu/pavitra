@@ -1,0 +1,119 @@
+{
+  "id": "hanuman-jayanti-2027",
+  "slug": "hanuman-jayanti",
+  "schema_version": 1,
+  "year": 2027,
+  "type": "puja",
+  "name": {
+    "en": "Hanuman Jayanti (Telugu)",
+    "te": "శ్రీ హనుమజ్జయంతి",
+    "sa": "श्री हनुमज्जयन्ती"
+  },
+  "deity": {
+    "en": "Lord Hanuman (Anjaneya), the mighty devotee of Sri Rama",
+    "te": "ఆంజనేయ స్వామి (హనుమంతుడు)",
+    "sa": "श्री हनुमान् / आञ्जनेय"
+  },
+  "observed_on": {
+    "date": "2027-05-30",
+    "weekday": "Sunday",
+    "masa": "Vaishakha",
+    "paksha": "Krishna",
+    "tithi": "Dashami",
+    "rule": "In Andhra Pradesh & Telangana, Hanuman Jayanti is observed on Vaishakha Krishna Dashami — the culmination of the 41-day Hanuman Deeksha that begins on Chaitra Purnima. This differs from the North-Indian Chaitra Purnima date.",
+    "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946.",
+    "note": "Telugu Hanuman Jayanthi. Marks the end of the 41-day mala deeksha; devotees visit Anjaneya temples, offer vada malas and recite the Hanuman Chalisa."
+  },
+  "significance": {
+    "en": "Hanuman Jayanti celebrates the birth of Anjaneya, the embodiment of devotion, strength and selfless service. In the Telugu states it falls on Vaishakha Krishna Dashami, concluding the 41-day Hanuman deeksha begun on Chaitra Purnima. Devotees recite the Hanuman Chalisa and Sundarakanda, offer garlands of vada and betel, and pray for courage, protection and freedom from afflictions.",
+    "te": "హనుమజ్జయంతి భక్తి, బలం, సేవలకు మారుపేరైన ఆంజనేయుని జన్మదినం. తెలుగు రాష్ట్రాలలో వైశాఖ బహుళ దశమి నాడు, చైత్ర పూర్ణిమ నుండి మొదలయ్యే 41 రోజుల దీక్ష ముగింపుగా జరుపుకుంటారు. హనుమాన్ చాలీసా, సుందరకాండ పఠించి, వడ మాలలు సమర్పిస్తారు.",
+    "sa": "वैशाखकृष्णदशम्यां आञ्जनेयजन्मोत्सवः भक्तिबलसेवायाः प्रतीकम्।"
+  },
+  "regions": ["Andhra Pradesh", "Telangana"],
+  "languages": ["en", "te", "sa"],
+  "samagri": [
+    { "id": "hanuman-idol", "name": { "en": "Hanuman (Anjaneya) idol or picture", "te": "ఆంజనేయ విగ్రహం / చిత్రం" }, "quantity": "1", "category": "idol", "essential": true },
+    { "id": "sindoor", "name": { "en": "Sindooram (vermilion) & sesame oil", "te": "సిందూరం, నువ్వుల నూనె" }, "quantity": "1 set", "category": "auspicious", "essential": true, "notes": { "en": "Hanuman is adorned with sindoor mixed in oil." } },
+    { "id": "betel-garland", "name": { "en": "Betel-leaf garland / vada mala", "te": "తమలపాకు మాల / వడ మాల" }, "quantity": "1", "category": "offering", "essential": true },
+    { "id": "flowers", "name": { "en": "Red & orange flowers, tulasi", "te": "ఎర్ర, నారింజ పూలు, తులసి" }, "quantity": "assorted", "category": "flowers", "essential": true },
+    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, akshata, sandalwood", "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "appam-naivedya", "name": { "en": "Appalu / vada, jaggery, fruits for naivedya", "te": "అప్పాలు / వడ, బెల్లం, పండ్లు" }, "quantity": "1 set", "category": "naivedya", "essential": true },
+    { "id": "lamp", "name": { "en": "Oil lamp (sesame oil), camphor, incense", "te": "నువ్వుల నూనె దీపం, కర్పూరం, అగరవత్తులు" }, "quantity": "1 set", "category": "light", "essential": true },
+    { "id": "coconut", "name": { "en": "Coconut, bananas", "te": "కొబ్బరికాయ, అరటిపండ్లు" }, "quantity": "assorted", "category": "offering", "essential": true },
+    { "id": "chalisa-book", "name": { "en": "Hanuman Chalisa / Sundarakanda text", "te": "హనుమాన్ చాలీసా / సుందరకాండ" }, "quantity": "1", "category": "parayana", "essential": false }
+  ],
+  "vidhi": {
+    "sankshipta": {
+      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "duration_minutes": 25,
+      "description": { "en": "A concise Anjaneya puja with sindoor, the mula mantra and a Hanuman Chalisa recitation." },
+      "steps": [
+        { "order": 1, "title": { "en": "Sankalpam", "te": "సంకల్పం" }, "instruction": { "en": "Bathe, place Hanuman facing south or east, light the sesame-oil lamp and take the sankalpa.", "te": "స్నానం చేసి, ఆంజనేయుని ప్రతిష్టించి, దీపం వెలిగించి సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Avahana & Sindoor", "te": "ఆవాహన & సిందూరం" }, "instruction": { "en": "Invoke Hanuman and adorn him with sindoor mixed in oil, chanting the mula mantra.", "te": "హనుమంతుని ఆవాహన చేసి, నూనెలో కలిపిన సిందూరం సమర్పించండి." }, "mantra": { "sa": "ॐ श्री हनुमते नमः", "transliteration": "Om Sri Hanumate Namaha", "meaning": { "en": "Salutations to Lord Hanuman." } } },
+        { "order": 3, "title": { "en": "Pancha Upachara", "te": "పంచోపచార పూజ" }, "instruction": { "en": "Offer gandha, akshata, red flowers, tulasi, dhupa and deepa.", "te": "గంధం, అక్షతలు, ఎర్రపూలు, తులసి, ధూప దీపాలు సమర్పించండి." } },
+        { "order": 4, "title": { "en": "Hanuman Chalisa & Naivedya", "te": "హనుమాన్ చాలీసా & నైవేద్యం" }, "instruction": { "en": "Recite the Hanuman Chalisa, offer appalu/vada and fruits.", "te": "హనుమాన్ చాలీసా పఠించి, అప్పాలు, పండ్లు నైవేద్యం." } },
+        { "order": 5, "title": { "en": "Aarti & Distribution", "te": "హారతి & పంపిణీ" }, "instruction": { "en": "Offer camphor aarti and distribute prasadam.", "te": "కర్పూర హారతి ఇచ్చి ప్రసాదం పంచండి." } }
+      ]
+    },
+    "sampurna": {
+      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "duration_minutes": 75,
+      "description": { "en": "The full worship with shodashopachara, Hanuman Ashtottara and Sundarakanda parayana." },
+      "steps": [
+        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean the space, perform achamana and pranayama, and take the detailed sankalpa (often to conclude a deeksha).", "te": "స్థలం శుభ్రపరచి, ఆచమనం చేసి, దీక్ష ముగింపు సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Ganapati & Rama Smarana", "te": "గణపతి & రామ స్మరణ" }, "instruction": { "en": "Worship Ganapati and remember Sri Rama, whose servant Hanuman is.", "te": "గణపతి పూజ, శ్రీరామ స్మరణ." } },
+        { "order": 3, "title": { "en": "Dhyana & Avahana", "te": "ధ్యానం & ఆవాహన" }, "instruction": { "en": "Meditate on Anjaneya leaping across the ocean and invoke his presence.", "te": "సముద్రలంఘన ఆంజనేయుని ధ్యానించి ఆవాహన చేయండి." }, "mantra": { "sa": "मनोजवं मारुततुल्यवेगं जितेन्द्रियं बुद्धिमतां वरिष्ठम् । वातात्मजं वानरयूथमुख्यं श्रीरामदूतं शरणं प्रपद्ये ॥", "transliteration": "Manojavam Maruta-tulya-vegam Jitendriyam Buddhimatam Varishtham | Vatatmajam Vanara-yutha-mukhyam Sri-Rama-dutam Sharanam Prapadye ||", "meaning": { "en": "I take refuge in Sri Rama's messenger — swift as thought, fast as the wind, master of the senses, wisest of the wise, son of the wind, chief of the vanaras." } } },
+        { "order": 4, "title": { "en": "Sindoor Alankarana", "te": "సిందూర అలంకరణ" }, "instruction": { "en": "Adorn Hanuman fully with sindoor and oil, offer betel-leaf/vada garland.", "te": "సిందూరం, నూనెతో అలంకరించి వడ మాల సమర్పించండి." } },
+        { "order": 5, "title": { "en": "Shodashopachara Puja", "te": "షోడశోపచార పూజ" }, "instruction": { "en": "Offer the sixteen services from avahana to mantrapushpa.", "te": "ఆవాహన నుండి మంత్రపుష్పం వరకు షోడశోపచారాలు సమర్పించండి." } },
+        { "order": 6, "title": { "en": "Hanuman Ashtottara", "te": "హనుమాన్ అష్టోత్తరం" }, "instruction": { "en": "Recite the 108 names of Hanuman with kumkum and flowers.", "te": "హనుమాన్ అష్టోత్తర శతనామావళి అర్చన." } },
+        { "order": 7, "title": { "en": "Sundarakanda / Chalisa Parayana", "te": "సుందరకాండ / చాలీసా పారాయణ" }, "instruction": { "en": "Recite the Sundarakanda or the Hanuman Chalisa (often 3, 9 or 11 times).", "te": "సుందరకాండ లేదా హనుమాన్ చాలీసా పారాయణ." } },
+        { "order": 8, "title": { "en": "Naivedya & Vada Mala", "te": "నైవేద్యం & వడ మాల" }, "instruction": { "en": "Offer appalu, vada mala, jaggery and fruits.", "te": "అప్పాలు, వడ మాల, బెల్లం, పండ్లు నైవేద్యం." } },
+        { "order": 9, "title": { "en": "Mangala Harati & Prasadam", "te": "మంగళ హారతి & ప్రసాదం" }, "instruction": { "en": "Offer camphor aarti and distribute prasadam; pray for strength and protection.", "te": "కర్పూర హారతి ఇచ్చి ప్రసాదం పంచండి." } }
+      ]
+    }
+  },
+  "prasadam": [
+    {
+      "id": "appalu",
+      "name": { "en": "Appalu (jaggery rice-flour sweet)", "te": "అప్పాలు" },
+      "type": "sweet",
+      "serves": "makes ~15",
+      "ingredients": [
+        { "item": { "en": "Rice flour", "te": "బియ్యప్పిండి" }, "quantity": "1 cup" },
+        { "item": { "en": "Jaggery", "te": "బెల్లం" }, "quantity": "3/4 cup" },
+        { "item": { "en": "Cardamom, ghee/oil for frying", "te": "యాలకులు, నెయ్యి/నూనె" }, "quantity": "as needed" }
+      ],
+      "steps": [
+        { "en": "Melt jaggery, strain and cook to a soft syrup; add cardamom." },
+        { "en": "Mix in rice flour to a soft dough; rest briefly." },
+        { "en": "Pat into small discs and deep-fry to golden; offer warm." }
+      ],
+      "offering_note": { "en": "A favourite Anjaneya naivedya across Andhra & Telangana." }
+    },
+    {
+      "id": "vada",
+      "name": { "en": "Garelu / Vada (for the vada mala)", "te": "గారెలు / వడ" },
+      "type": "savory",
+      "serves": "makes ~12",
+      "ingredients": [
+        { "item": { "en": "Urad dal (soaked)", "te": "మినపప్పు (నానబెట్టినది)" }, "quantity": "1 cup" },
+        { "item": { "en": "Green chilli, pepper, cumin, curry leaves, salt, oil", "te": "పచ్చిమిర్చి, మిరియాలు, జీలకర్ర, కరివేపాకు, ఉప్పు, నూనె" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Grind soaked urad dal to a fluffy batter; add spices." },
+        { "en": "Shape rings and deep-fry to golden and crisp." },
+        { "en": "String into a garland (vada mala) to adorn Hanuman, then share." }
+      ],
+      "offering_note": { "en": "Strung into a vada mala, a signature Hanuman offering." }
+    }
+  ],
+  "primary_mantra": {
+    "sa": "ॐ श्री हनुमते नमः",
+    "transliteration": "Om Sri Hanumate Namaha",
+    "meaning": { "en": "Salutations to Lord Hanuman, the mighty devotee of Rama." }
+  },
+  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Hanuman Chalisa / Sundarakanda narration." },
+  "source": "Compiled for the Pavitra app; follows the Telugu (Andhra/Telangana) Hanuman Jayanthi tradition on Vaishakha Krishna Dashami.",
+  "disclaimer": "Regional and family practices vary; North-Indian Hanuman Jayanti falls on Chaitra Purnima. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
+  "created_at": "2026-09-25T00:00:00Z"
+}

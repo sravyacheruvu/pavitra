@@ -1,0 +1,121 @@
+{
+  "id": "sri-rama-navami-2027",
+  "slug": "sri-rama-navami",
+  "schema_version": 1,
+  "year": 2027,
+  "type": "puja",
+  "name": {
+    "en": "Sri Rama Navami",
+    "te": "శ్రీ రామ నవమి",
+    "sa": "श्रीराम नवमी"
+  },
+  "deity": {
+    "en": "Lord Sri Rama, the seventh avatara of Vishnu, with Sita, Lakshmana & Hanuman",
+    "te": "శ్రీ సీతారాములు, లక్ష్మణ, హనుమంతులు",
+    "sa": "श्री सीतारामचन्द्र"
+  },
+  "observed_on": {
+    "date": "2027-04-15",
+    "weekday": "Thursday",
+    "masa": "Chaitra",
+    "paksha": "Shukla",
+    "tithi": "Navami",
+    "nakshatra": "Punarvasu/Ashlesha",
+    "rule": "Chaitra Shukla Navami; Rama's birth is celebrated at madhyahna (noon), the janma muhurtham. Kalyanam (Sitarama celestial wedding) is a highlight in Andhra/Telangana (esp. Bhadrachalam).",
+    "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946.",
+    "note": "The culmination of Chaitra Navaratri. In Telugu tradition the Sitarama Kalyanam and Panakam/Vadapappu distribution are central."
+  },
+  "significance": {
+    "en": "Sri Rama Navami celebrates the birth of Lord Rama, the embodiment of dharma, at noon in Chaitra. Devotees read the Ramayana, perform the Sitarama Kalyanam (the celestial wedding of Rama and Sita), and distribute panakam (jaggery-ginger drink) and vadapappu (soaked moong) as the cooling naivedya of the hot season. Bhadrachalam in Telangana is the great centre of the Kalyanam.",
+    "te": "శ్రీ రామ నవమి ధర్మస్వరూపుడైన శ్రీరాముని జన్మదినం. మధ్యాహ్నం రాముని జన్మ ఘడియలో పూజ చేసి, సీతారామ కల్యాణం జరిపి, పానకం, వడపప్పు పంచుతారు. భద్రాచలంలో కల్యాణం ప్రసిద్ధం.",
+    "sa": "चैत्रशुक्लनवम्यां मध्याह्ने श्रीरामजन्मोत्सवः धर्मस्थापकस्य आराधना।"
+  },
+  "regions": ["Andhra Pradesh", "Telangana", "Tamil Nadu", "Karnataka", "Maharashtra", "All India"],
+  "languages": ["en", "te", "sa"],
+  "samagri": [
+    { "id": "rama-pattabhishekam", "name": { "en": "Sri Rama Pattabhishekam idol/picture (Rama, Sita, Lakshmana, Hanuman)", "te": "శ్రీ రామ పట్టాభిషేక చిత్రం / విగ్రహం" }, "quantity": "1", "category": "idol", "essential": true },
+    { "id": "peetham-cloth", "name": { "en": "Peetham with new yellow cloth", "te": "పీఠం, కొత్త పసుపు వస్త్రం" }, "quantity": "1", "category": "seat", "essential": true },
+    { "id": "tulasi", "name": { "en": "Tulasi leaves & garland", "te": "తులసి దళాలు, మాల" }, "quantity": "1 set", "category": "leaves", "essential": true },
+    { "id": "flowers", "name": { "en": "Flowers & garlands (esp. for kalyanam)", "te": "పూలు, పూలమాలలు" }, "quantity": "assorted", "category": "flowers", "essential": true },
+    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, akshata, sandalwood", "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "panakam-items", "name": { "en": "Jaggery, dry ginger, cardamom, pepper (for panakam)", "te": "బెల్లం, శొంఠి, యాలకులు, మిరియాలు (పానకం)" }, "quantity": "1 set", "category": "naivedya", "essential": true },
+    { "id": "moong", "name": { "en": "Green gram / moong dal (for vadapappu)", "te": "పెసరపప్పు (వడపప్పు)" }, "quantity": "1 cup", "category": "naivedya", "essential": true },
+    { "id": "mangalasutra-kalyanam", "name": { "en": "Mangalasutra, talambralu (turmeric rice) for Kalyanam", "te": "మంగళసూత్రం, తలంబ్రాలు" }, "quantity": "1 set", "category": "kalyanam", "essential": false },
+    { "id": "lamp", "name": { "en": "Oil lamp, camphor, incense", "te": "దీపం, కర్పూరం, అగరవత్తులు" }, "quantity": "1 set", "category": "light", "essential": true },
+    { "id": "coconut-fruits", "name": { "en": "Coconut, bananas, fruits", "te": "కొబ్బరికాయ, అరటిపండ్లు, పండ్లు" }, "quantity": "assorted", "category": "offering", "essential": true }
+  ],
+  "vidhi": {
+    "sankshipta": {
+      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "duration_minutes": 25,
+      "description": { "en": "A concise Rama Navami puja with the Rama Taraka mantra and panakam naivedya." },
+      "steps": [
+        { "order": 1, "title": { "en": "Sankalpam", "te": "సంకల్పం" }, "instruction": { "en": "Bathe, place the Rama picture facing east on the yellow cloth, light the lamp and take the sankalpa at midday.", "te": "స్నానం చేసి, రాముని చిత్రాన్ని తూర్పుముఖంగా ఉంచి, దీపం వెలిగించి మధ్యాహ్నం సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Dhyana & Avahana", "te": "ధ్యానం & ఆవాహన" }, "instruction": { "en": "Meditate on Sri Rama and invoke him with the Taraka mantra.", "te": "శ్రీరాముని ధ్యానించి తారక మంత్రంతో ఆవాహన చేయండి." }, "mantra": { "sa": "श्री राम राम रामेति रमे रामे मनोरमे । सहस्रनाम तत्तुल्यं राम नाम वरानने ॥", "transliteration": "Sri Rama Rama Rameti Rame Raame Manorame | Sahasranama Tattulyam Rama Nama Varaanane ||", "meaning": { "en": "Repeating 'Rama' thrice equals the thousand names of Vishnu — so said Shiva to Parvati." } } },
+        { "order": 3, "title": { "en": "Shodasa/Pancha Upachara", "te": "పంచోపచార పూజ" }, "instruction": { "en": "Offer gandha, akshata, tulasi, flowers, dhupa and deepa to Rama, Sita, Lakshmana and Hanuman.", "te": "గంధం, అక్షతలు, తులసి, పూలు, ధూప దీపాలు సమర్పించండి." } },
+        { "order": 4, "title": { "en": "Panakam & Vadapappu Naivedya", "te": "పానకం & వడపప్పు నైవేద్యం" }, "instruction": { "en": "Offer panakam and vadapappu (and fruits), the cooling seasonal naivedya.", "te": "పానకం, వడపప్పు, పండ్లు నైవేద్యం సమర్పించండి." } },
+        { "order": 5, "title": { "en": "Aarti & Distribution", "te": "హారతి & పంపిణీ" }, "instruction": { "en": "Read a Ramayana passage, offer camphor aarti and distribute panakam-vadapappu as prasadam.", "te": "రామాయణ పఠనం, హారతి ఇచ్చి పానకం, వడపప్పు పంచండి." } }
+      ]
+    },
+    "sampurna": {
+      "label": { "en": "Sampurna (Full — with Kalyanam)", "te": "సంపూర్ణ విధి (కల్యాణంతో)" },
+      "duration_minutes": 90,
+      "description": { "en": "The full worship with shodashopachara, Sri Rama Ashtottara and the Sitarama Kalyanam." },
+      "steps": [
+        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean the space, draw a muggu, perform achamana and pranayama, and take the detailed midday sankalpa.", "te": "స్థలం శుభ్రపరచి, ముగ్గు వేసి, ఆచమనం చేసి మధ్యాహ్న సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Kalasha & Deepa Aradhana", "te": "కలశ & దీప ఆరాధన" }, "instruction": { "en": "Establish the kalasham, light the lamps and worship Ganapati to remove obstacles.", "te": "కలశ స్థాపన, దీపారాధన, గణపతి పూజ." } },
+        { "order": 3, "title": { "en": "Dhyana & Avahana", "te": "ధ్యానం & ఆవాహన" }, "instruction": { "en": "Meditate on Sri Ramachandra with Sita on his lap and invoke the divine family.", "te": "సీతాసమేత రాముని ధ్యానించి ఆవాహన చేయండి." }, "mantra": { "sa": "ॐ श्री रामाय नमः", "transliteration": "Om Sri Ramaya Namaha", "meaning": { "en": "Salutations to Lord Sri Rama." } } },
+        { "order": 4, "title": { "en": "Shodashopachara Puja", "te": "షోడశోపచార పూజ" }, "instruction": { "en": "Offer the sixteen services from avahana to mantrapushpa to Rama, Sita, Lakshmana and Hanuman.", "te": "ఆవాహన నుండి మంత్రపుష్పం వరకు షోడశోపచారాలు సమర్పించండి." } },
+        { "order": 5, "title": { "en": "Sri Rama Ashtottara", "te": "శ్రీ రామ అష్టోత్తరం" }, "instruction": { "en": "Recite the 108 names of Sri Rama with tulasi and flowers.", "te": "శ్రీ రామ అష్టోత్తర శతనామావళి అర్చన." } },
+        { "order": 6, "title": { "en": "Ramayana / Sundarakanda Parayana", "te": "రామాయణ / సుందరకాండ పారాయణ" }, "instruction": { "en": "Read the janma passage of the Bala Kanda or a Sundarakanda chapter.", "te": "బాలకాండ జన్మ ఘట్టం లేదా సుందరకాండ పఠనం." } },
+        { "order": 7, "title": { "en": "Sitarama Kalyanam", "te": "సీతారామ కల్యాణం" }, "instruction": { "en": "Perform the celestial wedding: tie the mangalasutra, shower talambralu (turmeric rice) and sing the kalyana songs.", "te": "మంగళసూత్రధారణ, తలంబ్రాలు, కల్యాణ గీతాలతో సీతారామ కల్యాణం జరపండి." } },
+        { "order": 8, "title": { "en": "Panakam, Vadapappu & Naivedya", "te": "పానకం, వడపప్పు & నైవేద్యం" }, "instruction": { "en": "Offer panakam, vadapappu, kosambari and fruits as the seasonal naivedya.", "te": "పానకం, వడపప్పు, కోసంబరి, పండ్లు నైవేద్యం." } },
+        { "order": 9, "title": { "en": "Mangala Harati & Prasadam", "te": "మంగళ హారతి & ప్రసాదం" }, "instruction": { "en": "Offer camphor aarti and distribute panakam and vadapappu to all.", "te": "కర్పూర హారతి ఇచ్చి ప్రసాదం పంచండి." } }
+      ]
+    }
+  },
+  "prasadam": [
+    {
+      "id": "panakam",
+      "name": { "en": "Panakam (jaggery-ginger drink)", "te": "పానకం" },
+      "type": "drink",
+      "serves": "4",
+      "ingredients": [
+        { "item": { "en": "Jaggery", "te": "బెల్లం" }, "quantity": "1 cup" },
+        { "item": { "en": "Water", "te": "నీరు" }, "quantity": "4 cups" },
+        { "item": { "en": "Dry ginger, cardamom, pepper, a little edible camphor", "te": "శొంఠి, యాలకులు, మిరియాలు, పచ్చకర్పూరం" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Dissolve jaggery in water and strain." },
+        { "en": "Add dry ginger, cardamom, crushed pepper and a pinch of edible camphor." },
+        { "en": "Offer chilled as the cooling naivedya of Rama Navami." }
+      ],
+      "offering_note": { "en": "The signature Rama Navami offering, cooling for the hot Chaitra season." }
+    },
+    {
+      "id": "vadapappu",
+      "name": { "en": "Vadapappu (soaked moong dal)", "te": "వడపప్పు" },
+      "type": "savory",
+      "serves": "4",
+      "ingredients": [
+        { "item": { "en": "Green gram (moong dal), soaked", "te": "పెసరపప్పు (నానబెట్టినది)" }, "quantity": "1 cup" },
+        { "item": { "en": "Grated coconut, green chilli, ginger, salt", "te": "కొబ్బరి తురుము, పచ్చిమిర్చి, అల్లం, ఉప్పు" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Soak moong dal 2-3 hours and drain." },
+        { "en": "Mix with grated coconut, finely chopped chilli, ginger and salt." },
+        { "en": "Offer fresh alongside panakam." }
+      ],
+      "offering_note": { "en": "Paired with panakam as the classic Rama Navami prasadam." }
+    }
+  ],
+  "primary_mantra": {
+    "sa": "ॐ श्री रामाय नमः",
+    "transliteration": "Om Sri Ramaya Namaha",
+    "meaning": { "en": "Salutations to Lord Sri Rama, the embodiment of dharma." }
+  },
+  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Rama Navami / Kalyanam narration." },
+  "source": "Compiled for the Pavitra app; follows the standard South-Indian Sri Rama Navami and Sitarama Kalyanam tradition.",
+  "disclaimer": "Regional and family practices vary. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
+  "created_at": "2026-09-25T00:00:00Z"
+}

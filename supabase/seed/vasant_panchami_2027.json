@@ -1,0 +1,119 @@
+{
+  "id": "vasant-panchami-2027",
+  "slug": "vasant-panchami",
+  "schema_version": 1,
+  "year": 2027,
+  "type": "puja",
+  "name": {
+    "en": "Vasant Panchami (Sri Panchami)",
+    "te": "వసంత పంచమి (శ్రీ పంచమి)",
+    "sa": "वसन्त पञ्चमी"
+  },
+  "deity": {
+    "en": "Goddess Saraswati, deity of knowledge, music and the arts",
+    "te": "సరస్వతీ దేవి",
+    "sa": "श्री सरस्वती"
+  },
+  "observed_on": {
+    "date": "2027-02-11",
+    "weekday": "Thursday",
+    "masa": "Magha",
+    "paksha": "Shukla",
+    "tithi": "Panchami",
+    "rule": "Magha Shukla Panchami; Saraswati puja is performed in the morning (purvahna). An auspicious abujha muhurtham for beginning education (aksharabhyasam) and the arts.",
+    "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946.",
+    "note": "Also Sri Panchami / Saraswati Puja. Marks the onset of spring (vasanta). Yellow is the auspicious colour; children begin learning (aksharabhyasam)."
+  },
+  "significance": {
+    "en": "Vasant Panchami heralds spring and honours Saraswati, goddess of learning, speech, music and the arts. Devotees dress in yellow, place books, instruments and tools of learning before the goddess, and keep them for her blessing. It is a favoured day for aksharabhyasam — a child's first writing of letters — and for beginning any study or art.",
+    "te": "వసంత పంచమి వసంత రుతువును ఆహ్వానిస్తూ, విద్య, వాక్కు, సంగీత, కళలకు అధిష్ఠాత్రి సరస్వతీ దేవిని పూజించే పండుగ. పసుపు వస్త్రాలు ధరించి, పుస్తకాలు, వాద్యాలను దేవి ముందు ఉంచి ఆశీర్వాదం పొందుతారు. అక్షరాభ్యాసానికి, విద్యారంభానికి శుభదినం.",
+    "sa": "माघशुक्लपञ्चम्यां वसन्तागमे विद्यादेव्याः सरस्वत्याः आराधना।"
+  },
+  "regions": ["Andhra Pradesh", "Telangana", "Karnataka", "West Bengal", "North India", "All India"],
+  "languages": ["en", "te", "sa"],
+  "samagri": [
+    { "id": "saraswati-idol", "name": { "en": "Saraswati idol or picture", "te": "సరస్వతీ దేవి విగ్రహం / చిత్రం" }, "quantity": "1", "category": "idol", "essential": true },
+    { "id": "yellow-cloth", "name": { "en": "Yellow cloth for the peetham & yellow flowers", "te": "పసుపు వస్త్రం, పసుపు పూలు" }, "quantity": "1 set", "category": "seat", "essential": true },
+    { "id": "books-instruments", "name": { "en": "Books, pen, musical instruments, tools of one's craft", "te": "పుస్తకాలు, కలం, వాద్యాలు, వృత్తి పరికరాలు" }, "quantity": "as available", "category": "offering", "essential": true },
+    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, akshata, sandalwood", "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "white-yellow-flowers", "name": { "en": "White & yellow flowers, garland", "te": "తెలుపు, పసుపు పూలు, మాల" }, "quantity": "assorted", "category": "flowers", "essential": true },
+    { "id": "slate-chalk", "name": { "en": "Slate/rice tray & chalk for aksharabhyasam", "te": "పలక, బలపం / అక్షరాభ్యాసానికి బియ్యం" }, "quantity": "1 set", "category": "learning", "essential": false },
+    { "id": "naivedya-items", "name": { "en": "Kesari, sweet pongal, fruits for naivedya", "te": "కేసరి, చక్కెర పొంగలి, పండ్లు" }, "quantity": "1 set", "category": "naivedya", "essential": true },
+    { "id": "lamp", "name": { "en": "Oil lamp, camphor, incense", "te": "దీపం, కర్పూరం, అగరవత్తులు" }, "quantity": "1 set", "category": "light", "essential": true },
+    { "id": "coconut", "name": { "en": "Coconut, betel, bananas", "te": "కొబ్బరికాయ, తాంబూలం, అరటిపండ్లు" }, "quantity": "assorted", "category": "offering", "essential": true }
+  ],
+  "vidhi": {
+    "sankshipta": {
+      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "duration_minutes": 20,
+      "description": { "en": "A concise Saraswati puja with the mula mantra and placing of books for blessing." },
+      "steps": [
+        { "order": 1, "title": { "en": "Sankalpam", "te": "సంకల్పం" }, "instruction": { "en": "Bathe, wear yellow, place Saraswati on the yellow cloth, light the lamp and take the sankalpa.", "te": "స్నానం చేసి, పసుపు వస్త్రం ధరించి, దేవిని ప్రతిష్టించి, దీపం వెలిగించి సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Avahana", "te": "ఆవాహన" }, "instruction": { "en": "Invoke Saraswati with the mula mantra and the dhyana shloka.", "te": "మూల మంత్రంతో సరస్వతీ దేవిని ఆవాహన చేయండి." }, "mantra": { "sa": "ॐ ऐं सरस्वत्यै नमः", "transliteration": "Om Aim Saraswatyai Namaha", "meaning": { "en": "Salutations to Goddess Saraswati (with her seed-syllable Aim)." } } },
+        { "order": 3, "title": { "en": "Pancha Upachara & Books", "te": "పంచోపచార & పుస్తక పూజ" }, "instruction": { "en": "Offer gandha, akshata, yellow flowers, dhupa and deepa, and place books/instruments before her.", "te": "గంధం, అక్షతలు, పసుపు పూలు, ధూప దీపాలు సమర్పించి, పుస్తకాలు దేవి ముందు ఉంచండి." } },
+        { "order": 4, "title": { "en": "Naivedya", "te": "నైవేద్యం" }, "instruction": { "en": "Offer kesari/sweet pongal and fruits.", "te": "కేసరి / చక్కెర పొంగలి, పండ్లు నైవేద్యం." } },
+        { "order": 5, "title": { "en": "Aarti & Blessing", "te": "హారతి & ఆశీర్వాదం" }, "instruction": { "en": "Offer camphor aarti; children may begin aksharabhyasam. Distribute prasadam.", "te": "కర్పూర హారతి; పిల్లలకు అక్షరాభ్యాసం; ప్రసాదం పంచండి." } }
+      ]
+    },
+    "sampurna": {
+      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "duration_minutes": 60,
+      "description": { "en": "The full Saraswati worship with shodashopachara, Ashtottara and aksharabhyasam." },
+      "steps": [
+        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean the space, draw a muggu, perform achamana and take the sankalpa in yellow attire.", "te": "స్థలం శుభ్రపరచి, ముగ్గు వేసి, ఆచమనం చేసి, పసుపు వస్త్రంతో సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Ganapati Puja", "te": "గణపతి పూజ" }, "instruction": { "en": "Worship Ganapati to remove obstacles.", "te": "గణపతి పూజ చేయండి." } },
+        { "order": 3, "title": { "en": "Dhyana & Avahana", "te": "ధ్యానం & ఆవాహన" }, "instruction": { "en": "Meditate on Saraswati, white-robed, holding the veena, book and japamala, and invoke her.", "te": "వీణ, పుస్తకం, జపమాలలతో ఉన్న శ్వేతవర్ణ సరస్వతిని ధ్యానించి ఆవాహన చేయండి." }, "mantra": { "sa": "या कुन्देन्दुतुषारहारधवला या शुभ्रवस्त्रावृता । या वीणावरदण्डमण्डितकरा या श्वेतपद्मासना ॥", "transliteration": "Ya Kundendu-tushara-hara-dhavala Ya Shubhra-vastravrita | Ya Veena-vara-danda-mandita-kara Ya Shweta-padmasana ||", "meaning": { "en": "She who is white as jasmine, the moon and snow, robed in white, her hands graced by the veena, seated on a white lotus — Goddess Saraswati." } } },
+        { "order": 4, "title": { "en": "Shodashopachara Puja", "te": "షోడశోపచార పూజ" }, "instruction": { "en": "Offer the sixteen services from avahana to mantrapushpa with yellow and white flowers.", "te": "ఆవాహన నుండి మంత్రపుష్పం వరకు షోడశోపచారాలు సమర్పించండి." } },
+        { "order": 5, "title": { "en": "Pustaka & Vadya Puja", "te": "పుస్తక & వాద్య పూజ" }, "instruction": { "en": "Worship the books, pens and instruments placed before the goddess; leave them for her blessing.", "te": "పుస్తకాలు, కలములు, వాద్యాలను దేవి ముందు ఉంచి పూజించండి." } },
+        { "order": 6, "title": { "en": "Saraswati Ashtottara", "te": "సరస్వతీ అష్టోత్తరం" }, "instruction": { "en": "Recite the 108 names of Saraswati with kumkum and flowers.", "te": "సరస్వతీ అష్టోత్తర శతనామావళి అర్చన." } },
+        { "order": 7, "title": { "en": "Aksharabhyasam", "te": "అక్షరాభ్యాసం" }, "instruction": { "en": "Children write their first letters (Om, Sri) in a rice tray, guided by an elder — an auspicious start to learning.", "te": "పిల్లలు పెద్దల చేయి పట్టుకొని బియ్యంలో మొదటి అక్షరాలు (ఓం, శ్రీ) రాస్తారు." } },
+        { "order": 8, "title": { "en": "Naivedya & Mangala Harati", "te": "నైవేద్యం & మంగళ హారతి" }, "instruction": { "en": "Offer kesari/sweet pongal and fruits, then the camphor aarti.", "te": "కేసరి, పండ్లు నైవేద్యం, కర్పూర హారతి." } }
+      ]
+    }
+  },
+  "prasadam": [
+    {
+      "id": "kesari",
+      "name": { "en": "Kesari / Rava Kesari (semolina sweet)", "te": "కేసరి / రవ్వ కేసరి" },
+      "type": "sweet",
+      "serves": "4",
+      "ingredients": [
+        { "item": { "en": "Rava (semolina)", "te": "రవ్వ" }, "quantity": "1 cup" },
+        { "item": { "en": "Sugar", "te": "పంచదార" }, "quantity": "1 cup" },
+        { "item": { "en": "Ghee, cardamom, saffron, cashews, raisins", "te": "నెయ్యి, యాలకులు, కుంకుమపువ్వు, జీడిపప్పు, ఎండుద్రాక్ష" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Roast rava in ghee; fry cashews and raisins." },
+        { "en": "Add hot water with saffron, cook till soft, then add sugar and more ghee." },
+        { "en": "Finish with cardamom; offer warm (traditionally tinted yellow/orange)." }
+      ],
+      "offering_note": { "en": "The auspicious yellow sweet of Sri Panchami." }
+    },
+    {
+      "id": "sweet-pongal",
+      "name": { "en": "Chakkara Pongali (sweet pongal)", "te": "చక్కెర పొంగలి" },
+      "type": "sweet",
+      "serves": "4",
+      "ingredients": [
+        { "item": { "en": "Rice & moong dal", "te": "బియ్యం, పెసరపప్పు" }, "quantity": "1 cup" },
+        { "item": { "en": "Jaggery", "te": "బెల్లం" }, "quantity": "1 cup" },
+        { "item": { "en": "Ghee, cardamom, cashews, raisins, edible camphor", "te": "నెయ్యి, యాలకులు, జీడిపప్పు, ఎండుద్రాక్ష, పచ్చకర్పూరం" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Cook rice and moong dal soft; mash lightly." },
+        { "en": "Melt jaggery to syrup and combine with the rice." },
+        { "en": "Add ghee-fried nuts, cardamom and a pinch of edible camphor; offer warm." }
+      ],
+      "offering_note": { "en": "A classic Saraswati naivedya." }
+    }
+  ],
+  "primary_mantra": {
+    "sa": "ॐ ऐं सरस्वत्यै नमः",
+    "transliteration": "Om Aim Saraswatyai Namaha",
+    "meaning": { "en": "Salutations to Goddess Saraswati, bestower of knowledge and speech." }
+  },
+  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Saraswati stotra narration." },
+  "source": "Compiled for the Pavitra app; follows the standard Vasant Panchami / Sri Panchami Saraswati puja tradition.",
+  "disclaimer": "Regional and family practices vary. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
+  "created_at": "2026-09-25T00:00:00Z"
+}

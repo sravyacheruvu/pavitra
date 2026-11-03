@@ -1,0 +1,118 @@
+{
+  "id": "maha-shivaratri-2027",
+  "slug": "maha-shivaratri",
+  "schema_version": 1,
+  "year": 2027,
+  "type": "vratam",
+  "name": {
+    "en": "Maha Shivaratri",
+    "te": "మహా శివరాత్రి",
+    "sa": "महाशिवरात्रि"
+  },
+  "deity": {
+    "en": "Lord Shiva (Parameshwara), the auspicious destroyer of ignorance",
+    "te": "పరమేశ్వరుడు (శివుడు)",
+    "sa": "श्री परमेश्वर / महादेव"
+  },
+  "observed_on": {
+    "date": "2027-03-06",
+    "weekday": "Saturday",
+    "masa": "Magha / Phalguna",
+    "paksha": "Krishna",
+    "tithi": "Chaturdashi",
+    "rule": "Magha (Phalguna in Amanta reckoning) Krishna Chaturdashi; the vrata and lingarchana are performed through the four praharas of the night, with the tithi taken at Nishita (midnight).",
+    "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946; India-baseline date, night observance.",
+    "note": "The most important night of the year for Shiva devotees. Observed with day-long fasting, night-long jagarana (vigil) and abhishekam of the Shiva lingam."
+  },
+  "significance": {
+    "en": "Maha Shivaratri, 'the great night of Shiva', marks the night Shiva is worshipped through vigil, fasting and continuous abhishekam. It is variously held to be the night of Shiva's cosmic dance (tandava), his marriage to Parvati, and the appearance of the infinite jyotirlinga. Staying awake through the four praharas offering bilva leaves and the Panchakshari mantra is said to dissolve accumulated karma and grant liberation.",
+    "te": "మహా శివరాత్రి శివుని ఆరాధనకు అత్యంత పవిత్రమైన రాత్రి. ఉపవాసం, జాగరణ, లింగాభిషేకంతో నాలుగు జాముల పాటు శివుని పూజిస్తారు. బిల్వదళాలతో, పంచాక్షరీ మంత్రంతో అర్చించడం మోక్షప్రదమని విశ్వాసం.",
+    "sa": "शिवरात्रौ जागरणं उपवासः लिङ्गाभिषेकः च मोक्षप्रदः इति मन्यते।"
+  },
+  "regions": ["Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu", "Maharashtra", "All India", "Nepal"],
+  "languages": ["en", "te", "sa"],
+  "samagri": [
+    { "id": "shiva-lingam", "name": { "en": "Shiva lingam or Shiva idol/picture", "te": "శివలింగం / శివుని విగ్రహం" }, "quantity": "1", "category": "idol", "essential": true },
+    { "id": "bilva", "name": { "en": "Bilva (bael) leaves", "te": "బిల్వ దళాలు (మారేడు ఆకులు)" }, "quantity": "108 or a bunch", "category": "leaves", "essential": true, "notes": { "en": "Shiva's most beloved offering; use three-lobed unbroken leaves." } },
+    { "id": "milk-panchamrita", "name": { "en": "Milk, curd, ghee, honey, sugar (panchamrita)", "te": "పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార (పంచామృతం)" }, "quantity": "1 set", "category": "abhisheka", "essential": true },
+    { "id": "water-ganga", "name": { "en": "Clean water / Ganga jal for abhishekam", "te": "శుద్ధ జలం / గంగా జలం" }, "quantity": "as needed", "category": "abhisheka", "essential": true },
+    { "id": "vibhuti", "name": { "en": "Vibhuti (sacred ash) & rudraksha", "te": "విభూతి, రుద్రాక్ష" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "sandal-kumkum", "name": { "en": "Sandalwood paste, kumkum, akshata", "te": "గంధం, కుంకుమ, అక్షతలు" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "datura-flowers", "name": { "en": "White flowers, datura (ummetta) & tumme flowers", "te": "తెల్ల పూలు, ఉమ్మెత్త పూలు, తుమ్మి పూలు" }, "quantity": "assorted", "category": "flowers", "essential": true },
+    { "id": "lamp", "name": { "en": "Oil lamp, ghee wicks, camphor, incense", "te": "దీపం, నెయ్యి వత్తులు, కర్పూరం, అగరవత్తులు" }, "quantity": "1 set", "category": "light", "essential": true },
+    { "id": "fruits-naivedya", "name": { "en": "Fruits, coconut, jaggery for naivedya", "te": "పండ్లు, కొబ్బరికాయ, బెల్లం" }, "quantity": "assorted", "category": "offering", "essential": true },
+    { "id": "fasting-foods", "name": { "en": "Upavasa foods (fruits, milk, sabudana)", "te": "ఉపవాస ఆహారం (పండ్లు, పాలు, సగ్గుబియ్యం)" }, "quantity": "as needed", "category": "vrata", "essential": false }
+  ],
+  "vidhi": {
+    "sankshipta": {
+      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "duration_minutes": 30,
+      "description": { "en": "A concise Shivaratri worship with abhishekam and Panchakshari japa." },
+      "steps": [
+        { "order": 1, "title": { "en": "Sankalpam & fast", "te": "సంకల్పం & ఉపవాసం" }, "instruction": { "en": "Bathe, resolve to keep the Shivaratri fast and night vigil, and light the lamp before the lingam.", "te": "స్నానం చేసి, శివరాత్రి ఉపవాస, జాగరణ సంకల్పం చెప్పుకొని దీపం వెలిగించండి." } },
+        { "order": 2, "title": { "en": "Abhishekam", "te": "అభిషేకం" }, "instruction": { "en": "Bathe the lingam with water and panchamrita while chanting the Panchakshari.", "te": "పంచామృతం, జలంతో లింగాభిషేకం చేయండి." }, "mantra": { "sa": "ॐ नमः शिवाय", "transliteration": "Om Namah Shivaya", "meaning": { "en": "Salutations to Lord Shiva." } } },
+        { "order": 3, "title": { "en": "Bilva Archana", "te": "బిల్వ అర్చన" }, "instruction": { "en": "Offer bilva leaves one by one with 'Om Namah Shivaya', then vibhuti and flowers.", "te": "బిల్వ దళాలతో అర్చన చేసి, విభూతి, పూలు సమర్పించండి." } },
+        { "order": 4, "title": { "en": "Naivedya & Aarti", "te": "నైవేద్యం & హారతి" }, "instruction": { "en": "Offer fruits and jaggery, wave camphor aarti, and continue japa through the night.", "te": "పండ్లు, బెల్లం నైవేద్యం, కర్పూర హారతి ఇచ్చి రాత్రంతా జపం చేయండి." } }
+      ]
+    },
+    "sampurna": {
+      "label": { "en": "Sampurna (Full — Four Praharas)", "te": "సంపూర్ణ విధి (నాలుగు జాములు)" },
+      "duration_minutes": 90,
+      "description": { "en": "The full night vigil with abhishekam in each of the four praharas and Rudra japa." },
+      "steps": [
+        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean the puja space, perform achamana and pranayama, and take the sankalpa for the Shivaratri vrata and jagarana naming tithi, place and intent.", "te": "పూజా స్థలం శుభ్రపరచి, ఆచమనం చేసి, శివరాత్రి వ్రత సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Dhyana & Avahana", "te": "ధ్యానం & ఆవాహన" }, "instruction": { "en": "Meditate on Shiva seated on Kailasa and invoke his presence into the lingam.", "te": "కైలాసవాసుడైన శివుని ధ్యానించి లింగంలో ఆవాహన చేయండి." }, "mantra": { "sa": "ॐ त्र्यम्बकं यजामहे सुगन्धिं पुष्टिवर्धनम् । उर्वारुकमिव बन्धनान् मृत्योर्मुक्षीय मामृतात् ॥", "transliteration": "Om Tryambakam Yajamahe Sugandhim Pushtivardhanam | Urvarukamiva Bandhanan Mrityor Mukshiya Maamritat ||", "meaning": { "en": "We worship the three-eyed Lord; may he free us from death for the sake of immortality, as a cucumber is severed from its stem." } } },
+        { "order": 3, "title": { "en": "First Prahara — Jala Abhishekam", "te": "ప్రథమ జాము — జలాభిషేకం" }, "instruction": { "en": "In the first quarter of night, bathe the lingam with water and offer bilva, worshipping Shiva as Ishana.", "te": "మొదటి జామున జలంతో అభిషేకం చేసి బిల్వం సమర్పించండి." } },
+        { "order": 4, "title": { "en": "Second Prahara — Ksheera Abhishekam", "te": "ద్వితీయ జాము — క్షీరాభిషేకం" }, "instruction": { "en": "In the second quarter, offer milk/curd abhishekam and continue Panchakshari japa.", "te": "రెండవ జామున పాలతో అభిషేకం, పంచాక్షరీ జపం." } },
+        { "order": 5, "title": { "en": "Third Prahara — Ghrita/Madhu Abhishekam", "te": "తృతీయ జాము — ఘృత/మధు అభిషేకం" }, "instruction": { "en": "In the third quarter, offer ghee and honey abhishekam and recite the Rudram or Shiva Ashtottara.", "te": "మూడవ జామున నెయ్యి, తేనెతో అభిషేకం, రుద్రం / అష్టోత్తరం." } },
+        { "order": 6, "title": { "en": "Fourth Prahara — Nishita Puja", "te": "చతుర్థ జాము — నిశీథ పూజ" }, "instruction": { "en": "At midnight (nishita), perform the main abhishekam with panchamrita, offer 108 bilva leaves and full shodashopachara.", "te": "అర్ధరాత్రి పంచామృత అభిషేకం, 108 బిల్వ దళాలు, షోడశోపచార పూజ." } },
+        { "order": 7, "title": { "en": "Shiva Ashtottara & Lingashtakam", "te": "శివ అష్టోత్తర & లింగాష్టకం" }, "instruction": { "en": "Recite the 108 names of Shiva and the Lingashtakam with kumkum and bilva.", "te": "శివ అష్టోత్తర శతనామావళి, లింగాష్టకం పఠించండి." } },
+        { "order": 8, "title": { "en": "Vrata Katha & Jagarana", "te": "వ్రత కథ & జాగరణ" }, "instruction": { "en": "Read the Shivaratri vrata katha (the hunter and the bilva tree), sing bhajans and keep the night-long vigil.", "te": "శివరాత్రి వ్రత కథ (వేటగాడి కథ) చదివి, భజనలు చేసి జాగరణ చేయండి." } },
+        { "order": 9, "title": { "en": "Mangala Harati & Paarana", "te": "మంగళ హారతి & పారణ" }, "instruction": { "en": "Offer camphor aarti at dawn; break the fast the next morning after a final worship (paarana).", "te": "తెల్లవారుజామున మంగళ హారతి, మరుసటి ఉదయం పారణతో ఉపవాసం విరమించండి." } }
+      ]
+    }
+  },
+  "prasadam": [
+    {
+      "id": "sabudana-khichdi",
+      "name": { "en": "Sabudana Khichdi (fasting dish)", "te": "సగ్గుబియ్యం ఖిచిడీ" },
+      "type": "vrata",
+      "serves": "2-3",
+      "ingredients": [
+        { "item": { "en": "Sabudana (soaked)", "te": "సగ్గుబియ్యం (నానబెట్టినది)" }, "quantity": "1 cup" },
+        { "item": { "en": "Roasted peanuts", "te": "వేయించిన వేరుశనగలు" }, "quantity": "1/2 cup" },
+        { "item": { "en": "Potato, cumin, green chilli, ghee, rock salt", "te": "బంగాళాదుంప, జీలకర్ర, పచ్చిమిర్చి, నెయ్యి, సైంధవ లవణం" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Soak sabudana until soft and drain well." },
+        { "en": "Temper cumin in ghee, add potato and cook, then peanuts and chilli." },
+        { "en": "Add sabudana and rock salt; toss gently until translucent. Offer warm." }
+      ],
+      "offering_note": { "en": "A traditional upavasa (fasting) naivedya permitted on Shivaratri." }
+    },
+    {
+      "id": "panchamrita",
+      "name": { "en": "Panchamrita", "te": "పంచామృతం" },
+      "type": "offering",
+      "serves": "prasad",
+      "ingredients": [
+        { "item": { "en": "Milk, curd, ghee, honey, sugar", "te": "పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" }, "quantity": "equal parts" },
+        { "item": { "en": "Tulsi leaf, banana (optional)", "te": "తులసి ఆకు, అరటిపండు" }, "quantity": "a little" }
+      ],
+      "steps": [
+        { "en": "Mix the five nectars in a clean vessel." },
+        { "en": "Use for abhishekam, then distribute the remainder as prasadam." }
+      ],
+      "offering_note": { "en": "The abhisheka nectar, shared as blessed prasad." }
+    }
+  ],
+  "primary_mantra": {
+    "sa": "ॐ नमः शिवाय",
+    "transliteration": "Om Namah Shivaya",
+    "meaning": { "en": "Salutations to Lord Shiva — the five-syllable Panchakshari mantra." }
+  },
+  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Shivaratri vrata katha narration." },
+  "source": "Compiled for the Pavitra app; follows the standard South-Indian Maha Shivaratri jagarana tradition.",
+  "disclaimer": "Regional and family practices vary. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
+  "created_at": "2026-09-25T00:00:00Z"
+}

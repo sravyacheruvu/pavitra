@@ -1,0 +1,119 @@
+{
+  "id": "makara-sankranti-2027",
+  "slug": "makara-sankranti",
+  "schema_version": 1,
+  "year": 2027,
+  "type": "festival",
+  "name": {
+    "en": "Makara Sankranti & Pongal",
+    "te": "మకర సంక్రాంతి",
+    "sa": "मकर सङ्क्रान्ति"
+  },
+  "deity": {
+    "en": "Surya (the Sun), with reverence to cattle, ancestors and the harvest",
+    "te": "సూర్య భగవానుడు",
+    "sa": "श्री सूर्यनारायण"
+  },
+  "observed_on": {
+    "date": "2027-01-14",
+    "weekday": "Thursday",
+    "masa": "Pausha",
+    "paksha": "Shukla",
+    "tithi": "Shashthi (solar Makara Sankramana)",
+    "rule": "A solar festival — the day the Sun enters Makara rashi (Capricorn) and begins Uttarayana. In the Telugu states a three-day festival: Bhogi (Jan 13), Sankranti (Jan 14) and Kanuma (Jan 15); in Tamil Nadu, Thai Pongal.",
+    "computed_by": "Surya Siddhanta / Swiss Ephemeris solar ingress; the date is fixed by the Sun, not the Moon.",
+    "note": "The great harvest festival. Bhogi bonfire, Surya puja, freshly-cooked pongal that is allowed to boil over ('pongi'), rangoli with gobbemma, haridasu and gangireddu processions."
+  },
+  "significance": {
+    "en": "Makara Sankranti marks the Sun's northward turn (Uttarayana) and the harvest's arrival — a festival of gratitude, light and plenty. In Andhra & Telangana it spans three days: Bhogi (burning the old in a dawn bonfire), Sankranti (Surya puja and sweet pongal that is joyfully let to boil over), and Kanuma (honouring the cattle that till the land). Sesame-jaggery sweets, elaborate muggulu with gobbemmalu, and gifts to elders mark the days.",
+    "te": "మకర సంక్రాంతి సూర్యుడు మకర రాశిలో ప్రవేశించి ఉత్తరాయణం ప్రారంభమయ్యే పండుగ, పంట చేతికొచ్చిన కృతజ్ఞతా పర్వం. తెలుగు రాష్ట్రాలలో మూడు రోజులు — భోగి, సంక్రాంతి, కనుమ. భోగి మంటలు, సూర్య పూజ, పొంగలి, గొబ్బెమ్మలతో ముగ్గులు, హరిదాసు, గంగిరెద్దులు ప్రత్యేకం.",
+    "sa": "मकरसङ्क्रान्तौ सूर्यस्य उत्तरायणारम्भः शस्यसमृद्धेः कृतज्ञतापर्व।"
+  },
+  "regions": ["Andhra Pradesh", "Telangana", "Tamil Nadu", "Karnataka", "All India"],
+  "languages": ["en", "te", "sa"],
+  "samagri": [
+    { "id": "surya-picture", "name": { "en": "Surya idol/picture or a bright kalasham facing east", "te": "సూర్య చిత్రం / తూర్పు కలశం" }, "quantity": "1", "category": "idol", "essential": true },
+    { "id": "pongal-pot", "name": { "en": "New clay/brass pot for pongal, turmeric plant, sugarcane", "te": "కొత్త పొంగలి పాత్ర, పసుపు మొక్క, చెరకు" }, "quantity": "1 set", "category": "cooking", "essential": true },
+    { "id": "new-rice", "name": { "en": "Newly harvested rice, moong dal, milk, jaggery", "te": "కొత్త బియ్యం, పెసరపప్పు, పాలు, బెల్లం" }, "quantity": "1 set", "category": "naivedya", "essential": true },
+    { "id": "sesame-jaggery", "name": { "en": "Sesame (til) & jaggery for sweets and daanam", "te": "నువ్వులు, బెల్లం" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "muggu", "name": { "en": "Rangoli powder, gobbemma (cow-dung balls), marigold", "te": "ముగ్గు, గొబ్బెమ్మలు, బంతిపూలు" }, "quantity": "as needed", "category": "decoration", "essential": true },
+    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, akshata, sandalwood", "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "flowers", "name": { "en": "Flowers & garlands", "te": "పూలు, మాలలు" }, "quantity": "assorted", "category": "flowers", "essential": true },
+    { "id": "lamp", "name": { "en": "Oil lamp, camphor, incense", "te": "దీపం, కర్పూరం, అగరవత్తులు" }, "quantity": "1 set", "category": "light", "essential": true },
+    { "id": "fruits", "name": { "en": "Coconut, bananas, betel, fruits", "te": "కొబ్బరికాయ, అరటిపండ్లు, తాంబూలం, పండ్లు" }, "quantity": "assorted", "category": "offering", "essential": true }
+  ],
+  "vidhi": {
+    "sankshipta": {
+      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "duration_minutes": 25,
+      "description": { "en": "A concise Sankranti observance: Surya puja and the boiling-over of fresh pongal." },
+      "steps": [
+        { "order": 1, "title": { "en": "Muggu & Sankalpam", "te": "ముగ్గు & సంకల్పం" }, "instruction": { "en": "Draw the festive muggu at the doorway, bathe, light the lamp and take the Sankranti sankalpa facing the rising sun.", "te": "ద్వారం వద్ద ముగ్గు వేసి, స్నానం చేసి, దీపం వెలిగించి సూర్యునికి అభిముఖంగా సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Surya Namaskaram & Arghya", "te": "సూర్య నమస్కారం & అర్ఘ్యం" }, "instruction": { "en": "Offer arghya (water) to the Sun and chant the Surya mantra.", "te": "సూర్యునికి అర్ఘ్యం సమర్పించి సూర్య మంత్రం జపించండి." }, "mantra": { "sa": "ॐ सूर्याय नमः", "transliteration": "Om Suryaya Namaha", "meaning": { "en": "Salutations to the Sun, giver of life and light." } } },
+        { "order": 3, "title": { "en": "Pongal Nivedana", "te": "పొంగలి నివేదన" }, "instruction": { "en": "Cook fresh sweet pongal, let it joyfully boil over ('pongi'), and offer it to Surya.", "te": "కొత్త బియ్యంతో పొంగలి వండి, పొంగనిచ్చి సూర్యునికి నైవేద్యం సమర్పించండి." } },
+        { "order": 4, "title": { "en": "Til-Gud & Aarti", "te": "నువ్వులు-బెల్లం & హారతి" }, "instruction": { "en": "Offer sesame-jaggery, wave camphor aarti, and share til-gud sweets with the words of goodwill.", "te": "నువ్వులు-బెల్లం సమర్పించి, హారతి ఇచ్చి, నువ్వుల ఉండలు పంచండి." } }
+      ]
+    },
+    "sampurna": {
+      "label": { "en": "Sampurna (Three Days)", "te": "సంపూర్ణ విధి (మూడు రోజులు)" },
+      "duration_minutes": 90,
+      "description": { "en": "The full three-day Telugu Sankranti: Bhogi, Sankranti and Kanuma." },
+      "steps": [
+        { "order": 1, "title": { "en": "Bhogi — Dawn Bonfire", "te": "భోగి మంటలు" }, "instruction": { "en": "On Bhogi (Jan 13), light the pre-dawn bonfire of old wood, discarding the past; children receive bhogi pallu (regi pandlu) blessings in the evening.", "te": "భోగి రోజు (జనవరి 13) తెల్లవారుజామున భోగి మంటలు వేసి, సాయంత్రం పిల్లలపై భోగి పండ్లు పోస్తారు." } },
+        { "order": 2, "title": { "en": "Gruha Alankarana", "te": "గృహ అలంకరణ" }, "instruction": { "en": "Adorn the doorway with a large muggu, gobbemmalu, marigold, mango toran and sugarcane.", "te": "పెద్ద ముగ్గు, గొబ్బెమ్మలు, బంతిపూలు, చెరకుతో ఇంటిని అలంకరించండి." } },
+        { "order": 3, "title": { "en": "Sankranti Sankalpam", "te": "సంక్రాంతి సంకల్పం" }, "instruction": { "en": "On Sankranti (Jan 14), bathe, perform achamana, and take the sankalpa for the Uttarayana punyakalam.", "te": "సంక్రాంతి (జనవరి 14) స్నానం చేసి, ఆచమనం చేసి, ఉత్తరాయణ పుణ్యకాల సంకల్పం చెప్పుకోండి." } },
+        { "order": 4, "title": { "en": "Surya Puja & Arghya", "te": "సూర్య పూజ & అర్ఘ్యం" }, "instruction": { "en": "Worship Surya facing east, offer arghya, and recite the Aditya Hridayam or Surya Ashtottara.", "te": "తూర్పుముఖంగా సూర్య పూజ, అర్ఘ్యం, ఆదిత్య హృదయం / సూర్య అష్టోత్తరం." }, "mantra": { "sa": "ॐ ह्रां ह्रीं ह्रौं सः सूर्याय नमः", "transliteration": "Om Hraam Hreem Hraum Sah Suryaya Namaha", "meaning": { "en": "The Surya beeja mantra, saluting the radiant Sun." } } },
+        { "order": 5, "title": { "en": "Pongal Naivedya", "te": "పొంగలి నైవేద్యం" }, "instruction": { "en": "Cook chakkara pongali in a new pot with the first harvest and offer it to Surya as it boils over.", "te": "కొత్త పాత్రలో చక్కెర పొంగలి వండి, పొంగనిచ్చి సూర్యునికి నైవేద్యం సమర్పించండి." } },
+        { "order": 6, "title": { "en": "Pitru Tarpanam & Daanam", "te": "పితృ తర్పణం & దానం" }, "instruction": { "en": "Remember the ancestors with tarpanam and give sesame, jaggery, rice and blankets in daanam.", "te": "పితృదేవతలకు తర్పణం, నువ్వులు, బెల్లం, బియ్యం దానం చేయండి." } },
+        { "order": 7, "title": { "en": "Haridasu & Gangireddu", "te": "హరిదాసు & గంగిరెద్దులు" }, "instruction": { "en": "Welcome the haridasu (singing mendicant) and the decorated gangireddu (bull), giving alms — a Sankranti blessing at the door.", "te": "హరిదాసును, గంగిరెద్దులను ఆహ్వానించి దానం ఇవ్వండి." } },
+        { "order": 8, "title": { "en": "Kanuma — Cattle Worship", "te": "కనుమ — పశు పూజ" }, "instruction": { "en": "On Kanuma (Jan 15), bathe and honour the cattle that draw the plough, thanking them for the harvest.", "te": "కనుమ (జనవరి 15) పశువులను స్నానం చేయించి, అలంకరించి పూజిస్తారు." } },
+        { "order": 9, "title": { "en": "Mangala Harati & Feast", "te": "మంగళ హారతి & విందు" }, "instruction": { "en": "Offer the camphor aarti, share til-gud and the festive meal, and seek elders' blessings.", "te": "కర్పూర హారతి, నువ్వుల ఉండలు, పండుగ భోజనం పంచి, పెద్దల ఆశీర్వాదం తీసుకోండి." } }
+      ]
+    }
+  },
+  "prasadam": [
+    {
+      "id": "chakkara-pongali",
+      "name": { "en": "Chakkara Pongali (sweet pongal)", "te": "చక్కెర పొంగలి" },
+      "type": "sweet",
+      "serves": "4-6",
+      "ingredients": [
+        { "item": { "en": "New rice & moong dal", "te": "కొత్త బియ్యం, పెసరపప్పు" }, "quantity": "1.5 cups" },
+        { "item": { "en": "Jaggery", "te": "బెల్లం" }, "quantity": "1.5 cups" },
+        { "item": { "en": "Milk, ghee, cardamom, cashews, raisins, edible camphor", "te": "పాలు, నెయ్యి, యాలకులు, జీడిపప్పు, ఎండుద్రాక్ష, పచ్చకర్పూరం" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Cook rice and moong dal with milk and water until very soft; let it boil over as a good omen." },
+        { "en": "Melt jaggery to syrup, strain, and stir into the rice." },
+        { "en": "Add ghee-fried cashews and raisins, cardamom and a pinch of edible camphor; offer warm to Surya." }
+      ],
+      "offering_note": { "en": "The heart of the Sankranti offering — the pot allowed to 'pongi' (overflow) for prosperity." }
+    },
+    {
+      "id": "til-laddu",
+      "name": { "en": "Nuvvula Undalu (sesame-jaggery balls / til-gud)", "te": "నువ్వుల ఉండలు" },
+      "type": "sweet",
+      "serves": "makes ~15",
+      "ingredients": [
+        { "item": { "en": "White sesame (til)", "te": "తెల్ల నువ్వులు" }, "quantity": "1 cup" },
+        { "item": { "en": "Jaggery", "te": "బెల్లం" }, "quantity": "3/4 cup" },
+        { "item": { "en": "Cardamom, ghee", "te": "యాలకులు, నెయ్యి" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Dry-roast sesame till it pops; cool." },
+        { "en": "Melt jaggery to a soft-ball syrup, add sesame and cardamom." },
+        { "en": "Shape into balls while warm; share with words of goodwill." }
+      ],
+      "offering_note": { "en": "Given with the sentiment of sweet words and harmony in the new season." }
+    }
+  ],
+  "primary_mantra": {
+    "sa": "ॐ सूर्याय नमः",
+    "transliteration": "Om Suryaya Namaha",
+    "meaning": { "en": "Salutations to Surya, the Sun, source of life and the harvest." }
+  },
+  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Aditya Hridayam / Sankranti narration." },
+  "source": "Compiled for the Pavitra app; follows the Telugu three-day Sankranti (Bhogi–Sankranti–Kanuma) and Tamil Pongal tradition.",
+  "disclaimer": "Regional and family practices vary. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
+  "created_at": "2026-09-25T00:00:00Z"
+}

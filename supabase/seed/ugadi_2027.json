@@ -1,0 +1,122 @@
+{
+  "id": "ugadi-2027",
+  "slug": "ugadi",
+  "schema_version": 1,
+  "year": 2027,
+  "type": "festival",
+  "name": {
+    "en": "Ugadi (Telugu New Year)",
+    "te": "ఉగాది",
+    "sa": "युगादि"
+  },
+  "deity": {
+    "en": "Brahma the creator & the presiding deities of the new samvatsara (Plavanga)",
+    "te": "బ్రహ్మదేవుడు, నూతన సంవత్సర అధిదేవతలు",
+    "sa": "श्री ब्रह्मा / संवत्सराधिदेवता"
+  },
+  "observed_on": {
+    "date": "2027-04-07",
+    "weekday": "Wednesday",
+    "masa": "Chaitra",
+    "paksha": "Shukla",
+    "tithi": "Pratipada",
+    "samvatsara": "Plavanga",
+    "rule": "Chaitra Shukla Pratipada — the first sunrise of the lunar new year. Begins the Plavanga nama samvatsara. Also Gudi Padwa (Maharashtra) and the Kannada New Year.",
+    "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946.",
+    "note": "The Telugu & Kannada New Year. Marked by abhyanga snanam, the six-taste Ugadi pachadi, and the Panchanga Sravanam (hearing the year's almanac)."
+  },
+  "significance": {
+    "en": "Ugadi ('the beginning of an age') is the Telugu and Kannada lunar New Year on Chaitra Shukla Pratipada — the day tradition holds Brahma began creation. Families take an oil bath, decorate doorways with mango-leaf toranas, and eat Ugadi pachadi whose six tastes (sweet, sour, salt, bitter, tang, heat) accept the mixed experiences of the year ahead. The Panchanga Sravanam foretells the fortunes of the new samvatsara.",
+    "te": "ఉగాది తెలుగు, కన్నడ నూతన సంవత్సర ఆరంభం — చైత్ర శుద్ధ పాడ్యమి. బ్రహ్మదేవుడు సృష్టిని ప్రారంభించిన రోజని విశ్వాసం. అభ్యంగన స్నానం, మామిడాకు తోరణాలు, ఆరు రుచుల ఉగాది పచ్చడి, పంచాంగ శ్రవణం ప్రధానం.",
+    "sa": "चैत्रशुक्लप्रतिपदि ब्रह्मणा सृष्ट्यारम्भः इति नववर्षारम्भः।"
+  },
+  "regions": ["Andhra Pradesh", "Telangana", "Karnataka"],
+  "languages": ["en", "te", "sa"],
+  "samagri": [
+    { "id": "mango-toranam", "name": { "en": "Fresh mango-leaf toranam & marigold for the doorway", "te": "మామిడాకు తోరణం, బంతిపూలు" }, "quantity": "as needed", "category": "decoration", "essential": true },
+    { "id": "pachadi-items", "name": { "en": "Ugadi pachadi items: jaggery, neem flowers, raw mango, tamarind, salt, green chilli", "te": "బెల్లం, వేప పువ్వు, మామిడి, చింతపండు, ఉప్పు, మిరప (ఉగాది పచ్చడి)" }, "quantity": "1 set", "category": "naivedya", "essential": true },
+    { "id": "sesame-oil", "name": { "en": "Sesame/gingelly oil for the abhyanga snanam", "te": "నువ్వుల నూనె (అభ్యంగన స్నానం)" }, "quantity": "as needed", "category": "bath", "essential": true },
+    { "id": "panchangam", "name": { "en": "New Panchangam (almanac) for the Plavanga year", "te": "కొత్త పంచాంగం (ప్లవంగ)" }, "quantity": "1", "category": "parayana", "essential": true },
+    { "id": "new-clothes", "name": { "en": "New clothes", "te": "కొత్త బట్టలు" }, "quantity": "as available", "category": "auspicious", "essential": false },
+    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, akshata, sandalwood", "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం" }, "quantity": "1 set", "category": "auspicious", "essential": true },
+    { "id": "flowers", "name": { "en": "Flowers & garlands", "te": "పూలు, మాలలు" }, "quantity": "assorted", "category": "flowers", "essential": true },
+    { "id": "lamp", "name": { "en": "Oil lamp, camphor, incense", "te": "దీపం, కర్పూరం, అగరవత్తులు" }, "quantity": "1 set", "category": "light", "essential": true },
+    { "id": "coconut-fruits", "name": { "en": "Coconut, bananas, jaggery, betel", "te": "కొబ్బరికాయ, అరటిపండ్లు, బెల్లం, తాంబూలం" }, "quantity": "assorted", "category": "offering", "essential": true }
+  ],
+  "vidhi": {
+    "sankshipta": {
+      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "duration_minutes": 30,
+      "description": { "en": "A concise Ugadi observance: oil bath, doorway toranam, puja, pachadi and panchangam." },
+      "steps": [
+        { "order": 1, "title": { "en": "Abhyanga Snanam", "te": "అభ్యంగన స్నానం" }, "instruction": { "en": "Before sunrise, apply sesame oil and take the ceremonial oil bath, then wear new clothes.", "te": "సూర్యోదయానికి ముందు నువ్వుల నూనె రాసుకొని అభ్యంగన స్నానం చేసి కొత్త బట్టలు ధరించండి." } },
+        { "order": 2, "title": { "en": "Toranam & Sankalpam", "te": "తోరణం & సంకల్పం" }, "instruction": { "en": "Decorate the doorway with mango-leaf toranam, draw a muggu, light the lamp and take the new-year sankalpa.", "te": "మామిడాకు తోరణం కట్టి, ముగ్గు వేసి, దీపం వెలిగించి సంకల్పం చెప్పుకోండి." } },
+        { "order": 3, "title": { "en": "Ganapati & Ishta Devata Puja", "te": "గణపతి & ఇష్టదేవతా పూజ" }, "instruction": { "en": "Worship Ganapati and your ishta devata for a prosperous year.", "te": "గణపతి, ఇష్టదేవతా పూజ చేయండి." }, "mantra": { "sa": "ॐ श्री गुरुभ्यो नमः । ॐ गं गणपतये नमः", "transliteration": "Om Sri Gurubhyo Namaha | Om Gam Ganapataye Namaha", "meaning": { "en": "Salutations to the guru and to Ganapati, sought at every beginning." } } },
+        { "order": 4, "title": { "en": "Ugadi Pachadi Naivedya", "te": "ఉగాది పచ్చడి నైవేద్యం" }, "instruction": { "en": "Prepare and offer the six-taste Ugadi pachadi, then partake of it as the first food of the year.", "te": "ఆరు రుచుల ఉగాది పచ్చడి తయారు చేసి నైవేద్యం సమర్పించి స్వీకరించండి." }, "detailsRef": "ugadi_shadruchi" },
+        { "order": 5, "title": { "en": "Panchanga Sravanam", "te": "పంచాంగ శ్రవణం" }, "instruction": { "en": "Read or hear the new Plavanga panchangam — the year's forecast for each rashi.", "te": "కొత్త ప్లవంగ పంచాంగం విని, రాశి ఫలాలు తెలుసుకోండి." } }
+      ]
+    },
+    "sampurna": {
+      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "duration_minutes": 75,
+      "description": { "en": "The full new-year observance with puja, pachadi, panchanga sravanam and temple visit." },
+      "steps": [
+        { "order": 1, "title": { "en": "Abhyanga Snanam", "te": "అభ్యంగన స్నానం" }, "instruction": { "en": "Rise before dawn, apply sesame oil, take the oil bath and wear new clothes.", "te": "సూర్యోదయానికి ముందు నువ్వుల నూనెతో అభ్యంగన స్నానం, కొత్త బట్టలు." } },
+        { "order": 2, "title": { "en": "Gruha Alankarana", "te": "గృహ అలంకరణ" }, "instruction": { "en": "Adorn the home and doorway with mango-leaf torana, marigold and a fresh muggu (rangoli).", "te": "మామిడాకు తోరణం, బంతిపూలు, ముగ్గుతో ఇంటిని అలంకరించండి." } },
+        { "order": 3, "title": { "en": "Sankalpam", "te": "సంకల్పం" }, "instruction": { "en": "Light the lamp, perform achamana and take the sankalpa naming the new Plavanga samvatsara.", "te": "దీపం వెలిగించి, ఆచమనం చేసి, ప్లవంగ నామ సంవత్సర సంకల్పం చెప్పుకోండి." } },
+        { "order": 4, "title": { "en": "Ganapati Puja", "te": "గణపతి పూజ" }, "instruction": { "en": "Worship Ganapati first to remove obstacles for the year.", "te": "విఘ్నాలు తొలగించమని గణపతి పూజ చేయండి." } },
+        { "order": 5, "title": { "en": "Ishta Devata Shodashopachara", "te": "ఇష్టదేవతా షోడశోపచార పూజ" }, "instruction": { "en": "Perform the sixteen-service worship of your ishta devata / family deity.", "te": "ఇష్టదేవతకు షోడశోపచార పూజ చేయండి." } },
+        { "order": 6, "title": { "en": "Ugadi Pachadi Samarpana", "te": "ఉగాది పచ్చడి సమర్పణ" }, "instruction": { "en": "Offer the six-taste pachadi, symbolising acceptance of joy, sorrow and all of life's flavours in the year to come.", "te": "జీవితంలోని అన్ని అనుభవాలకు ప్రతీకగా ఆరు రుచుల పచ్చడిని నైవేద్యం సమర్పించండి." }, "detailsRef": "ugadi_shadruchi" },
+        { "order": 7, "title": { "en": "Panchanga Sravanam", "te": "పంచాంగ శ్రవణం" }, "instruction": { "en": "Read or listen to the new panchangam — the samvatsara phalam and rashi forecasts for the family.", "te": "కొత్త పంచాంగం చదివి / విని, సంవత్సర ఫలం, రాశి ఫలాలు తెలుసుకోండి." } },
+        { "order": 8, "title": { "en": "Naivedya & Mangala Harati", "te": "నైవేద్యం & మంగళ హారతి" }, "instruction": { "en": "Offer bobbatlu/pulihora and fruits, and wave the camphor aarti.", "te": "బొబ్బట్లు / పులిహోర, పండ్లు నైవేద్యం, కర్పూర హారతి." } },
+        { "order": 9, "title": { "en": "Temple Visit & Blessings", "te": "దేవాలయ దర్శనం & ఆశీర్వాదం" }, "instruction": { "en": "Visit the temple, seek elders' blessings and share the pachadi and festive meal.", "te": "దేవాలయ దర్శనం చేసి, పెద్దల ఆశీర్వాదం తీసుకొని పచ్చడి, భోజనం పంచండి." } }
+      ]
+    }
+  },
+  "prasadam": [
+    {
+      "id": "ugadi-pachadi",
+      "name": { "en": "Ugadi Pachadi (six-taste chutney)", "te": "ఉగాది పచ్చడి" },
+      "type": "ritual-food",
+      "serves": "family",
+      "ingredients": [
+        { "item": { "en": "Jaggery (sweet)", "te": "బెల్లం (తీపి)" }, "quantity": "2 tbsp" },
+        { "item": { "en": "Neem flowers (bitter)", "te": "వేప పువ్వు (చేదు)" }, "quantity": "1 tsp" },
+        { "item": { "en": "Raw mango (tang)", "te": "పచ్చి మామిడి (వగరు)" }, "quantity": "2 tbsp" },
+        { "item": { "en": "Tamarind (sour)", "te": "చింతపండు (పుల్లని)" }, "quantity": "1 tbsp pulp" },
+        { "item": { "en": "Salt & green chilli/pepper (salt & heat)", "te": "ఉప్పు, పచ్చిమిర్చి (ఉప్పు, కారం)" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Dissolve jaggery and tamarind pulp in a little water." },
+        { "en": "Add chopped raw mango, neem flowers, salt and a little chilli/pepper." },
+        { "en": "Mix all six tastes; offer as naivedya and share a spoon with every family member." }
+      ],
+      "offering_note": { "en": "The six tastes teach acceptance of all of the year's experiences." }
+    },
+    {
+      "id": "bobbatlu",
+      "name": { "en": "Bobbatlu / Puran Poli (jaggery-lentil flatbread)", "te": "బొబ్బట్లు / పోళీలు" },
+      "type": "sweet",
+      "serves": "makes ~10",
+      "ingredients": [
+        { "item": { "en": "Chana dal, jaggery, cardamom (filling)", "te": "శనగపప్పు, బెల్లం, యాలకులు" }, "quantity": "1 set" },
+        { "item": { "en": "Maida/wheat flour, oil, ghee (dough)", "te": "మైదా/గోధుమపిండి, నూనె, నెయ్యి" }, "quantity": "1 set" }
+      ],
+      "steps": [
+        { "en": "Cook chana dal soft, grind with jaggery and cardamom into a firm puran." },
+        { "en": "Make a soft, oil-rested dough; stuff with puran and roll thin." },
+        { "en": "Roast on a tava with ghee till golden; offer warm." }
+      ],
+      "offering_note": { "en": "The festive Ugadi sweet served after the pachadi." }
+    }
+  ],
+  "primary_mantra": {
+    "sa": "ॐ श्री गुरुभ्यो नमः",
+    "transliteration": "Om Sri Gurubhyo Namaha",
+    "meaning": { "en": "Salutations to the gurus and the divine — invoked at the start of the new year." }
+  },
+  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Ugadi panchanga sravanam narration." },
+  "source": "Compiled for the Pavitra app; follows the standard Telugu Ugadi tradition (Chaitra Shukla Pratipada, Plavanga samvatsara).",
+  "disclaimer": "Regional and family practices vary. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
+  "created_at": "2026-09-25T00:00:00Z"
+}

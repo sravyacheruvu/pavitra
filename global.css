@@ -1,0 +1,7 @@
+/* Veranda typography — Playfair Display (serif titles) + Plus Jakarta Sans
+   (body). Loaded on web; native builds fall back to Georgia / system sans. */
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

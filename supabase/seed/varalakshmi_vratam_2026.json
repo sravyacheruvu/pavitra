@@ -1,0 +1,184 @@
+{
+  "id": "varalakshmi-vratam-2026",
+  "slug": "varalakshmi-vratam",
+  "schema_version": 1,
+  "year": 2026,
+  "type": "vratam",
+  "name": {
+    "en": "Varalakshmi Vratam",
+    "te": "వరలక్ష్మీ వ్రతం",
+    "sa": "वरलक्ष्मी व्रतम्"
+  },
+  "deity": {
+    "en": "Goddess Varalakshmi (a form of Mahalakshmi)",
+    "te": "వరలక్ష్మీ దేవి (మహాలక్ష్మి స్వరూపం)",
+    "sa": "श्री वरलक्ष्मी"
+  },
+  "observed_on": {
+    "date": "2026-08-21",
+    "weekday": "Friday",
+    "masa": "Shravana",
+    "paksha": "Shukla",
+    "tithi": "Navami",
+    "rule": "First Friday before Shravana Purnima, per the South-Indian (Amanta) reckoning.",
+    "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946",
+    "tradition": "Telugu / Tamil / Kannada",
+    "regional_variants": [
+      {
+        "date": "2026-08-21",
+        "weekday": "Friday",
+        "primary": true,
+        "traditions": ["Telugu (Andhra Pradesh, Telangana)", "Tamil", "Kannada"],
+        "basis": "First Friday of Shravana Shukla paksha before Purnima."
+      },
+      {
+        "date": "2026-08-28",
+        "weekday": "Friday",
+        "primary": false,
+        "traditions": ["North Indian and several other regional panchangs"],
+        "basis": "Friday on which Shravana Purnima prevails at sunrise; Purnima tithi ends 09:48 IST on 28 Aug 2026."
+      }
+    ],
+    "note": "Pavitra follows the South-Indian reckoning (21 Aug 2026). The 28 Aug date is valid in other traditions; families are advised to follow their local panchang."
+  },
+  "significance": {
+    "en": "Varalakshmi Vratam is observed by married women (sumangalis) to invoke Goddess Lakshmi for the wellbeing, prosperity, health and longevity of their family. Worshipping Varalakshmi is said to equal worshipping Ashta Lakshmi — the eight forms of wealth: prosperity, grains, courage, progeny, success, knowledge, strength and beauty.",
+    "te": "వరలక్ష్మీ వ్రతమును ముత్తైదువులు తమ కుటుంబ శ్రేయస్సు, ఆరోగ్యం, ఐశ్వర్యం, దీర్ఘాయువు కోసం ఆచరిస్తారు. వరలక్ష్మీ పూజ అష్టలక్ష్ముల ఆరాధనతో సమానమని విశ్వాసం.",
+    "sa": "अष्टलक्ष्मी स्वरूपायाः वरलक्ष्म्याः आराधनं कुटुम्बस्य ऐश्वर्य-आरोग्य-सौभाग्य-दीर्घायुः प्रदायकम्।"
+  },
+  "regions": ["Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu", "Maharashtra"],
+  "languages": ["en", "te", "sa"],
+  "samagri": [
+    { "id": "kalasham", "name": { "en": "Kalasham (silver/brass/clay pot)", "te": "కలశం" }, "quantity": "1", "category": "vessel", "essential": true, "notes": { "en": "Represents the seat of the Goddess." } },
+    { "id": "rice", "name": { "en": "Raw rice (akshata)", "te": "బియ్యం / అక్షతలు" }, "quantity": "1 kg", "category": "grain", "essential": true },
+    { "id": "coconut", "name": { "en": "Coconut", "te": "కొబ్బరికాయ" }, "quantity": "1-2", "category": "fruit", "essential": true },
+    { "id": "mango-leaves", "name": { "en": "Fresh mango leaves", "te": "మామిడి ఆకులు" }, "quantity": "5-7", "category": "decor", "essential": true, "notes": { "en": "Arranged on the kalasham rim." } },
+    { "id": "turmeric", "name": { "en": "Turmeric (pasupu)", "te": "పసుపు" }, "quantity": "50 g", "category": "auspicious", "essential": true, "notes": { "en": "Used to make the Gauri/Lakshmi image and for the raksha thread." } },
+    { "id": "kumkum", "name": { "en": "Kumkum", "te": "కుంకుమ" }, "quantity": "50 g", "category": "auspicious", "essential": true },
+    { "id": "lakshmi-face", "name": { "en": "Lakshmi face / idol (mukkoti or metal face)", "te": "లక్ష్మీ ముఖం / విగ్రహం" }, "quantity": "1", "category": "idol", "essential": true, "notes": { "en": "Fixed on the kalasham and decorated as the Goddess." } },
+    { "id": "new-cloth", "name": { "en": "New blouse piece / saree for the Goddess", "te": "కొత్త రవికె / చీర" }, "quantity": "1", "category": "vastra", "essential": true },
+    { "id": "toranam", "name": { "en": "Nine-thread sacred yarn (toranam / raksha)", "te": "తోరణం / రక్ష దారం" }, "quantity": "as needed", "category": "thread", "essential": true, "notes": { "en": "Nine threads with nine knots, turmeric-smeared; tied on the wrist after puja." } },
+    { "id": "flowers", "name": { "en": "Flowers & garland (lotus, jasmine, marigold)", "te": "పూలు, దండ (తామర, మల్లె, బంతి)" }, "quantity": "assorted", "category": "flowers", "essential": true },
+    { "id": "betel", "name": { "en": "Betel leaves & areca nuts (tamalapaku, vakka)", "te": "తమలపాకులు, వక్కలు" }, "quantity": "12 leaves, 12 nuts", "category": "offering", "essential": true },
+    { "id": "fruits", "name": { "en": "Assorted fruits", "te": "పండ్లు" }, "quantity": "assorted", "category": "offering", "essential": true },
+    { "id": "jaggery", "name": { "en": "Jaggery", "te": "బెల్లం" }, "quantity": "250 g", "category": "offering", "essential": false },
+    { "id": "navadhanya", "name": { "en": "Nine grains (navadhanyalu)", "te": "నవధాన్యాలు" }, "quantity": "1 set", "category": "grain", "essential": false },
+    { "id": "lamp", "name": { "en": "Oil/ghee lamp with cotton wicks", "te": "దీపం, నెయ్యి, వత్తులు" }, "quantity": "2", "category": "light", "essential": true },
+    { "id": "camphor", "name": { "en": "Camphor", "te": "కర్పూరం" }, "quantity": "1 pack", "category": "aarti", "essential": true },
+    { "id": "incense", "name": { "en": "Incense sticks (agarbatti / sambrani)", "te": "అగరవత్తులు / సాంబ్రాణి" }, "quantity": "1 pack", "category": "aarti", "essential": true },
+    { "id": "bangles", "name": { "en": "Glass bangles, mirror, comb (sowbhagya items)", "te": "గాజులు, అద్దం, దువ్వెన" }, "quantity": "1 set", "category": "sowbhagya", "essential": false },
+    { "id": "coins", "name": { "en": "Coins / small gold ornament for the kalasham", "te": "నాణేలు / బంగారం" }, "quantity": "as available", "category": "wealth", "essential": false },
+    { "id": "tambulam", "name": { "en": "Tambulam trays for sumangalis (blouse piece, turmeric, kumkum, fruit, dakshina)", "te": "ముత్తైదువులకు తాంబూలం" }, "quantity": "per guest", "category": "dana", "essential": false }
+  ],
+  "vidhi": {
+    "sankshipta": {
+      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "duration_minutes": 30,
+      "description": { "en": "A condensed procedure for those with limited time, preserving the essential sequence." },
+      "steps": [
+        { "order": 1, "title": { "en": "Sankalpam", "te": "సంకల్పం" }, "instruction": { "en": "Bathe, wear clean clothes, sit facing east before the decorated kalasham, take water in the right palm and resolve to perform the Varalakshmi Vratam.", "te": "స్నానం చేసి, శుభ్రమైన వస్త్రాలు ధరించి, తూర్పు ముఖంగా కూర్చొని సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Kalasha Sthapana", "te": "కలశ స్థాపన" }, "instruction": { "en": "Fill the kalasham with rice/water, place betel, coin and coconut on top, fix the Lakshmi face, and adorn it with turmeric, kumkum, cloth and flowers.", "te": "కలశంలో బియ్యం/నీరు నింపి, తమలపాకు, నాణెం, కొబ్బరికాయ ఉంచి, లక్ష్మీ ముఖం అమర్చి అలంకరించండి." } },
+        { "order": 3, "title": { "en": "Vighneshwara Smarana", "te": "విఘ్నేశ్వర స్మరణ" }, "instruction": { "en": "Remember Lord Ganesha with a turmeric pillari and offer akshata to remove obstacles.", "te": "పసుపు గణపతిని పూజించి అక్షతలు సమర్పించండి." }, "mantra": { "sa": "ॐ गं गणपतये नमः", "transliteration": "Om Gam Ganapataye Namaha", "meaning": { "en": "Salutations to Lord Ganesha." } } },
+        { "order": 4, "title": { "en": "Varalakshmi Avahana", "te": "వరలక్ష్మీ ఆవాహన" }, "instruction": { "en": "Invoke Goddess Varalakshmi into the kalasham with the dhyana sloka and offer flowers.", "te": "ధ్యాన శ్లోకంతో వరలక్ష్మీ దేవిని కలశంలో ఆవాహన చేసి పూలు సమర్పించండి." }, "mantra": { "sa": "पद्मासने पद्मकरे सर्वलोकैकपूजिते । नारायणप्रिये देवि सुप्रीता भव सर्वदा ॥", "transliteration": "Padmasane padmakare sarvalokaika-pujite | Narayanapriye devi suprita bhava sarvada ||", "meaning": { "en": "O Goddess seated on the lotus, lotus in hand, worshipped by all worlds, beloved of Narayana, be ever pleased with me." } } },
+        { "order": 5, "title": { "en": "Pancha Upachara Puja", "te": "పంచ ఉపచార పూజ" }, "instruction": { "en": "Offer the five services — gandha (sandal), pushpa (flowers), dhupa (incense), deepa (lamp) and naivedya (food) — reciting Om Mahalakshmyai Namaha.", "te": "గంధం, పుష్పం, ధూపం, దీపం, నైవేద్యం అనే పంచోపచారాలు సమర్పించండి." }, "mantra": { "sa": "ॐ महालक्ष्म्यै नमः", "transliteration": "Om Mahalakshmyai Namaha", "meaning": { "en": "Salutations to Mahalakshmi." } } },
+        { "order": 6, "title": { "en": "Raksha / Toranam", "te": "రక్ష / తోరణం" }, "instruction": { "en": "Place the nine-knot turmeric thread before the Goddess, worship it, and tie it on the right wrist.", "te": "తొమ్మిది ముడుల తోరణాన్ని దేవి ముందు పూజించి కుడి చేతికి కట్టుకోండి." } },
+        { "order": 7, "title": { "en": "Harati & Katha", "te": "హారతి & కథ" }, "instruction": { "en": "Read a short form of the Vrata Katha, offer camphor aarti, and distribute prasadam.", "te": "సంక్షిప్త వ్రత కథ చదివి, కర్పూర హారతి ఇచ్చి, ప్రసాదం పంచండి." } }
+      ]
+    },
+    "sampurna": {
+      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "duration_minutes": 90,
+      "description": { "en": "The complete traditional procedure with shodashopachara (sixteen services) and ashtottara." },
+      "steps": [
+        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean the puja space, draw a muggu/rangoli, perform achamana and pranayama, then take the sankalpa naming the tithi, place and intent of the vratam.", "te": "పూజా స్థలం శుభ్రపరచి, ముగ్గు వేసి, ఆచమనం చేసి, తిథి-స్థలం-సంకల్పం చెప్పుకోండి." } },
+        { "order": 2, "title": { "en": "Kalasha Sthapana & Alankarana", "te": "కలశ స్థాపన & అలంకరణ" }, "instruction": { "en": "Set the kalasham on a bed of rice over a turmeric-drawn lotus, fill with water, gandha, akshata, coin and a small gold item; arrange mango leaves and coconut; fix and decorate the Lakshmi face with saree, jewellery and flowers.", "te": "బియ్యం మీద కలశం ఉంచి, నీరు-గంధం-అక్షతలు-నాణెం-బంగారం వేసి, మామిడాకులు-కొబ్బరికాయ అమర్చి, లక్ష్మీ ముఖాన్ని చీర, ఆభరణాలు, పూలతో అలంకరించండి." } },
+        { "order": 3, "title": { "en": "Vighneshwara Puja", "te": "విఘ్నేశ్వర పూజ" }, "instruction": { "en": "Worship a turmeric Ganesha first with 16 short upacharas to ensure an obstacle-free vratam.", "te": "ముందుగా పసుపు గణపతిని షోడశోపచారాలతో పూజించండి." }, "mantra": { "sa": "ॐ गं गणपतये नमः", "transliteration": "Om Gam Ganapataye Namaha", "meaning": { "en": "Salutations to Lord Ganesha." } } },
+        { "order": 4, "title": { "en": "Kalasha / Varuna Puja", "te": "కలశ / వరుణ పూజ" }, "instruction": { "en": "Invoke the sacred waters and all tirthas into the kalasham before invoking the Goddess.", "te": "కలశంలో సర్వ తీర్థాలను, వరుణుని ఆవాహన చేయండి." } },
+        { "order": 5, "title": { "en": "Varalakshmi Dhyana & Avahana", "te": "వరలక్ష్మీ ధ్యానం & ఆవాహన" }, "instruction": { "en": "Meditate on Varalakshmi and invoke her presence into the kalasham with the dhyana sloka.", "te": "వరలక్ష్మీ దేవిని ధ్యానించి కలశంలో ఆవాహన చేయండి." }, "mantra": { "sa": "श्रीं ह्रीं क्लीं ऐं वरलक्ष्म्यै नमः", "transliteration": "Shreem Hreem Kleem Aim Varalakshmyai Namaha", "meaning": { "en": "Salutations to Varalakshmi with the seed-syllables of prosperity, wellbeing and grace." } }, "detailsRef": "ashtalakshmi" },
+        { "order": 6, "title": { "en": "Shodashopachara Puja", "te": "షోడశోపచార పూజ" }, "instruction": { "en": "Offer the sixteen services in order: avahana, asana, padya, arghya, achamaniya, snana, vastra, yajnopavita, gandha, pushpa, dhupa, deepa, naivedya, tambula, neerajana and mantrapushpa.", "te": "ఆవాహన, ఆసనం, పాద్యం, అర్ఘ్యం, ఆచమనీయం, స్నానం, వస్త్రం, యజ్ఞోపవీతం, గంధం, పుష్పం, ధూపం, దీపం, నైవేద్యం, తాంబూలం, నీరాజనం, మంత్రపుష్పం సమర్పించండి." } },
+        { "order": 7, "title": { "en": "Ashtottara Shatanamavali", "te": "అష్టోత్తర శతనామావళి" }, "instruction": { "en": "Recite the 108 names of Lakshmi, offering kumkum or flowers at each name.", "te": "లక్ష్మీ అష్టోత్తర శతనామాలతో కుంకుమ/పూలతో అర్చన చేయండి." }, "mantra": { "sa": "ॐ श्रीं ह्रीं श्रीं कमले कमलालये प्रसीद प्रसीद श्रीं ह्रीं श्रीं ॐ महालक्ष्म्यै नमः", "transliteration": "Om Shreem Hreem Shreem Kamale Kamalalaye Praseeda Praseeda Shreem Hreem Shreem Om Mahalakshmyai Namaha", "meaning": { "en": "O Lakshmi dwelling in the lotus, be gracious and bestow prosperity." } }, "detailsRef": "lakshmi_ashtottara" },
+        { "order": 8, "title": { "en": "Toranam Puja & Raksha Bandhana", "te": "తోరణ పూజ & రక్ష బంధనం" }, "instruction": { "en": "Worship the nine-thread, nine-knot toranam at the Goddess's feet and tie it on the right wrist (women) invoking her protection for the year.", "te": "తొమ్మిది ముడుల తోరణాన్ని దేవి పాదాల వద్ద పూజించి కుడి చేతికి కట్టుకోండి." } },
+        { "order": 9, "title": { "en": "Vrata Katha Parayana", "te": "వ్రత కథ పారాయణ" }, "instruction": { "en": "Read the Varalakshmi Vrata Katha (the story of Charumati of Kundinapura, to whom the Goddess appeared in a dream), holding akshata and offering it at the end.", "te": "కుండిననగర చారుమతి కథ (వరలక్ష్మీ వ్రత కథ) చదివి, అక్షతలు సమర్పించండి." } },
+        { "order": 10, "title": { "en": "Mangala Harati", "te": "మంగళ హారతి" }, "instruction": { "en": "Offer camphor aarti with the mangala harati songs, ringing the bell.", "te": "కర్పూర మంగళ హారతి ఇవ్వండి." } },
+        { "order": 11, "title": { "en": "Tambula / Vayana Dana", "te": "తాంబూలం / వాయనం దానం" }, "instruction": { "en": "Invite sumangalis, offer them tambulam and vayanam (blouse piece, turmeric, kumkum, fruit and dakshina) and seek their blessings.", "te": "ముత్తైదువులకు తాంబూలం, వాయనం సమర్పించి ఆశీర్వాదం తీసుకోండి." } },
+        { "order": 12, "title": { "en": "Udvasana & Prasada Vitarana", "te": "ఉద్వాసన & ప్రసాద వితరణ" }, "instruction": { "en": "Conclude by seeking forgiveness for errors, gently request the Goddess to reside in the home, and distribute prasadam. The kalasham water is sprinkled in the house the next day.", "te": "క్షమాపణ చెప్పి, ఉద్వాసన చేసి, ప్రసాదం పంచండి. మరుసటి రోజు కలశ జలాన్ని ఇంట్లో చల్లండి." } }
+      ]
+    }
+  },
+  "prasadam": [
+    {
+      "id": "pulihora",
+      "name": { "en": "Pulihora (Tamarind Rice)", "te": "పులిహోర" },
+      "type": "savory",
+      "serves": "4-6",
+      "ingredients": [
+        { "item": { "en": "Cooked rice", "te": "అన్నం" }, "quantity": "3 cups" },
+        { "item": { "en": "Tamarind (soaked)", "te": "చింతపండు" }, "quantity": "lemon-sized" },
+        { "item": { "en": "Peanuts", "te": "వేరుశనగలు" }, "quantity": "3 tbsp" },
+        { "item": { "en": "Green chillies", "te": "పచ్చిమిర్చి" }, "quantity": "4" },
+        { "item": { "en": "Turmeric", "te": "పసుపు" }, "quantity": "1/2 tsp" },
+        { "item": { "en": "Mustard, chana & urad dal, curry leaves, dry red chilli, hing, sesame oil", "te": "ఆవాలు, శనగపప్పు, మినప్పప్పు, కరివేపాకు, ఎండుమిర్చి, ఇంగువ, నువ్వుల నూనె" }, "quantity": "for tempering" }
+      ],
+      "steps": [
+        { "en": "Extract thick tamarind pulp and cook it with turmeric and salt until it thickens into a paste (pulusu)." },
+        { "en": "Heat sesame oil; temper mustard, dals, peanuts, curry leaves, green and red chillies and hing." },
+        { "en": "Add the tamarind paste to the tempering and simmer 3-4 minutes." },
+        { "en": "Gently mix the paste into the cooled cooked rice; rest 15 minutes so flavours settle." }
+      ],
+      "offering_note": { "en": "Offered as the primary naivedya to Varalakshmi." }
+    },
+    {
+      "id": "payasam",
+      "name": { "en": "Semiya Payasam (Vermicelli Kheer)", "te": "సేమియా పాయసం" },
+      "type": "sweet",
+      "serves": "4-6",
+      "ingredients": [
+        { "item": { "en": "Vermicelli", "te": "సేమియా" }, "quantity": "1 cup" },
+        { "item": { "en": "Milk", "te": "పాలు" }, "quantity": "1 litre" },
+        { "item": { "en": "Sugar", "te": "చక్కెర" }, "quantity": "3/4 cup" },
+        { "item": { "en": "Ghee", "te": "నెయ్యి" }, "quantity": "2 tbsp" },
+        { "item": { "en": "Cashews, raisins, cardamom", "te": "జీడిపప్పు, ఎండుద్రాక్ష, యాలకులు" }, "quantity": "to taste" }
+      ],
+      "steps": [
+        { "en": "Roast vermicelli in ghee until golden; fry cashews and raisins separately." },
+        { "en": "Boil the milk, add the roasted vermicelli and cook until soft." },
+        { "en": "Add sugar and cardamom; simmer until slightly thick." },
+        { "en": "Garnish with the fried cashews and raisins." }
+      ],
+      "offering_note": { "en": "Sweet naivedya symbolising abundance." }
+    },
+    {
+      "id": "kudumulu",
+      "name": { "en": "Undrallu / Kudumulu (Steamed Rice Dumplings)", "te": "ఉండ్రాళ్లు / కుడుములు" },
+      "type": "steamed",
+      "serves": "4",
+      "ingredients": [
+        { "item": { "en": "Rice rava (coarse)", "te": "బియ్యం రవ్వ" }, "quantity": "1 cup" },
+        { "item": { "en": "Water", "te": "నీరు" }, "quantity": "2 cups" },
+        { "item": { "en": "Chana dal (soaked)", "te": "శనగపప్పు" }, "quantity": "2 tbsp" },
+        { "item": { "en": "Mustard, cumin, curry leaves, green chilli, ghee, salt", "te": "ఆవాలు, జీలకర్ర, కరివేపాకు, పచ్చిమిర్చి, నెయ్యి, ఉప్పు" }, "quantity": "for tempering" }
+      ],
+      "steps": [
+        { "en": "Temper mustard, cumin, chilli, curry leaves and soaked chana dal in ghee." },
+        { "en": "Add water and salt; when it boils add the rice rava and stir to a soft dough; cover and rest." },
+        { "en": "Shape into small lemon-sized balls (undrallu)." },
+        { "en": "Steam the dumplings 10-12 minutes until firm." }
+      ],
+      "offering_note": { "en": "A traditional Shravana-month steamed offering." }
+    }
+  ],
+  "primary_mantra": {
+    "sa": "ॐ श्रीं ह्रीं श्रीं कमले कमलालये प्रसीद प्रसीद श्रीं ह्रीं श्रीं ॐ महालक्ष्म्यै नमः",
+    "transliteration": "Om Shreem Hreem Shreem Kamale Kamalalaye Praseeda Praseeda Shreem Hreem Shreem Om Mahalakshmyai Namaha",
+    "meaning": { "en": "O Lakshmi who dwells in the lotus, be gracious and bestow prosperity and auspiciousness." }
+  },
+  "audio": {
+    "katha_track_id": null,
+    "narration_language": "te",
+    "duration_seconds": null,
+    "note": "Populate with a Supabase Storage path once the Vrata Katha narration is uploaded."
+  },
+  "source": "Compiled for the Pavitra app; procedure follows the standard South-Indian (Amanta) Shravana Shukla tradition.",
+  "disclaimer": "Regional families vary in the exact sequence and samagri. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
+  "created_at": "2026-08-14T00:00:00Z"
+}
