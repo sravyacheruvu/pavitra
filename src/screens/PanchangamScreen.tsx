@@ -13,7 +13,8 @@ import {
   TimeWindow,
   DayQuality,
 } from "../services/panchang";
-import { useT, StringKey } from "../i18n";
+import { useT, useLang, StringKey } from "../i18n";
+import { toScript } from "../i18n/script";
 
 type Win = { label: string; icon: keyof typeof Ionicons.glyphMap; window: TimeWindow };
 
@@ -34,6 +35,8 @@ const bannerMeta: Record<
 
 export default function PanchangamScreen() {
   const t = useT();
+  const { lang } = useLang();
+  const term = (roman: string, sa?: string) => (lang === "en" || !sa ? roman : toScript(sa, lang));
   const { panchang: p, now, timeZone: tz, location } = usePanchang();
   const w = p.windows;
 
@@ -51,10 +54,10 @@ export default function PanchangamScreen() {
   ];
 
   const lookup = [
-    { label: t("labelTithi"), value: p.tithi.name, ends: p.tithi.end, icon: "contrast" as const, hint: `${p.tithi.paksha} Paksha` },
-    { label: t("labelNakshatra"), value: p.nakshatra.name, ends: p.nakshatra.end, icon: "star" as const, hint: t("lunarMansion") },
-    { label: t("labelYoga"), value: p.yoga.name, ends: p.yoga.end, icon: "sunny" as const, hint: t("alignment") },
-    { label: t("labelKarana"), value: p.karana.name, ends: null as Date | null, icon: "flash" as const, hint: t("halfTithi") },
+    { label: t("labelTithi"), value: term(p.tithi.name, p.tithi.sa), ends: p.tithi.end, icon: "contrast" as const, hint: `${term(p.tithi.paksha, p.tithi.pakshaSa)} Paksha` },
+    { label: t("labelNakshatra"), value: term(p.nakshatra.name, p.nakshatra.sa), ends: p.nakshatra.end, icon: "star" as const, hint: t("lunarMansion") },
+    { label: t("labelYoga"), value: term(p.yoga.name, p.yoga.sa), ends: p.yoga.end, icon: "sunny" as const, hint: t("alignment") },
+    { label: t("labelKarana"), value: term(p.karana.name, p.karana.sa), ends: null as Date | null, icon: "flash" as const, hint: t("halfTithi") },
   ];
 
   const dayKey = useMemo(() => formatMediumDate(now, tz), [now, tz]);
@@ -102,7 +105,7 @@ export default function PanchangamScreen() {
               {t("sevenDayOutlook")}
             </Text>
             <Text className="text-xs font-semibold text-veranda-teakSubtle">
-              {p.tithi.paksha} {p.masa}
+              {term(p.tithi.paksha, p.tithi.pakshaSa)} {term(p.masa, p.masaSa)}
             </Text>
           </View>
           <ScrollView horizontal showsHorizontalScrollIndicator={false} contentContainerStyle={{ gap: 8 }}>

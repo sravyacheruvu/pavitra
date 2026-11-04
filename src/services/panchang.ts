@@ -1,5 +1,6 @@
 import { MhahPanchang } from "mhah-panchang";
 import * as SunCalc from "suncalc";
+import Sanscript from "@indic-transliteration/sanscript";
 import { AppLocation, DEFAULT_LOCATION } from "../config/location";
 
 /**
@@ -15,6 +16,17 @@ import { AppLocation, DEFAULT_LOCATION } from "../config/location";
  */
 
 const mhah = new MhahPanchang();
+
+/** The panchang library returns anga names in Odia script; convert to a neutral
+ * Devanagari source so the UI can transliterate into the reader's own script. */
+function odiaToDev(name: string | undefined): string {
+  if (!name) return "";
+  try {
+    return Sanscript.t(name, "oriya", "devanagari");
+  } catch {
+    return "";
+  }
+}
 
 // ---------- name tables ----------
 
@@ -60,10 +72,104 @@ const SAMVATSARA = [
 /** Sanskrit ritu (season) names, indexed by mhah-panchang's Ritu.ino (0–5). */
 const RITU_SA = ["Vasanta", "Grishma", "Varsha", "Sharad", "Hemanta", "Shishira"];
 
+// ---------- Devanagari sources (transliterated into the reader's script at render) ----------
+
+const TITHI_BASE_DEV = [
+  "प्रतिपदा", "द्वितीया", "तृतीया", "चतुर्थी", "पञ्चमी", "षष्ठी",
+  "सप्तमी", "अष्टमी", "नवमी", "दशमी", "एकादशी", "द्वादशी",
+  "त्रयोदशी", "चतुर्दशी",
+];
+
+const PAKSHA_DEV: Record<string, string> = { Shukla: "शुक्ल", Krishna: "कृष्ण" };
+
+const MASA_DEV: Record<string, string> = {
+  Chaitra: "चैत्र", Vaishakha: "वैशाख", Jyeshtha: "ज्येष्ठ", Ashadha: "आषाढ",
+  Shravana: "श्रावण", Bhadrapada: "भाद्रपद", Ashwina: "आश्विन", Kartika: "कार्तिक",
+  Margashirsha: "मार्गशीर्ष", Pausha: "पौष", Magha: "माघ", Phalguna: "फाल्गुन",
+  // common variant spellings used in the festival seed data
+  Karthika: "कार्तिक", Aswina: "आश्विन", Srabana: "श्रावण",
+};
+
+const RITU_DEV = ["वसन्त", "ग्रीष्म", "वर्षा", "शरद्", "हेमन्त", "शिशिर"];
+
+// The Amanta lunar month, indexed by the Sun's sidereal rashi (ino 0=Mesha…11=Meena)
+// at the month-ending Amavasya. Chaitra ↔ the month whose Amavasya falls with the Sun in Mesha.
+const MASA_BY_RASHI = [
+  "Chaitra", "Vaishakha", "Jyeshtha", "Ashadha", "Shravana", "Bhadrapada",
+  "Ashwina", "Kartika", "Margashirsha", "Pausha", "Magha", "Phalguna",
+];
+const MASA_BY_RASHI_DEV = [
+  "चैत्र", "वैशाख", "ज्येष्ठ", "आषाढ", "श्रावण", "भाद्रपद",
+  "आश्विन", "कार्तिक", "मार्गशीर्ष", "पौष", "माघ", "फाल्गुन",
+];
+
+// 60-year Jovian cycle in Devanagari, aligned index-for-index with SAMVATSARA.
+const SAMVATSARA_DEV = [
+  "प्रभव", "विभव", "शुक्ल", "प्रमोद", "प्रजापति", "आङ्गिरस",
+  "श्रीमुख", "भाव", "युव", "धातृ", "ईश्वर", "बहुधान्य", "प्रमादी",
+  "विक्रम", "वृष", "चित्रभानु", "स्वभानु", "तारण", "पार्थिव", "व्यय",
+  "सर्वजित्", "सर्वधारी", "विरोधी", "विकृति", "खर", "नन्दन",
+  "विजय", "जय", "मन्मथ", "दुर्मुखी", "हेविलम्बी", "विलम्बी", "विकारी",
+  "शार्वरी", "प्लव", "शुभकृत्", "शोभकृत्", "क्रोधी", "विश्वावसु",
+  "पराभव", "प्लवङ्ग", "कीलक", "सौम्य", "साधारण", "विरोधिकृत्",
+  "परिधावी", "प्रमादीच", "आनन्द", "राक्षस", "नल", "पिङ्गल",
+  "कालयुक्त", "सिद्धार्थी", "रौद्री", "दुर्मति", "दुन्दुभि", "रुधिरोद्गारी",
+  "रक्ताक्षी", "क्रोधन", "अक्षय",
+];
+
+/**
+ * Correct Amanta (South-Indian / Telugu) lunar month. The mhah-panchang `Masa`
+ * is keyed to the Sun's current solar month, so near month boundaries it names
+ * the month ahead of the traditional Amanta reckoning (e.g. it calls Ashwayuja
+ * "Kartika"). The Amanta month is instead the one that *ends* at the next
+ * Amavasya, so we walk forward to that new moon and read the Sun's sidereal
+ * rashi there — that rashi names the month. Memoised per civil day.
+ */
+const masaCache = new Map<string, { ino: number; roman: string; dev: string }>();
+function amantaMasa(date: Date, lat: number, lng: number, tz: string): { ino: number; roman: string; dev: string } {
+  const key = new Intl.DateTimeFormat("en-CA", { timeZone: tz, year: "numeric", month: "2-digit", day: "2-digit" }).format(date);
+  const cached = masaCache.get(key);
+  if (cached) return cached;
+  let d = new Date(date);
+  for (let i = 0; i < 32; i++) {
+    const c = mhah.calculate(d);
+    if (c.Tithi?.name_en_IN === "Amavasya") break;
+    d = new Date(d.getTime() + 86400000);
+  }
+  const rashi = mhah.calendar(d, lat, lng).Raasi?.ino;
+  const ino = typeof rashi === "number" && rashi >= 0 && rashi < 12 ? rashi : -1;
+  const out =
+    ino >= 0
+      ? { ino, roman: MASA_BY_RASHI[ino], dev: MASA_BY_RASHI_DEV[ino] }
+      : { ino: -1, roman: "—", dev: "" };
+  masaCache.set(key, out);
+  return out;
+}
+
+/** Map a roman anga name (masa, paksha or tithi) to its Devanagari source, for
+ * transliterating festival sub-labels into the reader's script. Returns "" when
+ * the term isn't a known anga. */
+export function angaDev(roman: string | undefined): string {
+  if (!roman) return "";
+  if (PAKSHA_DEV[roman]) return PAKSHA_DEV[roman];
+  if (MASA_DEV[roman]) return MASA_DEV[roman];
+  if (roman === "Purnima") return "पूर्णिमा";
+  if (roman === "Amavasya") return "अमावस्या";
+  const ti = TITHI_BASE.indexOf(roman);
+  if (ti >= 0) return TITHI_BASE_DEV[ti];
+  return "";
+}
+
 function tithiName(ino: number, pakshaEn: string): string {
   const within = ((ino % 15) + 15) % 15;
   if (within === 14) return pakshaEn === "Shukla" ? "Purnima" : "Amavasya";
   return TITHI_BASE[within];
+}
+
+function tithiDev(ino: number, pakshaEn: string): string {
+  const within = ((ino % 15) + 15) % 15;
+  if (within === 14) return pakshaEn === "Shukla" ? "पूर्णिमा" : "अमावस्या";
+  return TITHI_BASE_DEV[within];
 }
 
 function normaliseMasa(raw: string | undefined): string {
@@ -72,12 +178,16 @@ function normaliseMasa(raw: string | undefined): string {
 }
 
 function samvatsaraFor(date: Date, tz: string): string {
-  // Year in which the current Chaitra (lunar new year) began. Ugadi falls in
-  // late Mar / early Apr; before April we treat it as the previous samvatsara.
   const parts = zonedParts(date, tz);
   const chaitraYear = parts.month >= 4 ? parts.year : parts.year - 1;
   const idx = (((chaitraYear - 2025 + 38) % 60) + 60) % 60;
   return SAMVATSARA[idx];
+}
+
+function samvatsaraIdx(date: Date, tz: string): number {
+  const parts = zonedParts(date, tz);
+  const chaitraYear = parts.month >= 4 ? parts.year : parts.year - 1;
+  return (((chaitraYear - 2025 + 38) % 60) + 60) % 60;
 }
 
 // ---------- timezone helpers ----------
@@ -102,7 +212,6 @@ function zonedParts(date: Date, timeZone: string): YMDHMS {
 function tzOffsetMs(date: Date, timeZone: string): number {
   const p = zonedParts(date, timeZone);
   const asUtc = Date.UTC(p.year, p.month - 1, p.day, p.hour, p.minute);
-  // round the instant to the minute to match the parts we read back
   const rounded = Math.round(date.getTime() / 60000) * 60000;
   return asUtc - rounded;
 }
@@ -155,13 +264,16 @@ export type Panchang = {
   date: Date;
   location: AppLocation;
   gregorianLong: string;
-  tithi: { name: string; paksha: string; end: Date | null };
-  nakshatra: { name: string; end: Date | null };
-  yoga: { name: string; end: Date | null };
-  karana: { name: string };
+  tithi: { name: string; sa: string; paksha: string; pakshaSa: string; end: Date | null };
+  nakshatra: { name: string; sa: string; end: Date | null };
+  yoga: { name: string; sa: string; end: Date | null };
+  karana: { name: string; sa: string };
   masa: string;
+  masaSa: string;
   samvatsara: string;
+  samvatsaraSa: string;
   ritu: string;
+  rituSa: string;
   sun: { sunrise: Date; solarNoon: Date; sunset: Date };
   windows: {
     rahuKalam: TimeWindow;
@@ -180,6 +292,7 @@ export function getPanchang(
 
   const c = mhah.calculate(date);
   const cal = mhah.calendar(date, lat, lng);
+  const masa = amantaMasa(date, lat, lng, tz);
 
   const noon = locationNoon(date, tz);
   const sc = SunCalc.getTimes(noon, lat, lng);
@@ -213,22 +326,29 @@ export function getPanchang(
     gregorianLong: formatLongDate(date, tz),
     tithi: {
       name: tithiName(c.Tithi.ino, c.Paksha?.name_en_IN ?? ""),
+      sa: tithiDev(c.Tithi.ino, c.Paksha?.name_en_IN ?? ""),
       paksha: c.Paksha?.name_en_IN ?? "",
+      pakshaSa: PAKSHA_DEV[c.Paksha?.name_en_IN ?? ""] ?? "",
       end: c.Tithi?.end ? new Date(c.Tithi.end) : null,
     },
     nakshatra: {
       name: c.Nakshatra?.name_en_IN ?? "—",
+      sa: odiaToDev(c.Nakshatra?.name),
       end: c.Nakshatra?.end ? new Date(c.Nakshatra.end) : null,
     },
     yoga: {
       name: c.Yoga?.name_en_IN ?? "—",
+      sa: odiaToDev(c.Yoga?.name),
       end: c.Yoga?.end ? new Date(c.Yoga.end) : null,
     },
-    karana: { name: c.Karna?.name_en_IN ?? "—" },
-    masa: normaliseMasa(cal.Masa?.name_en_IN),
+    karana: { name: c.Karna?.name_en_IN ?? "—", sa: odiaToDev(c.Karna?.name) },
+    masa: masa.roman,
+    masaSa: masa.dev,
     samvatsara: samvatsaraFor(date, tz),
-    // Sanskrit ritu (season) by index — the sankalpam needs "Varsha", not "Monsoon".
-    ritu: RITU_SA[cal.Ritu?.ino ?? -1] ?? cal.Ritu?.name_en_UK ?? "—",
+    samvatsaraSa: SAMVATSARA_DEV[samvatsaraIdx(date, tz)] ?? "",
+    // Ritu (season) follows the Amanta masa: two masas per ritu, starting Chaitra→Vasanta.
+    ritu: masa.ino >= 0 ? RITU_SA[Math.floor(masa.ino / 2) % 6] : (RITU_SA[cal.Ritu?.ino ?? -1] ?? "—"),
+    rituSa: masa.ino >= 0 ? RITU_DEV[Math.floor(masa.ino / 2) % 6] : (RITU_DEV[cal.Ritu?.ino ?? -1] ?? ""),
     sun: { sunrise, solarNoon, sunset },
     windows: {
       rahuKalam: part(sunrise, sunset, RAHU[dow]),
@@ -296,8 +416,6 @@ export function nextTithiOccurrence(
 
 // ---------- auspiciousness heuristics ----------
 
-// Generally-benefic nakshatras for common new undertakings (matched loosely on
-// root so regional spellings from mhah-panchang still resolve).
 const GOOD_NAKSHATRA_ROOTS = [
   "ashwin", "aswin", "rohini", "mrigash", "mrugash", "punarv", "pushy", "pushya",
   "uttara", "hasta", "chitra", "swat", "anuradh", "shravan", "sravan", "dhanish",
@@ -360,8 +478,12 @@ export function forecast(
   const out: ForecastDay[] = [];
   for (let i = 0; i < count; i++) {
     const d = new Date(start.getTime() + i * 86400000);
-    const panchang = getPanchang(d, location);
-    out.push({ date: d, panchang, quality: dayQuality(panchang) });
+    try {
+      const panchang = getPanchang(d, location);
+      out.push({ date: d, panchang, quality: dayQuality(panchang) });
+    } catch {
+      // Skip days the ephemeris can't resolve (e.g. polar sunrise edge cases).
+    }
   }
   return out;
 }

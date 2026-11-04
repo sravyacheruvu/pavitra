@@ -1,10 +1,11 @@
 import { ReactNode, useState } from "react";
-import { Modal, Pressable, ScrollView, Text, View } from "react-native";
+import { ActivityIndicator, Modal, Pressable, ScrollView, Text, TextInput, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import { veranda } from "../theme/colors";
 import { LANGUAGES, useLang, useT } from "../i18n";
-import { useLocation } from "../services/location";
+import { useLocation, geocodeCity, GeoCity } from "../services/location";
+import { searchCities, City } from "../data/cities";
 
 /**
  * Shared building blocks styled with the "Veranda Theme" tokens: parchment
@@ -36,7 +37,7 @@ export type Ambient = { location?: string; sunrise?: string; sunset?: string };
 /**
  * Deep teak carved-wood header: a Playfair serif brass title with an ambient
  * telemetry strip (location · sunrise · sunset) and the language switcher. The
- * location is tappable to request/refresh the device location.
+ * location opens the location picker.
  */
 export function ScreenHeader({
   title,
@@ -51,8 +52,9 @@ export function ScreenHeader({
   ambient?: Ambient;
 }) {
   const heading = (tab ?? title ?? "").toString();
-  const { location: devLoc, status, usingDevice, request } = useLocation();
+  const { location: devLoc, status, usingDevice } = useLocation();
   const t = useT();
+  const [pickerOpen, setPickerOpen] = useState(false);
   const locLabel =
     status === "loading" ? t("locating") : usingDevice ? devLoc.name : t("enableLocation");
   return (
@@ -61,9 +63,10 @@ export function ScreenHeader({
         <View className="min-w-0 flex-1 pr-2">
           <Text className="font-display text-[26px] font-bold leading-tight text-veranda-brass">{heading}</Text>
           <View className="mt-2 flex-row flex-wrap items-center" style={{ gap: 14 }}>
-            <Pressable onPress={request} hitSlop={6} className="flex-row items-center" accessibilityLabel="Use my location">
+            <Pressable onPress={() => setPickerOpen(true)} hitSlop={6} className="flex-row items-center" accessibilityLabel="Choose location">
               <Ionicons name={usingDevice ? "location" : "location-outline"} size={13} color={veranda.brass} />
               <Text className="ml-1 text-xs text-veranda-parchment/80" numberOfLines={1}>{locLabel}</Text>
+              <Ionicons name="chevron-down" size={11} color={veranda.brass} style={{ marginLeft: 2 }} />
             </Pressable>
             {ambient?.sunrise ? (
               <View className="flex-row items-center">
@@ -83,6 +86,7 @@ export function ScreenHeader({
           <LanguageSwitcher />
         </View>
       </View>
+      <LocationPicker open={pickerOpen} onClose={() => setPickerOpen(false)} />
     </View>
   );
 }
@@ -165,6 +169,153 @@ export function Pill({
     <View className={`self-start rounded-full px-2.5 py-1 ${tones[tone]}`}>
       <Text className={`text-xs font-bold ${tones[tone]}`}>{label}</Text>
     </View>
+  );
+}
+
+/** A bundled city → the GeoCity shape the picker uses. */
+function cityToGeo(c: City): GeoCity {
+  return {
+    name: [c.city, c.region, c.country].filter(Boolean).join(", "),
+    latitude: c.latitude,
+    longitude: c.longitude,
+    timeZone: c.timeZone,
+  };
+}
+
+/**
+ * Location picker: an offline, bundled city search (works in the sandbox where
+ * GPS and network are blocked), augmented by the online geocoder when reachable,
+ * plus a "use my current location" option.
+ */
+export function LocationPicker({ open, onClose }: { open: boolean; onClose: () => void }) {
+  const { location, status, usingDevice, request, setManual } = useLocation();
+  const t = useT();
+  const [query, setQuery] = useState("");
+  const [results, setResults] = useState<GeoCity[]>([]);
+  const [searching, setSearching] = useState(false);
+  const [searched, setSearched] = useState(false);
+  const [netError, setNetError] = useState(false);
+
+  // Search the bundled city list instantly (works offline / in the sandbox).
+  const onQueryChange = (v: string) => {
+    setQuery(v);
+    setNetError(false);
+    const q = v.trim();
+    setSearched(q.length > 0);
+    setResults(q ? searchCities(q, 8).map(cityToGeo) : []);
+  };
+
+  // On submit, also try the online geocoder and merge in any new matches.
+  const runSearch = async () => {
+    const q = query.trim();
+    if (!q) return;
+    const local = searchCities(q, 8).map(cityToGeo);
+    setResults(local);
+    setSearched(true);
+    setNetError(false);
+    setSearching(true);
+    try {
+      const remote = await geocodeCity(q);
+      const seen = new Set(local.map((c) => `${c.name}|${c.timeZone}`));
+      const merged = [...local];
+      for (const r of remote) {
+        const key = `${r.name}|${r.timeZone}`;
+        if (!seen.has(key)) { seen.add(key); merged.push(r); }
+      }
+      setResults(merged);
+    } catch {
+      // Offline / sandboxed — the bundled matches are what we show.
+    } finally {
+      setSearching(false);
+    }
+  };
+
+  const useGps = async () => {
+    await request();
+  };
+  const gpsFailed = status === "denied" || status === "unavailable";
+
+  const pick = (c: GeoCity) => {
+    setManual({ name: c.name.split(",")[0], latitude: c.latitude, longitude: c.longitude, timeZone: c.timeZone });
+    setQuery("");
+    setResults([]);
+    setSearched(false);
+    onClose();
+  };
+
+  return (
+    <Modal visible={open} transparent animationType="fade" onRequestClose={onClose}>
+      <Pressable onPress={onClose} className="flex-1 items-center justify-center bg-black/40 px-8">
+        <Pressable onPress={(e) => e.stopPropagation()} className="w-full max-w-sm rounded-2xl bg-veranda-parchment p-4">
+          <View className="mb-1 flex-row items-center">
+            <Ionicons name="location" size={18} color={veranda.coral} />
+            <Text className="ml-2 font-display text-base font-bold text-veranda-teak">{t("chooseLocation")}</Text>
+          </View>
+          <Text className="mb-3 text-xs text-veranda-teakSubtle">{t("locationHint")}</Text>
+
+          <Pressable
+            onPress={useGps}
+            className="mb-3 flex-row items-center justify-center rounded-full bg-veranda-coral py-3"
+            style={cardGlow}
+          >
+            <Ionicons name="navigate" size={16} color="#fff" />
+            <Text className="ml-2 font-bold text-white">
+              {status === "loading" ? t("locating") : t("useCurrentLocation")}
+            </Text>
+          </Pressable>
+
+          {gpsFailed ? (
+            <Text className="mb-3 -mt-1 text-center text-[11px] text-veranda-terracotta">{t("gpsUnavailable")}</Text>
+          ) : null}
+
+          <View className="mb-2 flex-row items-center" style={{ gap: 8 }}>
+            <View className="h-px flex-1 bg-veranda-brass/25" />
+            <Text className="text-[11px] font-semibold uppercase text-veranda-teakSubtle">{t("orSearchCity")}</Text>
+            <View className="h-px flex-1 bg-veranda-brass/25" />
+          </View>
+
+          <View className="flex-row" style={{ gap: 8 }}>
+            <View className="flex-1">
+              <TextInput
+                value={query}
+                onChangeText={onQueryChange}
+                onSubmitEditing={runSearch}
+                placeholder={t("cityPlaceholder")}
+                placeholderTextColor="#b8a898"
+                autoCapitalize="words"
+                returnKeyType="search"
+                className="rounded-2xl border border-veranda-brass/30 bg-white px-4 py-3 text-[16px] text-veranda-teak"
+              />
+            </View>
+            <Pressable onPress={runSearch} className="items-center justify-center rounded-2xl bg-veranda-coral px-4" style={cardGlow}>
+              {searching ? <ActivityIndicator color="#fff" /> : <Ionicons name="search" size={18} color="#fff" />}
+            </Pressable>
+          </View>
+
+          <ScrollView style={{ maxHeight: 220 }} className="mt-2" keyboardShouldPersistTaps="handled">
+            {results.map((c, i) => {
+              const active = usingDevice && location.name === c.name.split(",")[0];
+              return (
+                <Pressable
+                  key={`${c.name}-${i}`}
+                  onPress={() => pick(c)}
+                  className={`mb-1.5 flex-row items-center rounded-xl border px-3 py-2.5 ${active ? "border-veranda-coral bg-veranda-coral/10" : "border-veranda-brass/20 bg-white"}`}
+                >
+                  <Ionicons name="location-outline" size={15} color={veranda.goldDark} />
+                  <Text className="ml-2 flex-1 text-[14px] font-semibold text-veranda-teak" numberOfLines={1}>{c.name}</Text>
+                  <Text className="text-[11px] text-veranda-teakSubtle" numberOfLines={1}>{c.timeZone}</Text>
+                </Pressable>
+              );
+            })}
+            {searched && !searching && results.length === 0 ? (
+              <Text className="px-1 py-2 text-[12px] text-veranda-terracotta">
+                {netError ? t("cityLookupFailed") : t("cityNotFound")}
+              </Text>
+            ) : null}
+          </ScrollView>
+        </Pressable>
+      </Pressable>
+    </Modal>
   );
 }
 

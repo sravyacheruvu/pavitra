@@ -1,8 +1,10 @@
-import { Pressable, ScrollView, Text, View } from "react-native";
+import { useState } from "react";
+import { Image, Pressable, ScrollView, Text, View } from "react-native";
 import { Ionicons, MaterialCommunityIcons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { Card, Screen, ScreenHeader, cardGlow } from "../components/ui";
+import { AskAssistant } from "../components/AskAssistant";
 import { veranda } from "../theme/colors";
 import { usePanchang } from "../hooks/usePanchang";
 import { formatTime, isActive } from "../services/panchang";
@@ -13,13 +15,20 @@ import {
   daysUntil,
   relativeDay,
 } from "../data/festivalContent";
+import { festivalBanner } from "../data/festivalImage";
+import { getDailyPooja } from "../data/dailyPooja";
+import { getDailyShloka, verseInScript } from "../data/gitaShloka";
 import type { RootStackParamList } from "../navigation/types";
 import { useLang, useT, pick } from "../i18n";
+import { toScript, pickTerm, mantraScript } from "../i18n/script";
 import { useProfile } from "../services/profile";
+
+const DOW = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 /**
  * Daily (Veranda) — the festive home. Tithi hero, live auspicious window,
- * festival spotlight, and the Daily Sankalpam mantra player.
+ * festival spotlight, Daily Sankalpam, the weekday Daily Pooja, and the Nitya
+ * Shloka — all rendered in the reader's selected script.
  */
 export default function DailyVerandaScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
@@ -31,6 +40,12 @@ export default function DailyVerandaScreen() {
   const festival = nextFestival(p.date);
   const festivalDays = daysUntil(festival.observed_on.date, p.date);
 
+  // Daily pooja: weekday (in the active location) decides the traditional deity,
+  // but the user's own family/followed deity takes precedence when set.
+  const dow = Math.max(0, DOW.indexOf(new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: tz }).format(p.date)));
+  const pooja = getDailyPooja(dow, profile.ishtaDevata, profile.deities);
+  const shloka = getDailyShloka(p.date, tz);
+
   // Live auspicious window: Abhijit if it's running now, else the next one up.
   const abhijit = p.windows.abhijit;
   const abhijitActive = isActive(abhijit, now);
@@ -39,6 +54,10 @@ export default function DailyVerandaScreen() {
   const openMuhurtam = () => (navigation as any).navigate("Muhurtam");
 
   const waxing = p.tithi.paksha === "Shukla";
+  // Render a Sanskrit anga in the reader's script: roman for English, else the
+  // Devanagari source transliterated into the selected script.
+  const term = (roman: string, sa?: string) => (lang === "en" || !sa ? roman : toScript(sa, lang));
+  const [askOpen, setAskOpen] = useState(false);
 
   return (
     <Screen>
@@ -53,12 +72,12 @@ export default function DailyVerandaScreen() {
             <View className="flex-row items-center rounded-full bg-veranda-gold/15 px-3 py-1">
               <View className="mr-1.5 h-1.5 w-1.5 rounded-full bg-veranda-gold" />
               <Text className="text-[11px] font-bold uppercase text-veranda-goldDark" style={{ letterSpacing: 1.2 }} numberOfLines={1}>
-                {p.samvatsara}
+                {term(p.samvatsara, p.samvatsaraSa)}
               </Text>
             </View>
             <View className="flex-row items-center">
               <Ionicons name="sparkles" size={14} color={veranda.gold} />
-              <Text className="ml-1 text-xs font-semibold text-veranda-teakSubtle">{p.masa} Masa</Text>
+              <Text className="ml-1 text-xs font-semibold text-veranda-teakSubtle">{term(p.masa, p.masaSa)} Māsa</Text>
             </View>
           </View>
 
@@ -68,10 +87,10 @@ export default function DailyVerandaScreen() {
                 {t("todaysTithi")}
               </Text>
               <Text className="font-display text-[26px] font-bold leading-tight text-veranda-teak">
-                {p.tithi.paksha} {p.tithi.name}
+                {term(p.tithi.paksha, p.tithi.pakshaSa)} {term(p.tithi.name, p.tithi.sa)}
               </Text>
               <Text className="mt-0.5 text-[13px] text-veranda-teakSubtle">
-                {waxing ? t("waxingMoon") : t("waningMoon")} · {p.samvatsara}
+                {waxing ? t("waxingMoon") : t("waningMoon")} · {term(p.samvatsara, p.samvatsaraSa)}
               </Text>
               {p.tithi.end ? (
                 <Text className="mt-0.5 text-xs text-veranda-teakSubtle/80">
@@ -149,15 +168,8 @@ export default function DailyVerandaScreen() {
         {/* ── Festival spotlight ───────────────────────── */}
         <Pressable onPress={openPooja}>
           <Card className="p-0 overflow-hidden">
-            {/* Festive banner (iconographic — a per-festival photo can replace this) */}
-            <View className="h-40 w-full items-center justify-center bg-veranda-blush">
-              <MaterialCommunityIcons name="string-lights" size={76} color={veranda.gold} style={{ opacity: 0.55 }} />
-              <MaterialCommunityIcons
-                name="flower"
-                size={40}
-                color={veranda.coral}
-                style={{ position: "absolute", opacity: 0.35 }}
-              />
+            <View className="h-40 w-full">
+              <Image source={festivalBanner(festival.slug)} style={{ width: "100%", height: "100%" }} resizeMode="cover" />
               <View className="absolute left-3 top-3 flex-row items-center rounded-full bg-veranda-gold px-3 py-1" style={cardGlow}>
                 <Ionicons name="calendar" size={12} color="#fff" />
                 <Text className="ml-1 text-[11px] font-bold uppercase text-white" style={{ letterSpacing: 0.6 }}>
@@ -174,7 +186,7 @@ export default function DailyVerandaScreen() {
                 {formatFestivalDate(festival.observed_on.date)}
               </Text>
               <Text className="font-display text-[22px] font-bold leading-tight text-veranda-teak">
-                {pick(festival.name, lang)}
+                {pickTerm(festival.name, lang)}
               </Text>
               <Text className="mt-1 text-[14px] leading-5 text-veranda-teakSubtle" numberOfLines={3}>
                 {pick(festival.significance, lang)}
@@ -187,7 +199,7 @@ export default function DailyVerandaScreen() {
           </Card>
         </Pressable>
 
-        {/* ── Daily Sankalpam player ───────────────────── */}
+        {/* ── Daily Sankalpam ──────────────────────────── */}
         <Card>
           <View className="flex-row items-center justify-between">
             <View className="flex-row items-center">
@@ -201,12 +213,102 @@ export default function DailyVerandaScreen() {
 
           <View className="mt-3 items-center px-1">
             <Text className="text-center font-display text-base font-bold leading-6 text-veranda-coralDeep">
-              “{sankalpam.line}”
+              “{lang === "en" ? sankalpam.line : toScript(sankalpam.lineSa, lang)}”
+            </Text>
+          </View>
+        </Card>
+
+        {/* ── Daily Pooja (weekday vidhanam) ───────────── */}
+        <Card>
+          <View className="flex-row items-center">
+            <MaterialCommunityIcons name="hand-heart" size={19} color={veranda.coral} />
+            <Text className="ml-2 text-[11px] font-bold uppercase text-veranda-goldDark" style={{ letterSpacing: 1.2 }}>
+              {t("dailyPooja")}
             </Text>
           </View>
 
+          <View className="mt-3 flex-row items-center">
+            <View className="mr-3 h-12 w-12 items-center justify-center rounded-full bg-veranda-gold/15">
+              <MaterialCommunityIcons name="flower-tulip" size={24} color={veranda.coral} />
+            </View>
+            <View className="min-w-0 flex-1">
+              <Text className="font-display text-xl font-bold leading-tight text-veranda-teak" numberOfLines={1}>
+                {pickTerm(pooja.deity.name, lang)}
+              </Text>
+              <Text className="text-[12px] text-veranda-teakSubtle" numberOfLines={1}>
+                {pick(pooja.weekday, lang)} · {pooja.personal ? t("yourDeity") : t("todaysDeity")}
+              </Text>
+            </View>
+          </View>
+
+          {pooja.ishtaNote ? (
+            <Text className="mt-2 text-[12px] leading-5 text-veranda-teakSubtle/80">
+              {pickTerm(pooja.ishtaNote.name, lang)} {t("ishtaDayNote")} {pick(pooja.ishtaNote.weekday, lang)}.
+            </Text>
+          ) : null}
+
+          {/* Mantra */}
+          <View className="mt-3 rounded-2xl bg-veranda-turmeric/60 px-4 py-3">
+            <Text className="text-[11px] font-bold uppercase text-veranda-goldDark" style={{ letterSpacing: 1 }}>
+              {t("mantra")}
+            </Text>
+            <Text className="mt-0.5 font-display text-[15px] font-bold text-veranda-coralDeep">{mantraScript(pooja.deity.mantra, lang)}</Text>
+            <Text className="mt-0.5 text-[11px] text-veranda-teakSubtle">{t("chantThrice")}</Text>
+          </View>
+
+          {/* Five quick steps */}
+          <View className="mt-3" style={{ gap: 10 }}>
+            {pooja.steps.map((s, i) => (
+              <View key={i} className="flex-row">
+                <View className="mr-3 h-6 w-6 items-center justify-center rounded-full bg-veranda-coral/15">
+                  <Text className="text-[12px] font-bold text-veranda-coral">{i + 1}</Text>
+                </View>
+                <View className="min-w-0 flex-1">
+                  <Text className="text-[14px] font-bold text-veranda-teak">{pick(s.title, lang)}</Text>
+                  <Text className="text-[13px] leading-5 text-veranda-teakSubtle">{pick(s.detail, lang)}</Text>
+                </View>
+              </View>
+            ))}
+          </View>
+        </Card>
+
+        {/* ── Nitya Shloka ─────────────────────────────── */}
+        <Card>
+          <View className="flex-row items-center justify-between">
+            <View className="flex-row items-center">
+              <MaterialCommunityIcons name="book-open-page-variant" size={18} color={veranda.gold} />
+              <Text className="ml-2 text-[11px] font-bold uppercase text-veranda-goldDark" style={{ letterSpacing: 1.2 }}>
+                {t("nityaShloka")}
+              </Text>
+            </View>
+            <View className="rounded-full bg-veranda-gold/20 px-2.5 py-0.5">
+              <Text className="text-[11px] font-bold text-veranda-goldDark">{t("bhagavadGita")} {shloka.ref}</Text>
+            </View>
+          </View>
+          <Text className="mt-3 font-display text-[17px] font-bold leading-7 text-veranda-coralDeep">
+            {verseInScript(shloka.iast, lang)}
+          </Text>
+          {lang !== "en" && (
+            <Text className="mt-1 text-[12px] italic leading-5 text-veranda-teakSubtle/80">
+              {shloka.iast}
+            </Text>
+          )}
+          <Text className="mt-2 text-[13px] leading-5 text-veranda-teakSubtle">
+            {pick(shloka.meaning, lang)}
+          </Text>
         </Card>
       </ScrollView>
+
+      {/* Floating "Ask Pavitra" */}
+      <Pressable
+        onPress={() => setAskOpen(true)}
+        className="absolute bottom-5 right-5 h-14 flex-row items-center rounded-full bg-veranda-coral px-4"
+        style={cardGlow}
+      >
+        <Ionicons name="sparkles" size={18} color="#fff" />
+        <Text className="ml-2 font-bold text-white">{t("askPavitra")}</Text>
+      </Pressable>
+      <AskAssistant open={askOpen} onClose={() => setAskOpen(false)} />
     </Screen>
   );
 }

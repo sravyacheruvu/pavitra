@@ -4,11 +4,14 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { Ionicons } from "@expo/vector-icons";
 import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Card, Pill, SectionHeader } from "../components/ui";
+import { AskAssistant } from "../components/AskAssistant";
 import { veranda } from "../theme/colors";
 import { FESTIVALS, FestivalDoc, Vidhi, VidhiStep, formatFestivalDate } from "../data/festivalContent";
 import { ENUMERATIONS, Enumeration } from "../data/enumerations";
 import type { RootStackParamList } from "../navigation/types";
 import { useLang, useT, pick, UILang } from "../i18n";
+import { pickTerm, toScript } from "../i18n/script";
+import { angaDev } from "../services/panchang";
 
 type Props = NativeStackScreenProps<RootStackParamList, "FestivalPooja">;
 
@@ -71,6 +74,8 @@ export default function FestivalPoojaScreen({ route, navigation }: Props) {
 
   const [mode, setMode] = useState<"sankshipta" | "sampurna">("sampurna");
   const [guideOpen, setGuideOpen] = useState(false);
+  const [askOpen, setAskOpen] = useState(false);
+  const term = (roman?: string, sa?: string) => (lang === "en" || !sa ? (roman ?? "") : toScript(sa, lang));
 
   if (!festival) {
     return (
@@ -83,16 +88,34 @@ export default function FestivalPoojaScreen({ route, navigation }: Props) {
   const vidhi = festival.vidhi[mode];
 
   return (
-    <View className="flex-1 bg-veranda-parchment">
+    <SafeAreaView edges={["top"]} className="flex-1 bg-veranda-parchment">
+      {/* Fixed top bar — back + title + Ask Pavitra (the tab bar stays below) */}
+      <View className="flex-row items-center border-b border-veranda-brass/25 bg-veranda-teak px-3 py-3">
+        <Pressable onPress={() => navigation.goBack()} hitSlop={8} className="h-9 w-9 items-center justify-center">
+          <Ionicons name="arrow-back" size={22} color={veranda.brass} />
+        </Pressable>
+        <Text className="ml-1 flex-1 font-display text-lg font-bold text-veranda-brass" numberOfLines={1}>
+          {pickTerm(festival.name, lang)}
+        </Text>
+        <Pressable
+          onPress={() => setAskOpen(true)}
+          hitSlop={8}
+          accessibilityLabel={t("askPavitra")}
+          className="h-10 flex-row items-center rounded-full border border-veranda-brass/40 px-3"
+        >
+          <Ionicons name="sparkles" size={16} color={veranda.brass} />
+          <Text className="ml-1 text-[12px] font-bold text-veranda-brass">{t("askPavitra")}</Text>
+        </Pressable>
+      </View>
       <ScrollView contentContainerStyle={{ paddingBottom: 32 }}>
-        <View className="border-b border-veranda-brass/15 bg-veranda-parchment px-5 pb-5 pt-4">
-          <Text className="font-display text-2xl font-bold text-veranda-coralDeep">{pick(festival.name, lang)}</Text>
-          {festival.name.te ? (
-            <Text className="mt-0.5 text-veranda-teakSubtle">{festival.name.te}</Text>
+        <View className="border-b border-veranda-brass/15 bg-white px-5 pb-5 pt-4">
+          <Text className="font-display text-2xl font-bold text-veranda-coralDeep">{pickTerm(festival.name, lang)}</Text>
+          {lang !== "en" && festival.name.en ? (
+            <Text className="mt-0.5 text-veranda-teakSubtle">{festival.name.en}</Text>
           ) : null}
           <Text className="mt-1 text-xs text-veranda-teakSubtle/80">
             {formatFestivalDate(festival.observed_on.date)}
-            {festival.observed_on.tithi ? ` · ${festival.observed_on.masa ?? ""} ${festival.observed_on.tithi}` : ""}
+            {festival.observed_on.tithi ? ` · ${term(festival.observed_on.masa, angaDev(festival.observed_on.masa))} ${term(festival.observed_on.tithi, angaDev(festival.observed_on.tithi))}` : ""}
           </Text>
         </View>
 
@@ -205,7 +228,7 @@ export default function FestivalPoojaScreen({ route, navigation }: Props) {
 
       {guideOpen ? (
         <GuidedMode
-          festivalName={pick(festival.name, lang)}
+          festivalName={pickTerm(festival.name, lang)}
           vidhiLabel={pick(vidhi.label, lang)}
           steps={vidhi.steps}
           lang={lang}
@@ -213,7 +236,8 @@ export default function FestivalPoojaScreen({ route, navigation }: Props) {
           onClose={() => setGuideOpen(false)}
         />
       ) : null}
-    </View>
+      <AskAssistant open={askOpen} onClose={() => setAskOpen(false)} context={pickTerm(festival.name, lang)} />
+    </SafeAreaView>
   );
 }
 

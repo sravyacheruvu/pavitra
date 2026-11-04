@@ -1,18 +1,13 @@
 import { View } from "react-native";
 import { StatusBar } from "expo-status-bar";
 import { NavigationContainer, DefaultTheme, Theme } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import BottomTabNavigator from "./BottomTabNavigator";
-import FestivalPoojaScreen from "../screens/FestivalPoojaScreen";
 import OnboardingScreen from "../screens/OnboardingScreen";
 import AuthScreen from "../screens/AuthScreen";
 import { veranda } from "../theme/colors";
-import type { RootStackParamList } from "./types";
 import { useLang } from "../i18n";
 import { useAuth } from "../services/auth";
-
-const Stack = createNativeStackNavigator<RootStackParamList>();
 
 const navTheme: Theme = {
   ...DefaultTheme,
@@ -65,21 +60,7 @@ export default function RootNavigator() {
   return (
     <NavigationContainer theme={navTheme}>
       <StatusBar style="dark" />
-      <Stack.Navigator
-        screenOptions={{
-          headerStyle: { backgroundColor: veranda.parchment },
-          headerTintColor: veranda.coral,
-          headerTitleStyle: { fontWeight: "700" },
-          contentStyle: { backgroundColor: veranda.parchment },
-        }}
-      >
-        <Stack.Screen name="Tabs" component={BottomTabNavigator} options={{ headerShown: false }} />
-        <Stack.Screen
-          name="FestivalPooja"
-          component={FestivalPoojaScreen}
-          options={{ title: "Pooja", headerBackTitle: "Back" }}
-        />
-      </Stack.Navigator>
+      <BottomTabNavigator />
     </NavigationContainer>
   );
 }

@@ -1,7 +1,26 @@
 import { createContext, useContext, useEffect, useRef, useState, ReactNode } from "react";
+import { Platform } from "react-native";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import * as Location from "expo-location";
 import { AppLocation, DEFAULT_LOCATION } from "../config/location";
+
+const isWeb = Platform.OS === "web";
+
+/** Browser geolocation (web) — a Promise wrapper the native SDK doesn't give us reliably. */
+function webGetPosition(): Promise<{ latitude: number; longitude: number }> {
+  return new Promise((resolve, reject) => {
+    const g = typeof navigator !== "undefined" ? navigator.geolocation : undefined;
+    if (!g) {
+      reject(new Error("geolocation-unavailable"));
+      return;
+    }
+    g.getCurrentPosition(
+      (pos) => resolve({ latitude: pos.coords.latitude, longitude: pos.coords.longitude }),
+      (err) => reject(err),
+      { enableHighAccuracy: false, timeout: 12000, maximumAge: 5 * 60 * 1000 }
+    );
+  });
+}
 
 /**
  * Device-location service. Asks for foreground location permission, resolves the
@@ -19,6 +38,8 @@ type Ctx = {
   status: LocationStatus;
   usingDevice: boolean;
   request: () => Promise<void>;
+  /** Manually set the active location (e.g. from a city search). */
+  setManual: (loc: AppLocation) => void;
 };
 
 const LocationContext = createContext<Ctx>({
@@ -26,7 +47,34 @@ const LocationContext = createContext<Ctx>({
   status: "idle",
   usingDevice: false,
   request: async () => {},
+  setManual: () => {},
 });
+
+export type GeoCity = { name: string; latitude: number; longitude: number; timeZone: string };
+
+/**
+ * Resolve a city name to coordinates + timezone (keyless Open-Meteo geocoder).
+ * Throws on a network/service failure so the UI can tell "no match" apart from
+ * "couldn't reach the lookup service".
+ */
+export async function geocodeCity(q: string): Promise<GeoCity[]> {
+  const query = q.trim();
+  if (!query) return [];
+  const res = await fetch(
+    `https://geocoding-api.open-meteo.com/v1/search?name=${encodeURIComponent(query)}&count=6&language=en&format=json`
+  );
+  if (!res.ok) throw new Error(`geocode ${res.status}`);
+  const j = await res.json();
+  const results = Array.isArray(j?.results) ? j.results : [];
+  return results
+    .filter((r: any) => r?.timezone && typeof r.latitude === "number")
+    .map((r: any) => ({
+      name: [r.name, r.admin1, r.country].filter(Boolean).join(", "),
+      latitude: r.latitude,
+      longitude: r.longitude,
+      timeZone: r.timezone,
+    }));
+}
 
 const deviceTimeZone = (): string => {
   try {
@@ -83,8 +131,27 @@ export function LocationProvider({ children }: { children: ReactNode }) {
     }
   };
 
+  const setManual = (loc: AppLocation) => {
+    setLocation(loc);
+    setUsingDevice(true);
+    setStatus("granted");
+    AsyncStorage.setItem(STORAGE_KEY, JSON.stringify(loc)).catch(() => {});
+  };
+
   const request = async () => {
     setStatus("loading");
+    // Web: go straight to the browser's geolocation API. Expo's web shim is
+    // unreliable across mobile browsers, so this is the dependable path.
+    if (isWeb) {
+      try {
+        const coords = await webGetPosition();
+        await applyPosition(coords);
+      } catch (e: any) {
+        // code 1 = permission denied; anything else (timeout, no API) = unavailable.
+        setStatus(e && e.code === 1 ? "denied" : "unavailable");
+      }
+      return;
+    }
     try {
       const { status: perm } = await Location.requestForegroundPermissionsAsync();
       if (perm !== "granted") {
@@ -116,7 +183,12 @@ export function LocationProvider({ children }: { children: ReactNode }) {
         // ignore
       }
 
-      // 2) Check permission: refresh silently if granted, otherwise ask once.
+      // 2) On web we do NOT auto-prompt — the browser only grants geolocation in
+      //    response to a user gesture, and auto-calling it just leaves the UI
+      //    stuck on "Locating…". The user taps "Use my current location" (or the
+      //    onboarding location step) when they're ready. Native keeps the silent
+      //    refresh / one-time ask.
+      if (isWeb) return;
       try {
         const perm = await Location.getForegroundPermissionsAsync();
         if (!active) return;
@@ -142,7 +214,7 @@ export function LocationProvider({ children }: { children: ReactNode }) {
   }, []);
 
   return (
-    <LocationContext.Provider value={{ location, status, usingDevice, request }}>
+    <LocationContext.Provider value={{ location, status, usingDevice, request, setManual }}>
       {children}
     </LocationContext.Provider>
   );

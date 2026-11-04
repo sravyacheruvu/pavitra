@@ -12,6 +12,8 @@ import {
 } from "../data/festivalContent";
 import type { RootStackParamList } from "../navigation/types";
 import { useLang, useT, pick } from "../i18n";
+import { pickTerm, toScript } from "../i18n/script";
+import { angaDev } from "../services/panchang";
 
 const FESTIVAL_ICON: Record<string, keyof typeof MaterialCommunityIcons.glyphMap> = {
   "varalakshmi-vratam": "flower-tulip",
@@ -24,6 +26,7 @@ export default function FestivalsScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
   const festivals = festivalsByDate();
   const { lang } = useLang();
+  const term = (roman?: string, sa?: string) => (lang === "en" || !sa ? (roman ?? "") : toScript(sa, lang));
   const t = useT();
 
   return (
@@ -47,13 +50,13 @@ export default function FestivalsScreen() {
                     />
                   </View>
                   <View className="flex-1">
-                    <Text className="text-base font-bold text-veranda-teak">{pick(f.name, lang)}</Text>
-                    {f.name.te ? (
-                      <Text className="text-sm text-veranda-teak/55">{f.name.te}</Text>
+                    <Text className="text-base font-bold text-veranda-teak">{pickTerm(f.name, lang)}</Text>
+                    {lang !== "en" && f.name.en ? (
+                      <Text className="text-sm text-veranda-teak/55">{f.name.en}</Text>
                     ) : null}
                     <Text className="mt-0.5 text-xs text-veranda-marigold">
                       {formatFestivalDate(f.observed_on.date)}
-                      {f.observed_on.tithi ? ` · ${f.observed_on.masa ?? ""} ${f.observed_on.tithi}` : ""}
+                      {f.observed_on.tithi ? ` · ${term(f.observed_on.masa, angaDev(f.observed_on.masa))} ${term(f.observed_on.tithi, angaDev(f.observed_on.tithi))}` : ""}
                     </Text>
                   </View>
                   <View className="items-end">
