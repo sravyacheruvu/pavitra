@@ -466,6 +466,112 @@ export function dayQuality(p: Panchang): DayQuality {
   };
 }
 
+// ---------- location-aware festival dates ----------
+
+/**
+ * A festival falls on the Gregorian day when its tithi prevails at a specific
+ * local reference time — sunrise for most, midday (madhyahna) for Ganesh
+ * Chaturthi & Rama Navami, the evening (pradosha) for Diwali, midnight (nishita)
+ * for Shivaratri & Janmashtami, etc. Because that reference time is *local*, the
+ * observed calendar day can differ by ±1 day in New York or Sydney vs India.
+ * We compute it from the ephemeris for the user's own location.
+ */
+type TithiRef = "sunrise" | "purvahna" | "madhyahna" | "aparahna" | "pradosha" | "nishita" | "anchor";
+
+const FESTIVAL_REF: Record<string, TithiRef> = {
+  "diwali-lakshmi-pooja": "pradosha",
+  "ganesh-chaturthi": "madhyahna",
+  "sri-rama-navami": "madhyahna",
+  "maha-shivaratri": "nishita",
+  "krishna-janmashtami": "nishita",
+  "raksha-bandhan": "aparahna",
+  "vasant-panchami": "purvahna",
+  // weekday-based / solar festivals don't shift cleanly by a single tithi rule:
+  "varalakshmi-vratam": "anchor",
+  "makara-sankranti": "anchor",
+};
+
+const TITHI_WITHIN: Record<string, number> = {
+  Pratipada: 0, Padyami: 0, Dwitiya: 1, Vidhiya: 1, Tritiya: 2, Thadiya: 2,
+  Chaturthi: 3, Chavithi: 3, Panchami: 4, Shashti: 5, Shashthi: 5, Saptami: 6,
+  Ashtami: 7, Navami: 8, Dashami: 9, Ekadashi: 10, Dwadashi: 11, Trayodashi: 12,
+  Chaturdashi: 13,
+};
+
+/** mhah tithi ino (0–29) from a tithi name + paksha. Returns -1 if unparseable. */
+function festivalTithiIno(tithiName: string | undefined, paksha: string | undefined): number {
+  const name = (tithiName ?? "").trim();
+  if (name === "Purnima") return 14;
+  if (name === "Amavasya") return 29;
+  const within = TITHI_WITHIN[name];
+  if (within === undefined) return -1;
+  return (paksha === "Krishna" ? 15 : 0) + within;
+}
+
+/** The reference-time instant on a day, from its sunrise/sunset (and next sunrise for nishita). */
+function refInstant(sunrise: Date, sunset: Date, nextSunrise: Date, ref: TithiRef): Date {
+  const day = sunset.getTime() - sunrise.getTime();
+  switch (ref) {
+    case "purvahna": return new Date(sunrise.getTime() + day * 0.25);
+    case "madhyahna": return new Date(sunrise.getTime() + day * 0.5);
+    case "aparahna": return new Date(sunrise.getTime() + day * 0.72);
+    case "pradosha": return new Date(sunset.getTime() + 18 * 60000);
+    case "nishita": return new Date(sunset.getTime() + (nextSunrise.getTime() - sunset.getTime()) * 0.5);
+    default: return sunrise;
+  }
+}
+
+function sunForLocalDay(y: number, m: number, d: number, lat: number, lng: number, tz: string) {
+  const noon = locationNoon(new Date(Date.UTC(y, m - 1, d, 12, 0, 0)), tz);
+  const sc = SunCalc.getTimes(noon, lat, lng);
+  return { sunrise: sc.sunrise as Date | undefined, sunset: sc.sunset as Date | undefined };
+}
+
+/**
+ * The Gregorian date (YYYY-MM-DD in the location's timezone) on which a festival
+ * is observed at that location. `anchorIso` is the India reference date; we search
+ * ±2 days around it for the day whose reference-time tithi matches.
+ */
+export function festivalObservedDate(
+  slug: string,
+  tithiName: string | undefined,
+  paksha: string | undefined,
+  anchorIso: string,
+  location: AppLocation
+): string {
+  const ref = FESTIVAL_REF[slug] ?? "sunrise";
+  if (ref === "anchor") return anchorIso;
+  const target = festivalTithiIno(tithiName, paksha);
+  if (target < 0) return anchorIso;
+
+  const { latitude: lat, longitude: lng, timeZone: tz } = location;
+  const [ay, am, ad] = anchorIso.split("-").map(Number);
+  const iso = (y: number, m: number, d: number) =>
+    `${y}-${String(m).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+
+  const search = (r: TithiRef): string | null => {
+    for (let off = -2; off <= 2; off++) {
+      const base = new Date(Date.UTC(ay, am - 1, ad + off, 12, 0, 0));
+      const p = zonedParts(base, tz); // the location-civil day containing this instant
+      const today = sunForLocalDay(p.year, p.month, p.day, lat, lng, tz);
+      if (!today.sunrise || !today.sunset) continue;
+      const next = sunForLocalDay(p.year, p.month, p.day + 1, lat, lng, tz);
+      const nextSr = next.sunrise ?? new Date(today.sunset.getTime() + 11 * 3600000);
+      const inst = refInstant(today.sunrise, today.sunset, nextSr, r);
+      try {
+        if (mhah.calculate(inst).Tithi?.ino === target) return iso(p.year, p.month, p.day);
+      } catch {
+        /* skip */
+      }
+    }
+    return null;
+  };
+
+  // The festival's own reference time; if the tithi never prevails at it locally
+  // (can happen for nishita festivals), fall back to the sunrise rule, then anchor.
+  return search(ref) ?? (ref !== "sunrise" ? search("sunrise") : null) ?? anchorIso;
+}
+
 export type ForecastDay = { date: Date; panchang: Panchang; quality: DayQuality };
 
 /** Panchang + day-quality for `count` days starting today (location-local). */

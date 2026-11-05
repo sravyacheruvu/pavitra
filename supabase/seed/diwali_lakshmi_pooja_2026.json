@@ -24,11 +24,32 @@
     "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946",
     "muhurat_note": "The exact Lakshmi Puja muhurat (pradosh kaal + Vrishabha lagna) is local; compute per the user's coordinates in the app before display.",
     "five_days": [
-      { "name": "Dhanteras (Dhanatrayodashi)", "date": "2026-11-06", "tithi": "Krishna Trayodashi" },
-      { "name": "Naraka Chaturdashi (Chhoti Diwali / Abhyanga Snanam)", "date": "2026-11-07", "tithi": "Krishna Chaturdashi" },
-      { "name": "Diwali — Lakshmi Puja", "date": "2026-11-08", "tithi": "Amavasya", "primary": true },
-      { "name": "Govardhan Puja / Bali Padyami", "date": "2026-11-09", "tithi": "Kartika Shukla Pratipada" },
-      { "name": "Bhai Dooj (Yama Dwitiya)", "date": "2026-11-10", "tithi": "Kartika Shukla Dwitiya" }
+      {
+        "name": "Dhanteras (Dhanatrayodashi)",
+        "date": "2026-11-06",
+        "tithi": "Krishna Trayodashi"
+      },
+      {
+        "name": "Naraka Chaturdashi (Chhoti Diwali / Abhyanga Snanam)",
+        "date": "2026-11-07",
+        "tithi": "Krishna Chaturdashi"
+      },
+      {
+        "name": "Diwali — Lakshmi Puja",
+        "date": "2026-11-08",
+        "tithi": "Amavasya",
+        "primary": true
+      },
+      {
+        "name": "Govardhan Puja / Bali Padyami",
+        "date": "2026-11-09",
+        "tithi": "Kartika Shukla Pratipada"
+      },
+      {
+        "name": "Bhai Dooj (Yama Dwitiya)",
+        "date": "2026-11-10",
+        "tithi": "Kartika Shukla Dwitiya"
+      }
     ],
     "note": "In Andhra/Telangana the emphasis is Deepavali Lakshmi Puja on Amavasya evening with rows of diyas and firecrackers."
   },
@@ -37,109 +58,474 @@
     "te": "దీపావళి వెలుగుల పండుగ — చీకటిపై వెలుగు, అజ్ఞానంపై జ్ఞానం సాధించిన విజయం. కార్తీక అమావాస్య సాయంత్రం లక్ష్మీ గణేశులను దీపాలతో ఆహ్వానించి ఐశ్వర్యం కోసం పూజిస్తారు.",
     "sa": "दीपावली तमसो ज्योतिषः विजयः; कार्तिक अमावास्यायां लक्ष्मी-गणेश पूजनं ऐश्वर्यप्रदम्।"
   },
-  "regions": ["Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu", "Maharashtra", "Gujarat", "North India"],
-  "languages": ["en", "te", "sa"],
+  "regions": [
+    "Andhra Pradesh",
+    "Telangana",
+    "Karnataka",
+    "Tamil Nadu",
+    "Maharashtra",
+    "Gujarat",
+    "North India"
+  ],
+  "languages": [
+    "en",
+    "te",
+    "sa"
+  ],
   "samagri": [
-    { "id": "lakshmi-ganesha-idol", "name": { "en": "Lakshmi & Ganesha idols (silver/clay)", "te": "లక్ష్మీ, గణేశ విగ్రహాలు" }, "quantity": "1 set", "category": "idol", "essential": true },
-    { "id": "chowki", "name": { "en": "Chowki / peetham with red cloth", "te": "పీఠం, ఎర్ర వస్త్రం" }, "quantity": "1", "category": "seat", "essential": true },
-    { "id": "kalasham", "name": { "en": "Kalasham with water, coin, mango leaves, coconut", "te": "కలశం, నాణెం, మామిడాకులు, కొబ్బరికాయ" }, "quantity": "1", "category": "vessel", "essential": true },
-    { "id": "diyas", "name": { "en": "Clay diyas / oil lamps (many)", "te": "మట్టి దీపాలు (అనేకం)" }, "quantity": "as many as possible", "category": "light", "essential": true },
-    { "id": "lotus", "name": { "en": "Lotus flowers & kamalgatta (lotus seeds)", "te": "తామర పూలు, తామర గింజలు" }, "quantity": "assorted", "category": "flowers", "essential": true },
-    { "id": "coins", "name": { "en": "Silver/gold coins, cash, account books (for worship)", "te": "వెండి/బంగారు నాణేలు, పద్దు పుస్తకాలు" }, "quantity": "as available", "category": "wealth", "essential": true },
-    { "id": "kumkum", "name": { "en": "Turmeric, kumkum, sandalwood, akshata, roli", "te": "పసుపు, కుంకుమ, గంధం, అక్షతలు" }, "quantity": "1 set", "category": "auspicious", "essential": true },
-    { "id": "batasha", "name": { "en": "Batasha, kheel (puffed rice), sugar candy, sweets", "te": "బతాషా, పేలాలు, పటిక బెల్లం, స్వీట్లు" }, "quantity": "assorted", "category": "naivedya", "essential": true },
-    { "id": "fruits", "name": { "en": "Fruits, coconut, betel leaves & nuts, dry fruits", "te": "పండ్లు, కొబ్బరికాయ, తమలపాకులు, వక్కలు" }, "quantity": "assorted", "category": "offering", "essential": true },
-    { "id": "camphor", "name": { "en": "Ghee, cotton wicks, camphor, incense, gulal, rangoli colors", "te": "నెయ్యి, వత్తులు, కర్పూరం, అగరవత్తులు, ముగ్గు రంగులు" }, "quantity": "1 set", "category": "aarti", "essential": true }
+    {
+      "id": "lakshmi-ganesha-idol",
+      "name": {
+        "en": "Lakshmi & Ganesha idols (silver/clay)",
+        "te": "లక్ష్మీ, గణేశ విగ్రహాలు"
+      },
+      "quantity": "1 set",
+      "category": "idol",
+      "essential": true
+    },
+    {
+      "id": "chowki",
+      "name": {
+        "en": "Chowki / peetham with red cloth",
+        "te": "పీఠం, ఎర్ర వస్త్రం"
+      },
+      "quantity": "1",
+      "category": "seat",
+      "essential": true
+    },
+    {
+      "id": "kalasham",
+      "name": {
+        "en": "Kalasham with water, coin, mango leaves, coconut",
+        "te": "కలశం, నాణెం, మామిడాకులు, కొబ్బరికాయ"
+      },
+      "quantity": "1",
+      "category": "vessel",
+      "essential": true
+    },
+    {
+      "id": "diyas",
+      "name": {
+        "en": "Clay diyas / oil lamps (many)",
+        "te": "మట్టి దీపాలు (అనేకం)"
+      },
+      "quantity": "as many as possible",
+      "category": "light",
+      "essential": true
+    },
+    {
+      "id": "lotus",
+      "name": {
+        "en": "Lotus flowers & kamalgatta (lotus seeds)",
+        "te": "తామర పూలు, తామర గింజలు"
+      },
+      "quantity": "assorted",
+      "category": "flowers",
+      "essential": true
+    },
+    {
+      "id": "coins",
+      "name": {
+        "en": "Silver/gold coins, cash, account books (for worship)",
+        "te": "వెండి/బంగారు నాణేలు, పద్దు పుస్తకాలు"
+      },
+      "quantity": "as available",
+      "category": "wealth",
+      "essential": true
+    },
+    {
+      "id": "kumkum",
+      "name": {
+        "en": "Turmeric, kumkum, sandalwood, akshata, roli",
+        "te": "పసుపు, కుంకుమ, గంధం, అక్షతలు"
+      },
+      "quantity": "1 set",
+      "category": "auspicious",
+      "essential": true
+    },
+    {
+      "id": "batasha",
+      "name": {
+        "en": "Batasha, kheel (puffed rice), sugar candy, sweets",
+        "te": "బతాషా, పేలాలు, పటిక బెల్లం, స్వీట్లు"
+      },
+      "quantity": "assorted",
+      "category": "naivedya",
+      "essential": true
+    },
+    {
+      "id": "fruits",
+      "name": {
+        "en": "Fruits, coconut, betel leaves & nuts, dry fruits",
+        "te": "పండ్లు, కొబ్బరికాయ, తమలపాకులు, వక్కలు"
+      },
+      "quantity": "assorted",
+      "category": "offering",
+      "essential": true
+    },
+    {
+      "id": "camphor",
+      "name": {
+        "en": "Ghee, cotton wicks, camphor, incense, gulal, rangoli colors",
+        "te": "నెయ్యి, వత్తులు, కర్పూరం, అగరవత్తులు, ముగ్గు రంగులు"
+      },
+      "quantity": "1 set",
+      "category": "aarti",
+      "essential": true
+    }
   ],
   "vidhi": {
     "sankshipta": {
-      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "label": {
+        "en": "Sankshipta (Quick)",
+        "te": "సంక్షిప్త విధి"
+      },
       "duration_minutes": 25,
-      "description": { "en": "A concise evening Lakshmi puja." },
+      "description": {
+        "en": "A concise evening Lakshmi puja."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Clean & Light", "te": "శుభ్రత & దీపాలు" }, "instruction": { "en": "Clean the home, draw a rangoli/muggu at the entrance, and light diyas throughout to welcome Lakshmi.", "te": "ఇల్లు శుభ్రపరచి, గుమ్మం ముందు ముగ్గు వేసి, దీపాలు వెలిగించండి." } },
-        { "order": 2, "title": { "en": "Sthapana & Sankalpa", "te": "స్థాపన & సంకల్పం" }, "instruction": { "en": "Place Ganesha and Lakshmi on the red-cloth chowki with the kalasham, light the lamp and take the sankalpa in the pradosh kaal.", "te": "పీఠంపై గణేశ, లక్ష్మీ, కలశం ఉంచి, ప్రదోష కాలంలో సంకల్పం చెప్పుకోండి." } },
-        { "order": 3, "title": { "en": "Ganesha then Lakshmi Puja", "te": "గణేశ, లక్ష్మీ పూజ" }, "instruction": { "en": "Worship Ganesha first, then Lakshmi, with gandha, akshata, flowers, dhupa, deepa and naivedya; worship coins/wealth and account books.", "te": "ముందు గణేశుని, తర్వాత లక్ష్మిని పూజించి, నాణేలు/పద్దు పుస్తకాలను పూజించండి." }, "mantra": { "sa": "ॐ श्रीं ह्रीं श्रीं कमले कमलालये प्रसीद प्रसीद श्रीं ह्रीं श्रीं ॐ महालक्ष्म्यै नमः", "transliteration": "Om Shreem Hreem Shreem Kamale Kamalalaye Praseeda Praseeda Shreem Hreem Shreem Om Mahalakshmyai Namaha", "meaning": { "en": "O Lakshmi dwelling in the lotus, be gracious and grant prosperity." } } },
-        { "order": 4, "title": { "en": "Aarti & Deepdaan", "te": "హారతి & దీపదానం" }, "instruction": { "en": "Sing Om Jai Lakshmi Mata, offer camphor aarti, and place lit lamps in every room and doorway.", "te": "ఓం జై లక్ష్మీ మాతా హారతి పాడి, ప్రతి గదిలో దీపాలు ఉంచండి." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Clean & Light",
+            "te": "శుభ్రత & దీపాలు"
+          },
+          "instruction": {
+            "en": "Clean the home, draw a rangoli/muggu at the entrance, and light diyas throughout to welcome Lakshmi.",
+            "te": "ఇల్లు శుభ్రపరచి, గుమ్మం ముందు ముగ్గు వేసి, దీపాలు వెలిగించండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Sthapana & Sankalpa",
+            "te": "స్థాపన & సంకల్పం"
+          },
+          "instruction": {
+            "en": "Place Ganesha and Lakshmi on the red-cloth chowki with the kalasham, light the lamp and take the sankalpa in the pradosh kaal.",
+            "te": "పీఠంపై గణేశ, లక్ష్మీ, కలశం ఉంచి, ప్రదోష కాలంలో సంకల్పం చెప్పుకోండి."
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Ganesha then Lakshmi Puja",
+            "te": "గణేశ, లక్ష్మీ పూజ"
+          },
+          "instruction": {
+            "en": "Worship Ganesha first, then Lakshmi, with gandha, akshata, flowers, dhupa, deepa and naivedya; worship coins/wealth and account books.",
+            "te": "ముందు గణేశుని, తర్వాత లక్ష్మిని పూజించి, నాణేలు/పద్దు పుస్తకాలను పూజించండి."
+          },
+          "mantra": {
+            "sa": "ॐ श्रीं ह्रीं श्रीं कमले कमलालये प्रसीद प्रसीद श्रीं ह्रीं श्रीं ॐ महालक्ष्म्यै नमः",
+            "transliteration": "Om Shreem Hreem Shreem Kamale Kamalalaye Praseeda Praseeda Shreem Hreem Shreem Om Mahalakshmyai Namaha",
+            "meaning": {
+              "en": "O Lakshmi dwelling in the lotus, be gracious and grant prosperity."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Aarti & Deepdaan",
+            "te": "హారతి & దీపదానం"
+          },
+          "instruction": {
+            "en": "Sing Om Jai Lakshmi Mata, offer camphor aarti, and place lit lamps in every room and doorway.",
+            "te": "ఓం జై లక్ష్మీ మాతా హారతి పాడి, ప్రతి గదిలో దీపాలు ఉంచండి."
+          }
+        }
       ]
     },
     "sampurna": {
-      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "label": {
+        "en": "Sampurna (Full)",
+        "te": "సంపూర్ణ విధి"
+      },
       "duration_minutes": 75,
-      "description": { "en": "The complete Lakshmi-Ganesha puja with Kubera and Saraswati worship in the pradosh muhurat." },
+      "description": {
+        "en": "The complete Lakshmi-Ganesha puja with Kubera and Saraswati worship in the pradosh muhurat."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean and decorate the home and puja space, draw rangoli, perform achamana, and take the sankalpa naming the pradosh/Vrishabha lagna muhurat.", "te": "ఇల్లు, పూజాస్థలం అలంకరించి, ముగ్గు వేసి, ఆచమనం చేసి సంకల్పం చెప్పుకోండి." } },
-        { "order": 2, "title": { "en": "Kalasha & Deepa Sthapana", "te": "కలశ & దీప స్థాపన" }, "instruction": { "en": "Establish the kalasham and light the akhand lamp; arrange the idols of Ganesha (right) and Lakshmi (left).", "te": "కలశం, అఖండ దీపం ఏర్పాటు చేసి, గణేశ-లక్ష్మీ విగ్రహాలను ఉంచండి." } },
-        { "order": 3, "title": { "en": "Ganesha Puja", "te": "గణేశ పూజ" }, "instruction": { "en": "Worship Ganesha first with shodashopachara to ensure an obstacle-free puja.", "te": "ముందుగా గణేశుని షోడశోపచారాలతో పూజించండి." }, "mantra": { "sa": "ॐ गं गणपतये नमः", "transliteration": "Om Gam Ganapataye Namaha", "meaning": { "en": "Salutations to Lord Ganesha." } } },
-        { "order": 4, "title": { "en": "Lakshmi Avahana & Shodashopachara", "te": "లక్ష్మీ ఆవాహన & షోడశోపచార" }, "instruction": { "en": "Invoke Mahalakshmi with the dhyana sloka and offer the sixteen services from avahana to mantrapushpa.", "te": "లక్ష్మీదేవిని ఆవాహన చేసి షోడశోపచారాలు సమర్పించండి." }, "mantra": { "sa": "नमस्ते सर्वदेवानां वरदासि हरिप्रिये । या गतिस्त्वत्प्रपन्नानां सा मे भूयात् त्वदर्चनात् ॥", "transliteration": "Namaste sarvadevanam varadasi haripriye | Ya gatis-tvat-prapannanam sa me bhuyat tvadarchanat ||", "meaning": { "en": "Salutations to you, beloved of Hari, giver of boons; may I attain the refuge that your devotees attain, through worshipping you." } } },
-        { "order": 5, "title": { "en": "Kubera & Saraswati Puja", "te": "కుబేర & సరస్వతీ పూజ" }, "instruction": { "en": "Worship Kubera (treasurer) with the wealth/lockers and Saraswati with account books and pens.", "te": "కుబేరుని (సంపద), సరస్వతిని (పద్దు పుస్తకాలు, కలం) పూజించండి." } },
-        { "order": 6, "title": { "en": "Lakshmi Ashtottara", "te": "లక్ష్మీ అష్టోత్తరం" }, "instruction": { "en": "Recite the 108 names of Lakshmi, offering kumkum/lotus at each.", "te": "లక్ష్మీ అష్టోత్తర శతనామాలతో అర్చన చేయండి." }, "detailsRef": "lakshmi_ashtottara" },
-        { "order": 7, "title": { "en": "Naivedya", "te": "నైవేద్యం" }, "instruction": { "en": "Offer batasha, kheel, sweets, fruits and coconut.", "te": "బతాషా, పేలాలు, స్వీట్లు, పండ్లు నైవేద్యం సమర్పించండి." } },
-        { "order": 8, "title": { "en": "Mangala Aarti", "te": "మంగళ హారతి" }, "instruction": { "en": "Perform the grand aarti (Om Jai Lakshmi Mata) with camphor and bell.", "te": "ఓం జై లక్ష్మీ మాతా మంగళ హారతి ఇవ్వండి." } },
-        { "order": 9, "title": { "en": "Deepdaan & Firecrackers", "te": "దీపదానం & టపాసులు" }, "instruction": { "en": "Light rows of diyas in every doorway, window and room, distribute prasadam, and celebrate. Keep a lamp burning through the night for Lakshmi.", "te": "ప్రతి గుమ్మం, గదిలో దీపాలు వెలిగించి, ప్రసాదం పంచి, రాత్రంతా దీపం వెలిగించి ఉంచండి." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Purification & Sankalpam",
+            "te": "శుద్ధి & సంకల్పం"
+          },
+          "instruction": {
+            "en": "Clean and decorate the home and puja space, draw rangoli, perform achamana, and take the sankalpa naming the pradosh/Vrishabha lagna muhurat.",
+            "te": "ఇల్లు, పూజాస్థలం అలంకరించి, ముగ్గు వేసి, ఆచమనం చేసి సంకల్పం చెప్పుకోండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Kalasha & Deepa Sthapana",
+            "te": "కలశ & దీప స్థాపన"
+          },
+          "instruction": {
+            "en": "Establish the kalasham and light the akhand lamp; arrange the idols of Ganesha (right) and Lakshmi (left).",
+            "te": "కలశం, అఖండ దీపం ఏర్పాటు చేసి, గణేశ-లక్ష్మీ విగ్రహాలను ఉంచండి."
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Ganesha Puja",
+            "te": "గణేశ పూజ"
+          },
+          "instruction": {
+            "en": "Worship Ganesha first with shodashopachara to ensure an obstacle-free puja.",
+            "te": "ముందుగా గణేశుని షోడశోపచారాలతో పూజించండి."
+          },
+          "mantra": {
+            "sa": "ॐ गं गणपतये नमः",
+            "transliteration": "Om Gam Ganapataye Namaha",
+            "meaning": {
+              "en": "Salutations to Lord Ganesha."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Lakshmi Avahana & Shodashopachara",
+            "te": "లక్ష్మీ ఆవాహన & షోడశోపచార"
+          },
+          "instruction": {
+            "en": "Invoke Mahalakshmi with the dhyana sloka and offer the sixteen services from avahana to mantrapushpa.",
+            "te": "లక్ష్మీదేవిని ఆవాహన చేసి షోడశోపచారాలు సమర్పించండి."
+          },
+          "mantra": {
+            "sa": "नमस्ते सर्वदेवानां वरदासि हरिप्रिये । या गतिस्त्वत्प्रपन्नानां सा मे भूयात् त्वदर्चनात् ॥",
+            "transliteration": "Namaste sarvadevanam varadasi haripriye | Ya gatis-tvat-prapannanam sa me bhuyat tvadarchanat ||",
+            "meaning": {
+              "en": "Salutations to you, beloved of Hari, giver of boons; may I attain the refuge that your devotees attain, through worshipping you."
+            }
+          },
+          "detailsRef": "shodashopachara"
+        },
+        {
+          "order": 5,
+          "title": {
+            "en": "Kubera & Saraswati Puja",
+            "te": "కుబేర & సరస్వతీ పూజ"
+          },
+          "instruction": {
+            "en": "Worship Kubera (treasurer) with the wealth/lockers and Saraswati with account books and pens.",
+            "te": "కుబేరుని (సంపద), సరస్వతిని (పద్దు పుస్తకాలు, కలం) పూజించండి."
+          }
+        },
+        {
+          "order": 6,
+          "title": {
+            "en": "Lakshmi Ashtottara",
+            "te": "లక్ష్మీ అష్టోత్తరం"
+          },
+          "instruction": {
+            "en": "Recite the 108 names of Lakshmi, offering kumkum/lotus at each.",
+            "te": "లక్ష్మీ అష్టోత్తర శతనామాలతో అర్చన చేయండి."
+          },
+          "detailsRef": "lakshmi_ashtottara"
+        },
+        {
+          "order": 7,
+          "title": {
+            "en": "Naivedya",
+            "te": "నైవేద్యం"
+          },
+          "instruction": {
+            "en": "Offer batasha, kheel, sweets, fruits and coconut.",
+            "te": "బతాషా, పేలాలు, స్వీట్లు, పండ్లు నైవేద్యం సమర్పించండి."
+          }
+        },
+        {
+          "order": 8,
+          "title": {
+            "en": "Mangala Aarti",
+            "te": "మంగళ హారతి"
+          },
+          "instruction": {
+            "en": "Perform the grand aarti (Om Jai Lakshmi Mata) with camphor and bell.",
+            "te": "ఓం జై లక్ష్మీ మాతా మంగళ హారతి ఇవ్వండి."
+          }
+        },
+        {
+          "order": 9,
+          "title": {
+            "en": "Deepdaan & Firecrackers",
+            "te": "దీపదానం & టపాసులు"
+          },
+          "instruction": {
+            "en": "Light rows of diyas in every doorway, window and room, distribute prasadam, and celebrate. Keep a lamp burning through the night for Lakshmi.",
+            "te": "ప్రతి గుమ్మం, గదిలో దీపాలు వెలిగించి, ప్రసాదం పంచి, రాత్రంతా దీపం వెలిగించి ఉంచండి."
+          }
+        }
       ]
     }
   },
   "prasadam": [
     {
       "id": "kheer",
-      "name": { "en": "Rava Kheer / Payasam", "te": "రవ్వ పాయసం" },
+      "name": {
+        "en": "Rava Kheer / Payasam",
+        "te": "రవ్వ పాయసం"
+      },
       "type": "sweet",
       "serves": "4-6",
       "ingredients": [
-        { "item": { "en": "Fine semolina (rava)", "te": "రవ్వ" }, "quantity": "1/2 cup" },
-        { "item": { "en": "Milk", "te": "పాలు" }, "quantity": "1 litre" },
-        { "item": { "en": "Sugar", "te": "చక్కెర" }, "quantity": "3/4 cup" },
-        { "item": { "en": "Ghee, cashews, raisins, cardamom", "te": "నెయ్యి, జీడిపప్పు, ద్రాక్ష, యాలకులు" }, "quantity": "to taste" }
+        {
+          "item": {
+            "en": "Fine semolina (rava)",
+            "te": "రవ్వ"
+          },
+          "quantity": "1/2 cup"
+        },
+        {
+          "item": {
+            "en": "Milk",
+            "te": "పాలు"
+          },
+          "quantity": "1 litre"
+        },
+        {
+          "item": {
+            "en": "Sugar",
+            "te": "చక్కెర"
+          },
+          "quantity": "3/4 cup"
+        },
+        {
+          "item": {
+            "en": "Ghee, cashews, raisins, cardamom",
+            "te": "నెయ్యి, జీడిపప్పు, ద్రాక్ష, యాలకులు"
+          },
+          "quantity": "to taste"
+        }
       ],
       "steps": [
-        { "en": "Roast rava in ghee; fry cashews and raisins." },
-        { "en": "Boil milk, add roasted rava and cook until soft." },
-        { "en": "Add sugar and cardamom; simmer and garnish." }
+        {
+          "en": "Roast rava in ghee; fry cashews and raisins."
+        },
+        {
+          "en": "Boil milk, add roasted rava and cook until soft."
+        },
+        {
+          "en": "Add sugar and cardamom; simmer and garnish."
+        }
       ],
-      "offering_note": { "en": "Auspicious white sweet offered to Lakshmi." }
+      "offering_note": {
+        "en": "Auspicious white sweet offered to Lakshmi."
+      }
     },
     {
       "id": "besan-ladoo",
-      "name": { "en": "Besan Ladoo", "te": "శనగపిండి లడ్డు" },
+      "name": {
+        "en": "Besan Ladoo",
+        "te": "శనగపిండి లడ్డు"
+      },
       "type": "sweet",
       "serves": "makes ~15",
       "ingredients": [
-        { "item": { "en": "Gram flour (besan)", "te": "శనగపిండి" }, "quantity": "2 cups" },
-        { "item": { "en": "Ghee", "te": "నెయ్యి" }, "quantity": "3/4 cup" },
-        { "item": { "en": "Powdered sugar, cardamom, nuts", "te": "పంచదార పొడి, యాలకులు, డ్రైఫ్రూట్స్" }, "quantity": "to taste" }
+        {
+          "item": {
+            "en": "Gram flour (besan)",
+            "te": "శనగపిండి"
+          },
+          "quantity": "2 cups"
+        },
+        {
+          "item": {
+            "en": "Ghee",
+            "te": "నెయ్యి"
+          },
+          "quantity": "3/4 cup"
+        },
+        {
+          "item": {
+            "en": "Powdered sugar, cardamom, nuts",
+            "te": "పంచదార పొడి, యాలకులు, డ్రైఫ్రూట్స్"
+          },
+          "quantity": "to taste"
+        }
       ],
       "steps": [
-        { "en": "Roast besan in ghee on low heat until golden and aromatic; cool slightly." },
-        { "en": "Mix in powdered sugar, cardamom and chopped nuts." },
-        { "en": "Shape into round ladoos while warm." }
+        {
+          "en": "Roast besan in ghee on low heat until golden and aromatic; cool slightly."
+        },
+        {
+          "en": "Mix in powdered sugar, cardamom and chopped nuts."
+        },
+        {
+          "en": "Shape into round ladoos while warm."
+        }
       ],
-      "offering_note": { "en": "A festive favourite offered and shared on Diwali." }
+      "offering_note": {
+        "en": "A festive favourite offered and shared on Diwali."
+      }
     },
     {
       "id": "chakli-murukku",
-      "name": { "en": "Chakli / Murukku (savory)", "te": "చక్రాలు / మురుకులు" },
+      "name": {
+        "en": "Chakli / Murukku (savory)",
+        "te": "చక్రాలు / మురుకులు"
+      },
       "type": "savory",
       "serves": "snack",
       "ingredients": [
-        { "item": { "en": "Rice flour", "te": "బియ్యప్పిండి" }, "quantity": "2 cups" },
-        { "item": { "en": "Urad dal flour", "te": "మినప్పిండి" }, "quantity": "1/2 cup" },
-        { "item": { "en": "Cumin, sesame, ajwain, butter, salt, oil", "te": "జీలకర్ర, నువ్వులు, వాము, వెన్న, ఉప్పు, నూనె" }, "quantity": "to taste" }
+        {
+          "item": {
+            "en": "Rice flour",
+            "te": "బియ్యప్పిండి"
+          },
+          "quantity": "2 cups"
+        },
+        {
+          "item": {
+            "en": "Urad dal flour",
+            "te": "మినప్పిండి"
+          },
+          "quantity": "1/2 cup"
+        },
+        {
+          "item": {
+            "en": "Cumin, sesame, ajwain, butter, salt, oil",
+            "te": "జీలకర్ర, నువ్వులు, వాము, వెన్న, ఉప్పు, నూనె"
+          },
+          "quantity": "to taste"
+        }
       ],
       "steps": [
-        { "en": "Mix the flours with spices, butter and salt; add water to a firm dough." },
-        { "en": "Press through a chakli mould into spirals." },
-        { "en": "Deep-fry on medium heat until crisp and golden." }
+        {
+          "en": "Mix the flours with spices, butter and salt; add water to a firm dough."
+        },
+        {
+          "en": "Press through a chakli mould into spirals."
+        },
+        {
+          "en": "Deep-fry on medium heat until crisp and golden."
+        }
       ],
-      "offering_note": { "en": "Traditional Diwali savoury shared with family and guests." }
+      "offering_note": {
+        "en": "Traditional Diwali savoury shared with family and guests."
+      }
     }
   ],
   "primary_mantra": {
     "sa": "ॐ श्रीं ह्रीं श्रीं कमले कमलालये प्रसीद प्रसीद श्रीं ह्रीं श्रीं ॐ महालक्ष्म्यै नमः",
     "transliteration": "Om Shreem Hreem Shreem Kamale Kamalalaye Praseeda Praseeda Shreem Hreem Shreem Om Mahalakshmyai Namaha",
-    "meaning": { "en": "O Lakshmi who dwells in the lotus, be gracious and bestow prosperity and auspiciousness." }
+    "meaning": {
+      "en": "O Lakshmi who dwells in the lotus, be gracious and bestow prosperity and auspiciousness."
+    }
   },
-  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Lakshmi Puja / Lakshmi Ashtottara narration." },
+  "audio": {
+    "katha_track_id": null,
+    "narration_language": "te",
+    "duration_seconds": null,
+    "note": "Populate with a Supabase Storage path for the Lakshmi Puja / Lakshmi Ashtottara narration."
+  },
   "source": "Compiled for the Pavitra app; follows the standard Kartika Amavasya Lakshmi Puja tradition with South-Indian emphasis.",
   "disclaimer": "The Lakshmi Puja muhurat is highly local — always compute pradosh/Vrishabha lagna for the user's location. Regional customs vary. Treat as a respectful general guide.",
   "created_at": "2026-08-14T00:00:00Z"

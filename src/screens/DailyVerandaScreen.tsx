@@ -13,6 +13,7 @@ import {
   nextFestival,
   formatFestivalDate,
   daysUntil,
+  observedDateFor,
   relativeDay,
 } from "../data/festivalContent";
 import { festivalBanner } from "../data/festivalImage";
@@ -37,8 +38,9 @@ export default function DailyVerandaScreen() {
   const { panchang: p, now, timeZone: tz } = usePanchang();
   const { profile } = useProfile();
   const sankalpam = buildSankalpam(p, { name: profile.name, gotra: profile.gotra });
-  const festival = nextFestival(p.date);
-  const festivalDays = daysUntil(festival.observed_on.date, p.date);
+  const festival = nextFestival(p.date, p.location);
+  const festivalIso = observedDateFor(festival, p.location);
+  const festivalDays = daysUntil(festivalIso, p.date, tz);
 
   // Daily pooja: weekday (in the active location) decides the traditional deity,
   // but the user's own family/followed deity takes precedence when set.
@@ -183,7 +185,7 @@ export default function DailyVerandaScreen() {
 
             <View className="p-4">
               <Text className="text-[11px] font-bold uppercase text-veranda-goldDark" style={{ letterSpacing: 1.2 }} numberOfLines={1}>
-                {formatFestivalDate(festival.observed_on.date)}
+                {formatFestivalDate(festivalIso)}
               </Text>
               <Text className="font-display text-[22px] font-bold leading-tight text-veranda-teak">
                 {pickTerm(festival.name, lang)}

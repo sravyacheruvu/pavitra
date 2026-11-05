@@ -29,88 +29,382 @@
     "te": "కార్తీక పౌర్ణమి కార్తీక మాసానికి శిఖరాయమానమైన రోజు — శైవులకు, వైష్ణవులకు అత్యంత పవిత్రం. ఈ సాయంత్రం దీపం (ఒక్క దీపమైనా, 365 వత్తులైనా, నదిలో దీపదానమైనా) వెలిగిస్తే జన్మజన్మల చీకటి తొలగి పుణ్యం కలుగుతుందని విశ్వాసం. త్రిపురాంతక శివుని విజయం, దామోదర విష్ణువు స్మరణ, కార్తీక దీపారాధన, వన భోజనం ప్రధానం.",
     "sa": "कार्तिकशुक्लपूर्णिमायां दीपदानं महापुण्यप्रदम्; त्रिपुरान्तकस्य स्मरणम्।"
   },
-  "regions": ["Andhra Pradesh", "Telangana", "Tamil Nadu", "Karnataka", "Varanasi", "All India"],
-  "languages": ["en", "te", "sa"],
+  "regions": [
+    "Andhra Pradesh",
+    "Telangana",
+    "Tamil Nadu",
+    "Karnataka",
+    "Varanasi",
+    "All India"
+  ],
+  "languages": [
+    "en",
+    "te",
+    "sa"
+  ],
   "samagri": [
-    { "id": "deepam", "name": { "en": "Oil lamps & wicks (many; incl. a 365-wick lamp if possible)", "te": "దీపాలు, వత్తులు (365 వత్తుల దీపం సాధ్యమైతే)" }, "quantity": "many", "category": "light", "essential": true },
-    { "id": "ghee-oil", "name": { "en": "Ghee / sesame oil for the lamps", "te": "నెయ్యి / నువ్వుల నూనె" }, "quantity": "as needed", "category": "light", "essential": true },
-    { "id": "shiva-vishnu", "name": { "en": "Shiva lingam & Vishnu/Damodara idol or picture", "te": "శివలింగం, విష్ణు/దామోదర విగ్రహం" }, "quantity": "1 set", "category": "idol", "essential": true },
-    { "id": "tulasi-bilva", "name": { "en": "Tulasi and bilva leaves", "te": "తులసి, బిల్వ దళాలు" }, "quantity": "1 set", "category": "leaves", "essential": true },
-    { "id": "amla", "name": { "en": "Amla (usiri) branch for vana bhojanam", "te": "ఉసిరి కొమ్మ (వన భోజనం)" }, "quantity": "1", "category": "auspicious", "essential": false },
-    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, akshata, sandalwood", "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం" }, "quantity": "1 set", "category": "auspicious", "essential": true },
-    { "id": "flowers", "name": { "en": "Flowers & garlands", "te": "పూలు, మాలలు" }, "quantity": "assorted", "category": "flowers", "essential": true },
-    { "id": "naivedya", "name": { "en": "Fruits, coconut, jaggery, appam for naivedya", "te": "పండ్లు, కొబ్బరికాయ, బెల్లం, అప్పం" }, "quantity": "assorted", "category": "naivedya", "essential": true },
-    { "id": "river-lamp", "name": { "en": "Small float-lamps for river/pond deepa daana", "te": "నదిలో వదిలే దీపాలు" }, "quantity": "as available", "category": "daana", "essential": false }
+    {
+      "id": "deepam",
+      "name": {
+        "en": "Oil lamps & wicks (many; incl. a 365-wick lamp if possible)",
+        "te": "దీపాలు, వత్తులు (365 వత్తుల దీపం సాధ్యమైతే)"
+      },
+      "quantity": "many",
+      "category": "light",
+      "essential": true
+    },
+    {
+      "id": "ghee-oil",
+      "name": {
+        "en": "Ghee / sesame oil for the lamps",
+        "te": "నెయ్యి / నువ్వుల నూనె"
+      },
+      "quantity": "as needed",
+      "category": "light",
+      "essential": true
+    },
+    {
+      "id": "shiva-vishnu",
+      "name": {
+        "en": "Shiva lingam & Vishnu/Damodara idol or picture",
+        "te": "శివలింగం, విష్ణు/దామోదర విగ్రహం"
+      },
+      "quantity": "1 set",
+      "category": "idol",
+      "essential": true
+    },
+    {
+      "id": "tulasi-bilva",
+      "name": {
+        "en": "Tulasi and bilva leaves",
+        "te": "తులసి, బిల్వ దళాలు"
+      },
+      "quantity": "1 set",
+      "category": "leaves",
+      "essential": true
+    },
+    {
+      "id": "amla",
+      "name": {
+        "en": "Amla (usiri) branch for vana bhojanam",
+        "te": "ఉసిరి కొమ్మ (వన భోజనం)"
+      },
+      "quantity": "1",
+      "category": "auspicious",
+      "essential": false
+    },
+    {
+      "id": "turmeric-kumkum",
+      "name": {
+        "en": "Turmeric, kumkum, akshata, sandalwood",
+        "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం"
+      },
+      "quantity": "1 set",
+      "category": "auspicious",
+      "essential": true
+    },
+    {
+      "id": "flowers",
+      "name": {
+        "en": "Flowers & garlands",
+        "te": "పూలు, మాలలు"
+      },
+      "quantity": "assorted",
+      "category": "flowers",
+      "essential": true
+    },
+    {
+      "id": "naivedya",
+      "name": {
+        "en": "Fruits, coconut, jaggery, appam for naivedya",
+        "te": "పండ్లు, కొబ్బరికాయ, బెల్లం, అప్పం"
+      },
+      "quantity": "assorted",
+      "category": "naivedya",
+      "essential": true
+    },
+    {
+      "id": "river-lamp",
+      "name": {
+        "en": "Small float-lamps for river/pond deepa daana",
+        "te": "నదిలో వదిలే దీపాలు"
+      },
+      "quantity": "as available",
+      "category": "daana",
+      "essential": false
+    }
   ],
   "vidhi": {
     "sankshipta": {
-      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "label": {
+        "en": "Sankshipta (Quick)",
+        "te": "సంక్షిప్త విధి"
+      },
       "duration_minutes": 20,
-      "description": { "en": "The essential Karthika deeparadhana with the Panchakshari and a Vishnu smarana." },
+      "description": {
+        "en": "The essential Karthika deeparadhana with the Panchakshari and a Vishnu smarana."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Sankalpam & Snanam", "te": "సంకల్పం & స్నానం" }, "instruction": { "en": "Take a holy bath (or river dip), light the lamp and take the Karthika Purnima sankalpa.", "te": "పుణ్య స్నానం చేసి, దీపం వెలిగించి కార్తీక పౌర్ణమి సంకల్పం చెప్పుకోండి." } },
-        { "order": 2, "title": { "en": "Shiva & Vishnu Puja", "te": "శివ & విష్ణు పూజ" }, "instruction": { "en": "Offer bilva to Shiva and tulasi to Vishnu with gandha, akshata and flowers.", "te": "శివునికి బిల్వం, విష్ణువుకు తులసి, గంధం, అక్షతలు, పూలు సమర్పించండి." }, "mantra": { "sa": "ॐ नमः शिवाय । ॐ नमो नारायणाय", "transliteration": "Om Namah Shivaya | Om Namo Narayanaya", "meaning": { "en": "Salutations to Shiva and to Narayana — worshipped together on this day." } } },
-        { "order": 3, "title": { "en": "Karthika Deeparadhana", "te": "కార్తీక దీపారాధన" }, "instruction": { "en": "At dusk light the Karthika lamps (and a 365-wick lamp if possible), placing them before the deity and at the tulasi.", "te": "సంధ్యవేళ కార్తీక దీపాలు (వీలైతే 365 వత్తులు) వెలిగించి, దేవుని ముందు, తులసి వద్ద ఉంచండి." } },
-        { "order": 4, "title": { "en": "Naivedya & Aarti", "te": "నైవేద్యం & హారతి" }, "instruction": { "en": "Offer fruits and appam, wave the camphor aarti, and float a lamp on water if you can.", "te": "పండ్లు, అప్పం నైవేద్యం, కర్పూర హారతి, వీలైతే నదిలో దీపదానం." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Sankalpam & Snanam",
+            "te": "సంకల్పం & స్నానం"
+          },
+          "instruction": {
+            "en": "Take a holy bath (or river dip), light the lamp and take the Karthika Purnima sankalpa.",
+            "te": "పుణ్య స్నానం చేసి, దీపం వెలిగించి కార్తీక పౌర్ణమి సంకల్పం చెప్పుకోండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Shiva & Vishnu Puja",
+            "te": "శివ & విష్ణు పూజ"
+          },
+          "instruction": {
+            "en": "Offer bilva to Shiva and tulasi to Vishnu with gandha, akshata and flowers.",
+            "te": "శివునికి బిల్వం, విష్ణువుకు తులసి, గంధం, అక్షతలు, పూలు సమర్పించండి."
+          },
+          "mantra": {
+            "sa": "ॐ नमः शिवाय । ॐ नमो नारायणाय",
+            "transliteration": "Om Namah Shivaya | Om Namo Narayanaya",
+            "meaning": {
+              "en": "Salutations to Shiva and to Narayana — worshipped together on this day."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Karthika Deeparadhana",
+            "te": "కార్తీక దీపారాధన"
+          },
+          "instruction": {
+            "en": "At dusk light the Karthika lamps (and a 365-wick lamp if possible), placing them before the deity and at the tulasi.",
+            "te": "సంధ్యవేళ కార్తీక దీపాలు (వీలైతే 365 వత్తులు) వెలిగించి, దేవుని ముందు, తులసి వద్ద ఉంచండి."
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Naivedya & Aarti",
+            "te": "నైవేద్యం & హారతి"
+          },
+          "instruction": {
+            "en": "Offer fruits and appam, wave the camphor aarti, and float a lamp on water if you can.",
+            "te": "పండ్లు, అప్పం నైవేద్యం, కర్పూర హారతి, వీలైతే నదిలో దీపదానం."
+          }
+        }
       ]
     },
     "sampurna": {
-      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "label": {
+        "en": "Sampurna (Full)",
+        "te": "సంపూర్ణ విధి"
+      },
       "duration_minutes": 70,
-      "description": { "en": "The full Karthika Pournami observance with Shiva-Vishnu puja, deeparadhana, deepa daana and vana bhojanam." },
+      "description": {
+        "en": "The full Karthika Pournami observance with Shiva-Vishnu puja, deeparadhana, deepa daana and vana bhojanam."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Punya Snanam & Sankalpam", "te": "పుణ్య స్నానం & సంకల్పం" }, "instruction": { "en": "Take a pre-dawn holy bath (river/tank if possible), perform achamana and take the Karthika Purnima vrata sankalpa.", "te": "తెల్లవారుజామున పుణ్య స్నానం చేసి, ఆచమనం చేసి, కార్తీక వ్రత సంకల్పం చెప్పుకోండి." } },
-        { "order": 2, "title": { "en": "Shiva Abhishekam", "te": "శివ అభిషేకం" }, "instruction": { "en": "Bathe the Shiva lingam with panchamrita and water, offering bilva with the Panchakshari.", "te": "శివలింగానికి పంచామృత అభిషేకం, బిల్వ అర్చన చేయండి." } },
-        { "order": 3, "title": { "en": "Vishnu (Damodara) Puja", "te": "విష్ణు (దామోదర) పూజ" }, "instruction": { "en": "Worship Vishnu as Damodara with tulasi, recalling the Karthika Damodarashtakam.", "te": "దామోదర రూపంలో విష్ణువును తులసితో పూజించండి." } },
-        { "order": 4, "title": { "en": "Shodashopachara Puja", "te": "షోడశోపచార పూజ" }, "instruction": { "en": "Offer the sixteen services to the deities, with bilva for Shiva and tulasi for Vishnu.", "te": "శివునికి బిల్వం, విష్ణువుకు తులసితో షోడశోపచార పూజ." } },
-        { "order": 5, "title": { "en": "Ashtottara & Parayana", "te": "అష్టోత్తరం & పారాయణ" }, "instruction": { "en": "Recite the Shiva/Vishnu Ashtottara and read the Karthika Purana chapter for the day.", "te": "శివ/విష్ణు అష్టోత్తరం, కార్తీక పురాణ పఠనం." } },
-        { "order": 6, "title": { "en": "Karthika Deeparadhana", "te": "కార్తీక దీపారాధన" }, "instruction": { "en": "At dusk, light rows of lamps and the 365-wick deepam, and raise the jwala toranam (lamp arch) if observed.", "te": "సంధ్యవేళ దీపాల వరుసలు, 365 వత్తుల దీపం వెలిగించి, జ్వాలా తోరణం వేయండి." } },
-        { "order": 7, "title": { "en": "Deepa Daanam", "te": "దీప దానం" }, "instruction": { "en": "Float lamps on a river or tank and gift lamps/ghee in daana — the special merit of the day.", "te": "నదిలో దీపదానం, దీపాలు/నెయ్యి దానం చేయండి." } },
-        { "order": 8, "title": { "en": "Vana Bhojanam", "te": "వన భోజనం" }, "instruction": { "en": "Where observed, share the community meal (vana bhojanam) under the amla tree, honouring Vishnu.", "te": "ఉసిరి చెట్టు కింద వన భోజనం పంచుకోండి." } },
-        { "order": 9, "title": { "en": "Mangala Harati", "te": "మంగళ హారతి" }, "instruction": { "en": "Offer the camphor aarti to Shiva and Vishnu and distribute prasadam.", "te": "శివ, విష్ణువులకు కర్పూర హారతి ఇచ్చి ప్రసాదం పంచండి." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Punya Snanam & Sankalpam",
+            "te": "పుణ్య స్నానం & సంకల్పం"
+          },
+          "instruction": {
+            "en": "Take a pre-dawn holy bath (river/tank if possible), perform achamana and take the Karthika Purnima vrata sankalpa.",
+            "te": "తెల్లవారుజామున పుణ్య స్నానం చేసి, ఆచమనం చేసి, కార్తీక వ్రత సంకల్పం చెప్పుకోండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Shiva Abhishekam",
+            "te": "శివ అభిషేకం"
+          },
+          "instruction": {
+            "en": "Bathe the Shiva lingam with panchamrita and water, offering bilva with the Panchakshari.",
+            "te": "శివలింగానికి పంచామృత అభిషేకం, బిల్వ అర్చన చేయండి."
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Vishnu (Damodara) Puja",
+            "te": "విష్ణు (దామోదర) పూజ"
+          },
+          "instruction": {
+            "en": "Worship Vishnu as Damodara with tulasi, recalling the Karthika Damodarashtakam.",
+            "te": "దామోదర రూపంలో విష్ణువును తులసితో పూజించండి."
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Shodashopachara Puja",
+            "te": "షోడశోపచార పూజ"
+          },
+          "instruction": {
+            "en": "Offer the sixteen services to the deities, with bilva for Shiva and tulasi for Vishnu.",
+            "te": "శివునికి బిల్వం, విష్ణువుకు తులసితో షోడశోపచార పూజ."
+          },
+          "detailsRef": "shodashopachara"
+        },
+        {
+          "order": 5,
+          "title": {
+            "en": "Ashtottara & Parayana",
+            "te": "అష్టోత్తరం & పారాయణ"
+          },
+          "instruction": {
+            "en": "Recite the Shiva/Vishnu Ashtottara and read the Karthika Purana chapter for the day.",
+            "te": "శివ/విష్ణు అష్టోత్తరం, కార్తీక పురాణ పఠనం."
+          },
+          "detailsRef": "vishnu_ashtottara"
+        },
+        {
+          "order": 6,
+          "title": {
+            "en": "Karthika Deeparadhana",
+            "te": "కార్తీక దీపారాధన"
+          },
+          "instruction": {
+            "en": "At dusk, light rows of lamps and the 365-wick deepam, and raise the jwala toranam (lamp arch) if observed.",
+            "te": "సంధ్యవేళ దీపాల వరుసలు, 365 వత్తుల దీపం వెలిగించి, జ్వాలా తోరణం వేయండి."
+          }
+        },
+        {
+          "order": 7,
+          "title": {
+            "en": "Deepa Daanam",
+            "te": "దీప దానం"
+          },
+          "instruction": {
+            "en": "Float lamps on a river or tank and gift lamps/ghee in daana — the special merit of the day.",
+            "te": "నదిలో దీపదానం, దీపాలు/నెయ్యి దానం చేయండి."
+          }
+        },
+        {
+          "order": 8,
+          "title": {
+            "en": "Vana Bhojanam",
+            "te": "వన భోజనం"
+          },
+          "instruction": {
+            "en": "Where observed, share the community meal (vana bhojanam) under the amla tree, honouring Vishnu.",
+            "te": "ఉసిరి చెట్టు కింద వన భోజనం పంచుకోండి."
+          }
+        },
+        {
+          "order": 9,
+          "title": {
+            "en": "Mangala Harati",
+            "te": "మంగళ హారతి"
+          },
+          "instruction": {
+            "en": "Offer the camphor aarti to Shiva and Vishnu and distribute prasadam.",
+            "te": "శివ, విష్ణువులకు కర్పూర హారతి ఇచ్చి ప్రసాదం పంచండి."
+          }
+        }
       ]
     }
   },
   "prasadam": [
     {
       "id": "daddojanam",
-      "name": { "en": "Daddojanam (curd rice) & Chalimidi", "te": "దద్దోజనం, చలిమిడి" },
+      "name": {
+        "en": "Daddojanam (curd rice) & Chalimidi",
+        "te": "దద్దోజనం, చలిమిడి"
+      },
       "type": "savory-sweet",
       "serves": "4",
       "ingredients": [
-        { "item": { "en": "Cooked rice, curd, tempering (for daddojanam)", "te": "అన్నం, పెరుగు, తాలింపు" }, "quantity": "1 set" },
-        { "item": { "en": "Rice flour, jaggery, cardamom (for chalimidi)", "te": "బియ్యప్పిండి, బెల్లం, యాలకులు" }, "quantity": "1 set" }
+        {
+          "item": {
+            "en": "Cooked rice, curd, tempering (for daddojanam)",
+            "te": "అన్నం, పెరుగు, తాలింపు"
+          },
+          "quantity": "1 set"
+        },
+        {
+          "item": {
+            "en": "Rice flour, jaggery, cardamom (for chalimidi)",
+            "te": "బియ్యప్పిండి, బెల్లం, యాలకులు"
+          },
+          "quantity": "1 set"
+        }
       ],
       "steps": [
-        { "en": "For daddojanam: mix soft rice with curd and a mustard-cumin tempering, curry leaves and green chilli." },
-        { "en": "For chalimidi: mix fine rice flour with grated jaggery, cardamom and a little ghee to a soft mass." },
-        { "en": "Offer both as the traditional Karthika naivedya." }
+        {
+          "en": "For daddojanam: mix soft rice with curd and a mustard-cumin tempering, curry leaves and green chilli."
+        },
+        {
+          "en": "For chalimidi: mix fine rice flour with grated jaggery, cardamom and a little ghee to a soft mass."
+        },
+        {
+          "en": "Offer both as the traditional Karthika naivedya."
+        }
       ],
-      "offering_note": { "en": "Classic Karthika masam naivedya in Andhra & Telangana." }
+      "offering_note": {
+        "en": "Classic Karthika masam naivedya in Andhra & Telangana."
+      }
     },
     {
       "id": "appam-nivedana",
-      "name": { "en": "Karthika Appam (jaggery appam)", "te": "కార్తీక అప్పం" },
+      "name": {
+        "en": "Karthika Appam (jaggery appam)",
+        "te": "కార్తీక అప్పం"
+      },
       "type": "sweet",
       "serves": "makes ~12",
       "ingredients": [
-        { "item": { "en": "Rice flour & wheat flour", "te": "బియ్యప్పిండి, గోధుమపిండి" }, "quantity": "1 cup" },
-        { "item": { "en": "Jaggery, banana, cardamom, ghee/oil", "te": "బెల్లం, అరటిపండు, యాలకులు, నెయ్యి/నూనె" }, "quantity": "to taste" }
+        {
+          "item": {
+            "en": "Rice flour & wheat flour",
+            "te": "బియ్యప్పిండి, గోధుమపిండి"
+          },
+          "quantity": "1 cup"
+        },
+        {
+          "item": {
+            "en": "Jaggery, banana, cardamom, ghee/oil",
+            "te": "బెల్లం, అరటిపండు, యాలకులు, నెయ్యి/నూనె"
+          },
+          "quantity": "to taste"
+        }
       ],
       "steps": [
-        { "en": "Mash banana with jaggery, add flours and cardamom to a thick batter." },
-        { "en": "Fry small appam in ghee/oil till golden." },
-        { "en": "Offer warm at the evening deeparadhana." }
+        {
+          "en": "Mash banana with jaggery, add flours and cardamom to a thick batter."
+        },
+        {
+          "en": "Fry small appam in ghee/oil till golden."
+        },
+        {
+          "en": "Offer warm at the evening deeparadhana."
+        }
       ],
-      "offering_note": { "en": "A sweet offered with the Karthika evening lamps." }
+      "offering_note": {
+        "en": "A sweet offered with the Karthika evening lamps."
+      }
     }
   ],
   "primary_mantra": {
     "sa": "ॐ नमः शिवाय",
     "transliteration": "Om Namah Shivaya",
-    "meaning": { "en": "Salutations to Shiva — worshipped alongside Vishnu on Karthika Pournami." }
+    "meaning": {
+      "en": "Salutations to Shiva — worshipped alongside Vishnu on Karthika Pournami."
+    }
   },
-  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Karthika Purana / deeparadhana narration." },
+  "audio": {
+    "katha_track_id": null,
+    "narration_language": "te",
+    "duration_seconds": null,
+    "note": "Populate with a Supabase Storage path for the Karthika Purana / deeparadhana narration."
+  },
   "source": "Compiled for the Pavitra app; follows the Telugu Karthika masam deeparadhana and Karthika Pournami tradition.",
   "disclaimer": "Regional and family practices vary. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
   "created_at": "2026-09-25T00:00:00Z"

@@ -18,7 +18,8 @@ import sriRamaNavami from "../../supabase/seed/sri_rama_navami_2027.json";
 import hanumanJayanti from "../../supabase/seed/hanuman_jayanti_2027.json";
 import rakshaBandhan from "../../supabase/seed/raksha_bandhan_2027.json";
 import krishnaJanmashtami from "../../supabase/seed/krishna_janmashtami_2027.json";
-import { DEFAULT_LOCATION } from "../config/location";
+import { DEFAULT_LOCATION, AppLocation } from "../config/location";
+import { festivalObservedDate } from "../services/panchang";
 
 export type Lang = "en" | "te" | "sa";
 export type LangText = { en: string; te?: string; sa?: string };
@@ -139,17 +140,35 @@ export function daysUntil(
   return Math.round((target - civilTodayMs(now, timeZone)) / 86400000);
 }
 
-/** Festivals sorted by date ascending (upcoming first, past ones fall to the end of the year list). */
-export function festivalsByDate(): FestivalDoc[] {
+/**
+ * The ISO date a festival is observed **at the user's location**. A festival
+ * falls on the day its tithi prevails at a local reference time (sunrise /
+ * midday / pradosha / midnight), so the calendar day can differ by ±1 in New
+ * York or Sydney vs India. Memoised per (festival, location).
+ */
+const _festDateCache = new Map<string, string>();
+export function observedDateFor(f: FestivalDoc, location?: AppLocation): string {
+  if (!location) return f.observed_on.date;
+  const key = `${f.slug}|${location.timeZone}|${location.latitude.toFixed(2)},${location.longitude.toFixed(2)}`;
+  const hit = _festDateCache.get(key);
+  if (hit) return hit;
+  const iso = festivalObservedDate(f.slug, f.observed_on.tithi, f.observed_on.paksha, f.observed_on.date, location);
+  _festDateCache.set(key, iso);
+  return iso;
+}
+
+/** Festivals sorted by their location-observed date ascending. */
+export function festivalsByDate(location?: AppLocation): FestivalDoc[] {
   return [...FESTIVALS].sort(
-    (a, b) => toLocalNoon(a.observed_on.date).getTime() - toLocalNoon(b.observed_on.date).getTime()
+    (a, b) => toLocalNoon(observedDateFor(a, location)).getTime() - toLocalNoon(observedDateFor(b, location)).getTime()
   );
 }
 
-/** The next festival on or after `now`; falls back to the earliest if all are past. */
-export function nextFestival(now: Date = new Date()): FestivalDoc {
-  const sorted = festivalsByDate();
-  const upcoming = sorted.find((f) => daysUntil(f.observed_on.date, now) >= 0);
+/** The next festival on or after `now` at the user's location; falls back to the earliest if all are past. */
+export function nextFestival(now: Date = new Date(), location?: AppLocation): FestivalDoc {
+  const sorted = festivalsByDate(location);
+  const tz = location?.timeZone;
+  const upcoming = sorted.find((f) => daysUntil(observedDateFor(f, location), now, tz) >= 0);
   return upcoming ?? sorted[0];
 }
 

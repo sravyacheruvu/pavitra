@@ -8,8 +8,10 @@ import {
   daysUntil,
   festivalsByDate,
   formatFestivalDate,
+  observedDateFor,
   relativeDay,
 } from "../data/festivalContent";
+import { useLocation } from "../services/location";
 import type { RootStackParamList } from "../navigation/types";
 import { useLang, useT, pick } from "../i18n";
 import { pickTerm, toScript } from "../i18n/script";
@@ -24,7 +26,8 @@ const FESTIVAL_ICON: Record<string, keyof typeof MaterialCommunityIcons.glyphMap
 
 export default function FestivalsScreen() {
   const navigation = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
-  const festivals = festivalsByDate();
+  const { location } = useLocation();
+  const festivals = festivalsByDate(location);
   const { lang } = useLang();
   const term = (roman?: string, sa?: string) => (lang === "en" || !sa ? (roman ?? "") : toScript(sa, lang));
   const t = useT();
@@ -35,7 +38,8 @@ export default function FestivalsScreen() {
       <ScrollView className="flex-1" contentContainerStyle={{ paddingBottom: 28, paddingTop: 8 }}>
         <View className="px-5" style={{ gap: 12 }}>
           {festivals.map((f) => {
-            const days = daysUntil(f.observed_on.date);
+            const fdate = observedDateFor(f, location);
+            const days = daysUntil(fdate, undefined, location.timeZone);
             return (
               <Pressable
                 key={f.id}
@@ -55,7 +59,7 @@ export default function FestivalsScreen() {
                       <Text className="text-sm text-veranda-teak/55">{f.name.en}</Text>
                     ) : null}
                     <Text className="mt-0.5 text-xs text-veranda-marigold">
-                      {formatFestivalDate(f.observed_on.date)}
+                      {formatFestivalDate(fdate)}
                       {f.observed_on.tithi ? ` · ${term(f.observed_on.masa, angaDev(f.observed_on.masa))} ${term(f.observed_on.tithi, angaDev(f.observed_on.tithi))}` : ""}
                     </Text>
                   </View>

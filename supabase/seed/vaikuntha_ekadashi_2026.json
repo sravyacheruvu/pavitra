@@ -29,88 +29,397 @@
     "te": "వైకుంఠ ఏకాదశి (ముక్కోటి ఏకాదశి) ధనుర్మాసంలో వచ్చే సంవత్సరంలోని అత్యంత పవిత్రమైన ఏకాదశి. ఈ రోజు వైకుంఠ ద్వారం తెరుచుకుంటుందని, పూర్తి ఉపవాసం, జాగరణ చేసి, తెల్లవారుజామున ఉత్తర ద్వారం (వైకుంఠ ద్వారం) గుండా దర్శనం చేసుకుంటే మోక్షం లభిస్తుందని విశ్వాసం. విష్ణు సహస్రనామ పారాయణ, నారాయణ జపం ప్రధానం.",
     "sa": "धनुर्मासे शुक्लैकादश्यां वैकुण्ठद्वारोद्घाटनं मोक्षप्रदम् इति मन्यते।"
   },
-  "regions": ["Andhra Pradesh", "Telangana", "Tamil Nadu", "Karnataka", "All India"],
-  "languages": ["en", "te", "sa"],
+  "regions": [
+    "Andhra Pradesh",
+    "Telangana",
+    "Tamil Nadu",
+    "Karnataka",
+    "All India"
+  ],
+  "languages": [
+    "en",
+    "te",
+    "sa"
+  ],
   "samagri": [
-    { "id": "vishnu-idol", "name": { "en": "Vishnu / Venkateswara idol or picture", "te": "విష్ణు / వేంకటేశ్వర విగ్రహం / చిత్రం" }, "quantity": "1", "category": "idol", "essential": true },
-    { "id": "tulasi", "name": { "en": "Tulasi leaves & garland", "te": "తులసి దళాలు, మాల" }, "quantity": "1 set", "category": "leaves", "essential": true, "notes": { "en": "Vishnu's most beloved offering." } },
-    { "id": "yellow-cloth", "name": { "en": "Yellow cloth for the peetham & yellow flowers", "te": "పసుపు వస్త్రం, పసుపు పూలు" }, "quantity": "1 set", "category": "seat", "essential": true },
-    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, akshata, sandalwood", "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం" }, "quantity": "1 set", "category": "auspicious", "essential": true },
-    { "id": "panchamrita", "name": { "en": "Panchamrita (milk, curd, ghee, honey, sugar)", "te": "పంచామృతం" }, "quantity": "1 set", "category": "abhisheka", "essential": true },
-    { "id": "fruits-naivedya", "name": { "en": "Fruits, coconut, jaggery (ekadashi-permitted naivedya)", "te": "పండ్లు, కొబ్బరికాయ, బెల్లం" }, "quantity": "assorted", "category": "naivedya", "essential": true },
-    { "id": "lamp", "name": { "en": "Oil lamp, camphor, incense", "te": "దీపం, కర్పూరం, అగరవత్తులు" }, "quantity": "1 set", "category": "light", "essential": true },
-    { "id": "sahasranama", "name": { "en": "Vishnu Sahasranama text", "te": "విష్ణు సహస్రనామం" }, "quantity": "1", "category": "parayana", "essential": false }
+    {
+      "id": "vishnu-idol",
+      "name": {
+        "en": "Vishnu / Venkateswara idol or picture",
+        "te": "విష్ణు / వేంకటేశ్వర విగ్రహం / చిత్రం"
+      },
+      "quantity": "1",
+      "category": "idol",
+      "essential": true
+    },
+    {
+      "id": "tulasi",
+      "name": {
+        "en": "Tulasi leaves & garland",
+        "te": "తులసి దళాలు, మాల"
+      },
+      "quantity": "1 set",
+      "category": "leaves",
+      "essential": true,
+      "notes": {
+        "en": "Vishnu's most beloved offering."
+      }
+    },
+    {
+      "id": "yellow-cloth",
+      "name": {
+        "en": "Yellow cloth for the peetham & yellow flowers",
+        "te": "పసుపు వస్త్రం, పసుపు పూలు"
+      },
+      "quantity": "1 set",
+      "category": "seat",
+      "essential": true
+    },
+    {
+      "id": "turmeric-kumkum",
+      "name": {
+        "en": "Turmeric, kumkum, akshata, sandalwood",
+        "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం"
+      },
+      "quantity": "1 set",
+      "category": "auspicious",
+      "essential": true
+    },
+    {
+      "id": "panchamrita",
+      "name": {
+        "en": "Panchamrita (milk, curd, ghee, honey, sugar)",
+        "te": "పంచామృతం"
+      },
+      "quantity": "1 set",
+      "category": "abhisheka",
+      "essential": true
+    },
+    {
+      "id": "fruits-naivedya",
+      "name": {
+        "en": "Fruits, coconut, jaggery (ekadashi-permitted naivedya)",
+        "te": "పండ్లు, కొబ్బరికాయ, బెల్లం"
+      },
+      "quantity": "assorted",
+      "category": "naivedya",
+      "essential": true
+    },
+    {
+      "id": "lamp",
+      "name": {
+        "en": "Oil lamp, camphor, incense",
+        "te": "దీపం, కర్పూరం, అగరవత్తులు"
+      },
+      "quantity": "1 set",
+      "category": "light",
+      "essential": true
+    },
+    {
+      "id": "sahasranama",
+      "name": {
+        "en": "Vishnu Sahasranama text",
+        "te": "విష్ణు సహస్రనామం"
+      },
+      "quantity": "1",
+      "category": "parayana",
+      "essential": false
+    }
   ],
   "vidhi": {
     "sankshipta": {
-      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "label": {
+        "en": "Sankshipta (Quick)",
+        "te": "సంక్షిప్త విధి"
+      },
       "duration_minutes": 25,
-      "description": { "en": "A concise Ekadashi worship with fasting and the Ashtakshari / Dvadashakshari japa." },
+      "description": {
+        "en": "A concise Ekadashi worship with fasting and the Ashtakshari / Dvadashakshari japa."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Sankalpam & Upavasa", "te": "సంకల్పం & ఉపవాసం" }, "instruction": { "en": "Bathe, resolve to keep the complete Ekadashi fast and vigil, and light the lamp before Vishnu.", "te": "స్నానం చేసి, పూర్తి ఏకాదశి ఉపవాస, జాగరణ సంకల్పం చెప్పుకొని దీపం వెలిగించండి." } },
-        { "order": 2, "title": { "en": "Avahana", "te": "ఆవాహన" }, "instruction": { "en": "Invoke Sri Maha Vishnu with the Ashtakshari mantra and tulasi.", "te": "అష్టాక్షరీ మంత్రం, తులసితో విష్ణువును ఆవాహన చేయండి." }, "mantra": { "sa": "ॐ नमो नारायणाय", "transliteration": "Om Namo Narayanaya", "meaning": { "en": "Salutations to Lord Narayana — the Ashtakshari mantra." } } },
-        { "order": 3, "title": { "en": "Tulasi Archana", "te": "తులసి అర్చన" }, "instruction": { "en": "Offer tulasi, sandal, flowers, dhupa and deepa to the Lord.", "te": "తులసి, గంధం, పూలు, ధూప దీపాలు సమర్పించండి." } },
-        { "order": 4, "title": { "en": "Sahasranama & Naivedya", "te": "సహస్రనామం & నైవేద్యం" }, "instruction": { "en": "Recite the Vishnu Sahasranama, offer fruits and panchamrita (no rice on Ekadashi).", "te": "విష్ణు సహస్రనామం పఠించి, పండ్లు, పంచామృతం నైవేద్యం (ఏకాదశి రోజు అన్నం వర్జ్యం)." } },
-        { "order": 5, "title": { "en": "Aarti & Jagarana", "te": "హారతి & జాగరణ" }, "instruction": { "en": "Offer camphor aarti and keep the night vigil with Narayana japa.", "te": "కర్పూర హారతి ఇచ్చి, నారాయణ జపంతో జాగరణ చేయండి." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Sankalpam & Upavasa",
+            "te": "సంకల్పం & ఉపవాసం"
+          },
+          "instruction": {
+            "en": "Bathe, resolve to keep the complete Ekadashi fast and vigil, and light the lamp before Vishnu.",
+            "te": "స్నానం చేసి, పూర్తి ఏకాదశి ఉపవాస, జాగరణ సంకల్పం చెప్పుకొని దీపం వెలిగించండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Avahana",
+            "te": "ఆవాహన"
+          },
+          "instruction": {
+            "en": "Invoke Sri Maha Vishnu with the Ashtakshari mantra and tulasi.",
+            "te": "అష్టాక్షరీ మంత్రం, తులసితో విష్ణువును ఆవాహన చేయండి."
+          },
+          "mantra": {
+            "sa": "ॐ नमो नारायणाय",
+            "transliteration": "Om Namo Narayanaya",
+            "meaning": {
+              "en": "Salutations to Lord Narayana — the Ashtakshari mantra."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Tulasi Archana",
+            "te": "తులసి అర్చన"
+          },
+          "instruction": {
+            "en": "Offer tulasi, sandal, flowers, dhupa and deepa to the Lord.",
+            "te": "తులసి, గంధం, పూలు, ధూప దీపాలు సమర్పించండి."
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Sahasranama & Naivedya",
+            "te": "సహస్రనామం & నైవేద్యం"
+          },
+          "instruction": {
+            "en": "Recite the Vishnu Sahasranama, offer fruits and panchamrita (no rice on Ekadashi).",
+            "te": "విష్ణు సహస్రనామం పఠించి, పండ్లు, పంచామృతం నైవేద్యం (ఏకాదశి రోజు అన్నం వర్జ్యం)."
+          },
+          "detailsRef": "vishnu_ashtottara"
+        },
+        {
+          "order": 5,
+          "title": {
+            "en": "Aarti & Jagarana",
+            "te": "హారతి & జాగరణ"
+          },
+          "instruction": {
+            "en": "Offer camphor aarti and keep the night vigil with Narayana japa.",
+            "te": "కర్పూర హారతి ఇచ్చి, నారాయణ జపంతో జాగరణ చేయండి."
+          }
+        }
       ]
     },
     "sampurna": {
-      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "label": {
+        "en": "Sampurna (Full)",
+        "te": "సంపూర్ణ విధి"
+      },
       "duration_minutes": 75,
-      "description": { "en": "The full Ekadashi vrata with abhishekam, Sahasranama, jagarana and dawn Vaikuntha Dwaram darshan." },
+      "description": {
+        "en": "The full Ekadashi vrata with abhishekam, Sahasranama, jagarana and dawn Vaikuntha Dwaram darshan."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean the space, perform achamana and pranayama, and take the sankalpa for the nirjala/complete Ekadashi vrata.", "te": "స్థలం శుభ్రపరచి, ఆచమనం చేసి, పూర్తి ఏకాదశి వ్రత సంకల్పం చెప్పుకోండి." } },
-        { "order": 2, "title": { "en": "Dhyana & Avahana", "te": "ధ్యానం & ఆవాహన" }, "instruction": { "en": "Meditate on Sri Maha Vishnu reclining on Adishesha and invoke his presence.", "te": "శేషశయనుడైన శ్రీ మహా విష్ణువును ధ్యానించి ఆవాహన చేయండి." }, "mantra": { "sa": "शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं विश्वाधारं गगनसदृशं मेघवर्णं शुभाङ्गम् ॥", "transliteration": "Shantakaram Bhujaga-shayanam Padmanabham Suresham | Vishvadharam Gagana-sadrisham Megha-varnam Shubhangam ||", "meaning": { "en": "I bow to Vishnu — of peaceful form, resting on the serpent, lotus-naveled, lord of the gods, support of the universe, vast as the sky, dark as a cloud, of auspicious limbs." } } },
-        { "order": 3, "title": { "en": "Abhishekam & Alankarana", "te": "అభిషేకం & అలంకరణ" }, "instruction": { "en": "Bathe the murti with panchamrita and water, then adorn with yellow cloth, tulasi and flowers.", "te": "పంచామృతం, జలంతో అభిషేకం చేసి, పసుపు వస్త్రం, తులసి, పూలతో అలంకరించండి." } },
-        { "order": 4, "title": { "en": "Shodashopachara Puja", "te": "షోడశోపచార పూజ" }, "instruction": { "en": "Offer the sixteen services from avahana to mantrapushpa with tulasi.", "te": "ఆవాహన నుండి మంత్రపుష్పం వరకు షోడశోపచారాలు, తులసి సమర్పించండి." } },
-        { "order": 5, "title": { "en": "Vishnu Sahasranama Parayana", "te": "విష్ణు సహస్రనామ పారాయణ" }, "instruction": { "en": "Recite the Vishnu Sahasranama and the Dvadasha nama, offering tulasi at each name.", "te": "విష్ణు సహస్రనామం, ద్వాదశ నామాలతో తులసి అర్చన చేయండి." } },
-        { "order": 6, "title": { "en": "Naivedya (phalahara)", "te": "నైవేద్యం (ఫలహారం)" }, "instruction": { "en": "Offer fruits, panchamrita and permitted phalahara — grains and rice are avoided on Ekadashi.", "te": "పండ్లు, పంచామృతం, ఫలహారం నైవేద్యం; అన్నం, ధాన్యం వర్జ్యం." } },
-        { "order": 7, "title": { "en": "Jagarana & Bhajans", "te": "జాగరణ & భజనలు" }, "instruction": { "en": "Keep the night vigil with Narayana japa, Govinda namas and bhajans.", "te": "నారాయణ జపం, గోవింద నామాలు, భజనలతో జాగరణ చేయండి." } },
-        { "order": 8, "title": { "en": "Vaikuntha Dwaram Darshan", "te": "వైకుంఠ ద్వార దర్శనం" }, "instruction": { "en": "At brahma muhurtham, pass through the north-facing Vaikuntha Dwaram (at the temple) for the Lord's darshan.", "te": "బ్రహ్మ ముహూర్తంలో ఉత్తర వైకుంఠ ద్వారం గుండా దర్శనం చేసుకోండి." } },
-        { "order": 9, "title": { "en": "Mangala Harati & Paarana", "te": "మంగళ హారతి & పారణ" }, "instruction": { "en": "Offer the dawn aarti; break the fast (paarana) on Dwadashi at the prescribed time.", "te": "తెల్లవారుజామున మంగళ హారతి; ద్వాదశి నాడు నియమిత సమయంలో పారణ చేయండి." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Purification & Sankalpam",
+            "te": "శుద్ధి & సంకల్పం"
+          },
+          "instruction": {
+            "en": "Clean the space, perform achamana and pranayama, and take the sankalpa for the nirjala/complete Ekadashi vrata.",
+            "te": "స్థలం శుభ్రపరచి, ఆచమనం చేసి, పూర్తి ఏకాదశి వ్రత సంకల్పం చెప్పుకోండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Dhyana & Avahana",
+            "te": "ధ్యానం & ఆవాహన"
+          },
+          "instruction": {
+            "en": "Meditate on Sri Maha Vishnu reclining on Adishesha and invoke his presence.",
+            "te": "శేషశయనుడైన శ్రీ మహా విష్ణువును ధ్యానించి ఆవాహన చేయండి."
+          },
+          "mantra": {
+            "sa": "शान्ताकारं भुजगशयनं पद्मनाभं सुरेशं विश्वाधारं गगनसदृशं मेघवर्णं शुभाङ्गम् ॥",
+            "transliteration": "Shantakaram Bhujaga-shayanam Padmanabham Suresham | Vishvadharam Gagana-sadrisham Megha-varnam Shubhangam ||",
+            "meaning": {
+              "en": "I bow to Vishnu — of peaceful form, resting on the serpent, lotus-naveled, lord of the gods, support of the universe, vast as the sky, dark as a cloud, of auspicious limbs."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Abhishekam & Alankarana",
+            "te": "అభిషేకం & అలంకరణ"
+          },
+          "instruction": {
+            "en": "Bathe the murti with panchamrita and water, then adorn with yellow cloth, tulasi and flowers.",
+            "te": "పంచామృతం, జలంతో అభిషేకం చేసి, పసుపు వస్త్రం, తులసి, పూలతో అలంకరించండి."
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Shodashopachara Puja",
+            "te": "షోడశోపచార పూజ"
+          },
+          "instruction": {
+            "en": "Offer the sixteen services from avahana to mantrapushpa with tulasi.",
+            "te": "ఆవాహన నుండి మంత్రపుష్పం వరకు షోడశోపచారాలు, తులసి సమర్పించండి."
+          },
+          "detailsRef": "shodashopachara"
+        },
+        {
+          "order": 5,
+          "title": {
+            "en": "Vishnu Sahasranama Parayana",
+            "te": "విష్ణు సహస్రనామ పారాయణ"
+          },
+          "instruction": {
+            "en": "Recite the Vishnu Sahasranama and the Dvadasha nama, offering tulasi at each name.",
+            "te": "విష్ణు సహస్రనామం, ద్వాదశ నామాలతో తులసి అర్చన చేయండి."
+          },
+          "detailsRef": "vishnu_ashtottara"
+        },
+        {
+          "order": 6,
+          "title": {
+            "en": "Naivedya (phalahara)",
+            "te": "నైవేద్యం (ఫలహారం)"
+          },
+          "instruction": {
+            "en": "Offer fruits, panchamrita and permitted phalahara — grains and rice are avoided on Ekadashi.",
+            "te": "పండ్లు, పంచామృతం, ఫలహారం నైవేద్యం; అన్నం, ధాన్యం వర్జ్యం."
+          }
+        },
+        {
+          "order": 7,
+          "title": {
+            "en": "Jagarana & Bhajans",
+            "te": "జాగరణ & భజనలు"
+          },
+          "instruction": {
+            "en": "Keep the night vigil with Narayana japa, Govinda namas and bhajans.",
+            "te": "నారాయణ జపం, గోవింద నామాలు, భజనలతో జాగరణ చేయండి."
+          }
+        },
+        {
+          "order": 8,
+          "title": {
+            "en": "Vaikuntha Dwaram Darshan",
+            "te": "వైకుంఠ ద్వార దర్శనం"
+          },
+          "instruction": {
+            "en": "At brahma muhurtham, pass through the north-facing Vaikuntha Dwaram (at the temple) for the Lord's darshan.",
+            "te": "బ్రహ్మ ముహూర్తంలో ఉత్తర వైకుంఠ ద్వారం గుండా దర్శనం చేసుకోండి."
+          }
+        },
+        {
+          "order": 9,
+          "title": {
+            "en": "Mangala Harati & Paarana",
+            "te": "మంగళ హారతి & పారణ"
+          },
+          "instruction": {
+            "en": "Offer the dawn aarti; break the fast (paarana) on Dwadashi at the prescribed time.",
+            "te": "తెల్లవారుజామున మంగళ హారతి; ద్వాదశి నాడు నియమిత సమయంలో పారణ చేయండి."
+          }
+        }
       ]
     }
   },
   "prasadam": [
     {
       "id": "sabudana-kheer",
-      "name": { "en": "Sabudana Kheer (fasting payasam)", "te": "సగ్గుబియ్యం పాయసం" },
+      "name": {
+        "en": "Sabudana Kheer (fasting payasam)",
+        "te": "సగ్గుబియ్యం పాయసం"
+      },
       "type": "vrata",
       "serves": "4",
       "ingredients": [
-        { "item": { "en": "Sabudana (sago)", "te": "సగ్గుబియ్యం" }, "quantity": "1/2 cup" },
-        { "item": { "en": "Milk", "te": "పాలు" }, "quantity": "3 cups" },
-        { "item": { "en": "Sugar, cardamom, cashews, raisins, ghee", "te": "పంచదార, యాలకులు, జీడిపప్పు, ఎండుద్రాక్ష, నెయ్యి" }, "quantity": "to taste" }
+        {
+          "item": {
+            "en": "Sabudana (sago)",
+            "te": "సగ్గుబియ్యం"
+          },
+          "quantity": "1/2 cup"
+        },
+        {
+          "item": {
+            "en": "Milk",
+            "te": "పాలు"
+          },
+          "quantity": "3 cups"
+        },
+        {
+          "item": {
+            "en": "Sugar, cardamom, cashews, raisins, ghee",
+            "te": "పంచదార, యాలకులు, జీడిపప్పు, ఎండుద్రాక్ష, నెయ్యి"
+          },
+          "quantity": "to taste"
+        }
       ],
       "steps": [
-        { "en": "Soak sabudana till soft." },
-        { "en": "Simmer in milk till the pearls turn translucent, then sweeten." },
-        { "en": "Add cardamom and ghee-fried nuts; offer as ekadashi-permitted phalahara." }
+        {
+          "en": "Soak sabudana till soft."
+        },
+        {
+          "en": "Simmer in milk till the pearls turn translucent, then sweeten."
+        },
+        {
+          "en": "Add cardamom and ghee-fried nuts; offer as ekadashi-permitted phalahara."
+        }
       ],
-      "offering_note": { "en": "A grain-free payasam suited to the Ekadashi fast." }
+      "offering_note": {
+        "en": "A grain-free payasam suited to the Ekadashi fast."
+      }
     },
     {
       "id": "panchamrita",
-      "name": { "en": "Panchamrita", "te": "పంచామృతం" },
+      "name": {
+        "en": "Panchamrita",
+        "te": "పంచామృతం"
+      },
       "type": "offering",
       "serves": "prasad",
       "ingredients": [
-        { "item": { "en": "Milk, curd, ghee, honey, sugar", "te": "పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార" }, "quantity": "equal parts" },
-        { "item": { "en": "Tulasi leaf, banana", "te": "తులసి ఆకు, అరటిపండు" }, "quantity": "a little" }
+        {
+          "item": {
+            "en": "Milk, curd, ghee, honey, sugar",
+            "te": "పాలు, పెరుగు, నెయ్యి, తేనె, పంచదార"
+          },
+          "quantity": "equal parts"
+        },
+        {
+          "item": {
+            "en": "Tulasi leaf, banana",
+            "te": "తులసి ఆకు, అరటిపండు"
+          },
+          "quantity": "a little"
+        }
       ],
       "steps": [
-        { "en": "Mix the five nectars with a tulasi leaf." },
-        { "en": "Use for abhishekam and share as prasadam." }
+        {
+          "en": "Mix the five nectars with a tulasi leaf."
+        },
+        {
+          "en": "Use for abhishekam and share as prasadam."
+        }
       ],
-      "offering_note": { "en": "Vishnu's abhisheka nectar, always with tulasi." }
+      "offering_note": {
+        "en": "Vishnu's abhisheka nectar, always with tulasi."
+      }
     }
   ],
   "primary_mantra": {
     "sa": "ॐ नमो नारायणाय",
     "transliteration": "Om Namo Narayanaya",
-    "meaning": { "en": "Salutations to Lord Narayana — the eight-syllable Ashtakshari mantra." }
+    "meaning": {
+      "en": "Salutations to Lord Narayana — the eight-syllable Ashtakshari mantra."
+    }
   },
-  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Vishnu Sahasranama narration." },
+  "audio": {
+    "katha_track_id": null,
+    "narration_language": "te",
+    "duration_seconds": null,
+    "note": "Populate with a Supabase Storage path for the Vishnu Sahasranama narration."
+  },
   "source": "Compiled for the Pavitra app; follows the South-Indian Dhanurmasa Vaikuntha (Mukkoti) Ekadashi tradition.",
   "disclaimer": "Regional and family practices vary; the exact date can differ by tradition. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
   "created_at": "2026-09-25T00:00:00Z"

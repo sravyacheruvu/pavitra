@@ -23,8 +23,15 @@
     "rule": "Bhadrapada Shukla Chaturthi; puja performed in the madhyahna (midday) period.",
     "computed_by": "Swiss Ephemeris (panchangamService) for +12.9716, +77.5946",
     "related_days": [
-      { "name": "Ganesh Chaturthi (Vinayaka Chavithi)", "date": "2026-09-14" },
-      { "name": "Anant Chaturdashi (Ganesh Visarjan)", "date": "2026-09-25", "note": "Conclusion of the 10-day festival; idols immersed." }
+      {
+        "name": "Ganesh Chaturthi (Vinayaka Chavithi)",
+        "date": "2026-09-14"
+      },
+      {
+        "name": "Anant Chaturdashi (Ganesh Visarjan)",
+        "date": "2026-09-25",
+        "note": "Conclusion of the 10-day festival; idols immersed."
+      }
     ],
     "note": "In Andhra/Telangana known as Vinayaka Chavithi. Avoid viewing the moon on Chaturthi night (mithya dosha / Chandra darshan)."
   },
@@ -33,114 +40,519 @@
     "te": "వినాయక చవితి గణేశుని జన్మదినంగా జరుపుకుంటారు. విఘ్నాలను తొలగించే వినాయకుడిని మట్టి విగ్రహంగా ప్రతిష్టించి పూజించి, చివరిరోజు నిమజ్జనం చేస్తారు.",
     "sa": "विघ्नहर्ता गणेशस्य आराधनं शुभारम्भ-बुद्धि-सिद्धि-प्रदायकम्।"
   },
-  "regions": ["Maharashtra", "Andhra Pradesh", "Telangana", "Karnataka", "Tamil Nadu", "Goa"],
-  "languages": ["en", "te", "sa"],
+  "regions": [
+    "Maharashtra",
+    "Andhra Pradesh",
+    "Telangana",
+    "Karnataka",
+    "Tamil Nadu",
+    "Goa"
+  ],
+  "languages": [
+    "en",
+    "te",
+    "sa"
+  ],
   "samagri": [
-    { "id": "ganesha-idol", "name": { "en": "Clay Ganesha idol (eco-friendly)", "te": "మట్టి వినాయక విగ్రహం" }, "quantity": "1", "category": "idol", "essential": true },
-    { "id": "wooden-plank", "name": { "en": "Wooden plank / peetham with new cloth", "te": "పీఠం, కొత్త వస్త్రం" }, "quantity": "1", "category": "seat", "essential": true },
-    { "id": "durva", "name": { "en": "Durva grass (21 blades / bunches)", "te": "గరిక (21)" }, "quantity": "21", "category": "auspicious", "essential": true, "notes": { "en": "Ganesha's favourite offering." } },
-    { "id": "modak", "name": { "en": "Modak (21 pieces)", "te": "మోదకం / కుడుములు (21)" }, "quantity": "21", "category": "naivedya", "essential": true },
-    { "id": "red-flowers", "name": { "en": "Red flowers, esp. hibiscus (mandara)", "te": "ఎర్ర పూలు (మందారం)" }, "quantity": "assorted", "category": "flowers", "essential": true },
-    { "id": "patri", "name": { "en": "21 leaves (Ekavimshati Patra Puja)", "te": "21 రకాల ఆకులు (పత్రి)" }, "quantity": "1 set", "category": "leaves", "essential": true, "notes": { "en": "Includes maachi, bilva, durva, jaji, etc." } },
-    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, sandalwood, akshata", "te": "పసుపు, కుంకుమ, గంధం, అక్షతలు" }, "quantity": "1 set", "category": "auspicious", "essential": true },
-    { "id": "coconut", "name": { "en": "Coconut & bananas", "te": "కొబ్బరికాయ, అరటిపండ్లు" }, "quantity": "as available", "category": "offering", "essential": true },
-    { "id": "lamp", "name": { "en": "Oil/ghee lamp, wicks, camphor, incense", "te": "దీపం, వత్తులు, కర్పూరం, అగరవత్తులు" }, "quantity": "1 set", "category": "light", "essential": true },
-    { "id": "betel", "name": { "en": "Betel leaves, areca nuts, fruits, jaggery", "te": "తమలపాకులు, వక్కలు, పండ్లు, బెల్లం" }, "quantity": "assorted", "category": "offering", "essential": true },
-    { "id": "kalasham", "name": { "en": "Kalasham with water, mango leaves", "te": "కలశం, మామిడాకులు" }, "quantity": "1", "category": "vessel", "essential": false }
+    {
+      "id": "ganesha-idol",
+      "name": {
+        "en": "Clay Ganesha idol (eco-friendly)",
+        "te": "మట్టి వినాయక విగ్రహం"
+      },
+      "quantity": "1",
+      "category": "idol",
+      "essential": true
+    },
+    {
+      "id": "wooden-plank",
+      "name": {
+        "en": "Wooden plank / peetham with new cloth",
+        "te": "పీఠం, కొత్త వస్త్రం"
+      },
+      "quantity": "1",
+      "category": "seat",
+      "essential": true
+    },
+    {
+      "id": "durva",
+      "name": {
+        "en": "Durva grass (21 blades / bunches)",
+        "te": "గరిక (21)"
+      },
+      "quantity": "21",
+      "category": "auspicious",
+      "essential": true,
+      "notes": {
+        "en": "Ganesha's favourite offering."
+      }
+    },
+    {
+      "id": "modak",
+      "name": {
+        "en": "Modak (21 pieces)",
+        "te": "మోదకం / కుడుములు (21)"
+      },
+      "quantity": "21",
+      "category": "naivedya",
+      "essential": true
+    },
+    {
+      "id": "red-flowers",
+      "name": {
+        "en": "Red flowers, esp. hibiscus (mandara)",
+        "te": "ఎర్ర పూలు (మందారం)"
+      },
+      "quantity": "assorted",
+      "category": "flowers",
+      "essential": true
+    },
+    {
+      "id": "patri",
+      "name": {
+        "en": "21 leaves (Ekavimshati Patra Puja)",
+        "te": "21 రకాల ఆకులు (పత్రి)"
+      },
+      "quantity": "1 set",
+      "category": "leaves",
+      "essential": true,
+      "notes": {
+        "en": "Includes maachi, bilva, durva, jaji, etc."
+      }
+    },
+    {
+      "id": "turmeric-kumkum",
+      "name": {
+        "en": "Turmeric, kumkum, sandalwood, akshata",
+        "te": "పసుపు, కుంకుమ, గంధం, అక్షతలు"
+      },
+      "quantity": "1 set",
+      "category": "auspicious",
+      "essential": true
+    },
+    {
+      "id": "coconut",
+      "name": {
+        "en": "Coconut & bananas",
+        "te": "కొబ్బరికాయ, అరటిపండ్లు"
+      },
+      "quantity": "as available",
+      "category": "offering",
+      "essential": true
+    },
+    {
+      "id": "lamp",
+      "name": {
+        "en": "Oil/ghee lamp, wicks, camphor, incense",
+        "te": "దీపం, వత్తులు, కర్పూరం, అగరవత్తులు"
+      },
+      "quantity": "1 set",
+      "category": "light",
+      "essential": true
+    },
+    {
+      "id": "betel",
+      "name": {
+        "en": "Betel leaves, areca nuts, fruits, jaggery",
+        "te": "తమలపాకులు, వక్కలు, పండ్లు, బెల్లం"
+      },
+      "quantity": "assorted",
+      "category": "offering",
+      "essential": true
+    },
+    {
+      "id": "kalasham",
+      "name": {
+        "en": "Kalasham with water, mango leaves",
+        "te": "కలశం, మామిడాకులు"
+      },
+      "quantity": "1",
+      "category": "vessel",
+      "essential": false
+    }
   ],
   "vidhi": {
     "sankshipta": {
-      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "label": {
+        "en": "Sankshipta (Quick)",
+        "te": "సంక్షిప్త విధి"
+      },
       "duration_minutes": 25,
-      "description": { "en": "A concise puja preserving the essential offerings." },
+      "description": {
+        "en": "A concise puja preserving the essential offerings."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Sankalpam", "te": "సంకల్పం" }, "instruction": { "en": "Bathe, install the idol on the cloth-covered plank facing east or north, light the lamp, and take the sankalpa.", "te": "స్నానం చేసి, విగ్రహాన్ని ప్రతిష్టించి, దీపం వెలిగించి సంకల్పం చెప్పుకోండి." } },
-        { "order": 2, "title": { "en": "Prana Pratishtha", "te": "ప్రాణ ప్రతిష్ఠ" }, "instruction": { "en": "Invoke the presence of Ganesha into the idol with akshata and the mula mantra.", "te": "అక్షతలతో వినాయకుని ఆవాహన చేయండి." }, "mantra": { "sa": "ॐ गं गणपतये नमः", "transliteration": "Om Gam Ganapataye Namaha", "meaning": { "en": "Salutations to Lord Ganesha." } } },
-        { "order": 3, "title": { "en": "Shatpachara Puja", "te": "పంచోపచార పూజ" }, "instruction": { "en": "Offer gandha, akshata, red flowers, durva, dhupa and deepa while chanting the name.", "te": "గంధం, అక్షతలు, ఎర్రపూలు, గరిక, ధూప దీపాలు సమర్పించండి." } },
-        { "order": 4, "title": { "en": "Durva & Modak Naivedya", "te": "గరిక, మోదక నైవేద్యం" }, "instruction": { "en": "Offer 21 durva blades and 21 modak, then fruits.", "te": "21 గరికలు, 21 మోదకాలు, పండ్లు సమర్పించండి." } },
-        { "order": 5, "title": { "en": "Vrata Katha & Aarti", "te": "వ్రత కథ & హారతి" }, "instruction": { "en": "Read the Vinayaka Vrata Katha (Syamantaka story), offer camphor aarti, and distribute prasadam.", "te": "వినాయక వ్రత కథ చదివి, హారతి ఇచ్చి ప్రసాదం పంచండి." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Sankalpam",
+            "te": "సంకల్పం"
+          },
+          "instruction": {
+            "en": "Bathe, install the idol on the cloth-covered plank facing east or north, light the lamp, and take the sankalpa.",
+            "te": "స్నానం చేసి, విగ్రహాన్ని ప్రతిష్టించి, దీపం వెలిగించి సంకల్పం చెప్పుకోండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Prana Pratishtha",
+            "te": "ప్రాణ ప్రతిష్ఠ"
+          },
+          "instruction": {
+            "en": "Invoke the presence of Ganesha into the idol with akshata and the mula mantra.",
+            "te": "అక్షతలతో వినాయకుని ఆవాహన చేయండి."
+          },
+          "mantra": {
+            "sa": "ॐ गं गणपतये नमः",
+            "transliteration": "Om Gam Ganapataye Namaha",
+            "meaning": {
+              "en": "Salutations to Lord Ganesha."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Shatpachara Puja",
+            "te": "పంచోపచార పూజ"
+          },
+          "instruction": {
+            "en": "Offer gandha, akshata, red flowers, durva, dhupa and deepa while chanting the name.",
+            "te": "గంధం, అక్షతలు, ఎర్రపూలు, గరిక, ధూప దీపాలు సమర్పించండి."
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Durva & Modak Naivedya",
+            "te": "గరిక, మోదక నైవేద్యం"
+          },
+          "instruction": {
+            "en": "Offer 21 durva blades and 21 modak, then fruits.",
+            "te": "21 గరికలు, 21 మోదకాలు, పండ్లు సమర్పించండి."
+          }
+        },
+        {
+          "order": 5,
+          "title": {
+            "en": "Vrata Katha & Aarti",
+            "te": "వ్రత కథ & హారతి"
+          },
+          "instruction": {
+            "en": "Read the Vinayaka Vrata Katha (Syamantaka story), offer camphor aarti, and distribute prasadam.",
+            "te": "వినాయక వ్రత కథ చదివి, హారతి ఇచ్చి ప్రసాదం పంచండి."
+          }
+        }
       ]
     },
     "sampurna": {
-      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "label": {
+        "en": "Sampurna (Full)",
+        "te": "సంపూర్ణ విధి"
+      },
       "duration_minutes": 75,
-      "description": { "en": "The full procedure with shodashopachara and the 21-leaf archana." },
+      "description": {
+        "en": "The full procedure with shodashopachara and the 21-leaf archana."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean the space, draw a muggu, perform achamana and pranayama, and take the detailed sankalpa naming tithi, place and intent.", "te": "స్థలం శుభ్రపరచి, ముగ్గు వేసి, ఆచమనం చేసి, సంకల్పం చెప్పుకోండి." } },
-        { "order": 2, "title": { "en": "Kalasha & Deepa Aradhana", "te": "కలశ & దీప ఆరాధన" }, "instruction": { "en": "Set up the kalasham, light the lamps and worship them.", "te": "కలశం ఏర్పాటు చేసి దీపారాధన చేయండి." } },
-        { "order": 3, "title": { "en": "Prana Pratishtha", "te": "ప్రాణ ప్రతిష్ఠ" }, "instruction": { "en": "Consecrate life into the clay idol with the dhyana and mula mantra.", "te": "మట్టి విగ్రహంలో ప్రాణ ప్రతిష్ఠ చేయండి." }, "mantra": { "sa": "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ । निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥", "transliteration": "Vakratunda Mahakaya Suryakoti Samaprabha | Nirvighnam Kuru Me Deva Sarvakaryeshu Sarvada ||", "meaning": { "en": "O curved-trunk, mighty God radiant as a million suns, make all my endeavours free of obstacles, always." } } },
-        { "order": 4, "title": { "en": "Shodashopachara Puja", "te": "షోడశోపచార పూజ" }, "instruction": { "en": "Offer the sixteen services from avahana to mantrapushpa.", "te": "ఆవాహన నుండి మంత్రపుష్పం వరకు షోడశోపచారాలు సమర్పించండి." } },
-        { "order": 5, "title": { "en": "Ekavimshati Patra Puja", "te": "ఏకవింశతి పత్ర పూజ" }, "instruction": { "en": "Worship Ganesha with 21 different leaves, naming each as you offer it.", "te": "21 రకాల పత్రితో, ఒక్కొక్కటి పేరు చెబుతూ వినాయకుని పూజించండి." }, "detailsRef": "ganesha_patra" },
-        { "order": 6, "title": { "en": "Durva Yugma Puja (21)", "te": "గరిక పూజ (21)" }, "instruction": { "en": "Offer 21 pairs of durva grass with the Ganesha names.", "te": "21 గరికలతో అర్చన చేయండి." } },
-        { "order": 7, "title": { "en": "Ashtottara Shatanamavali", "te": "అష్టోత్తర శతనామావళి" }, "instruction": { "en": "Recite the 108 names of Ganesha with kumkum/flowers.", "te": "గణేశ అష్టోత్తర శతనామాలతో అర్చన చేయండి." }, "detailsRef": "ganesha_ashtottara" },
-        { "order": 8, "title": { "en": "Modak Naivedya", "te": "మోదక నైవేద్యం" }, "instruction": { "en": "Offer 21 modak and other naivedya with fruits and jaggery.", "te": "21 మోదకాలు, పండ్లు, బెల్లం నైవేద్యం సమర్పించండి." } },
-        { "order": 9, "title": { "en": "Vrata Katha Parayana", "te": "వ్రత కథ పారాయణ" }, "instruction": { "en": "Read the Vinayaka Vrata Katha and the story of the Syamantaka jewel; take akshata on the head at the end.", "te": "వినాయక వ్రత కథ, శమంతకమణి కథ చదివి, అక్షతలు తలపై వేసుకోండి." } },
-        { "order": 10, "title": { "en": "Mangala Harati", "te": "మంగళ హారతి" }, "instruction": { "en": "Offer camphor aarti singing Sukhkarta Dukhharta / Jai Ganesha.", "te": "కర్పూర మంగళ హారతి ఇవ్వండి." } },
-        { "order": 11, "title": { "en": "Visarjan (on the final day)", "te": "నిమజ్జనం" }, "instruction": { "en": "On the concluding day, offer a farewell puja and immerse the idol in water with respect, praying for an early return.", "te": "చివరి రోజు ఉద్వాసన పూజ చేసి, విగ్రహాన్ని నీటిలో నిమజ్జనం చేయండి." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Purification & Sankalpam",
+            "te": "శుద్ధి & సంకల్పం"
+          },
+          "instruction": {
+            "en": "Clean the space, draw a muggu, perform achamana and pranayama, and take the detailed sankalpa naming tithi, place and intent.",
+            "te": "స్థలం శుభ్రపరచి, ముగ్గు వేసి, ఆచమనం చేసి, సంకల్పం చెప్పుకోండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Kalasha & Deepa Aradhana",
+            "te": "కలశ & దీప ఆరాధన"
+          },
+          "instruction": {
+            "en": "Set up the kalasham, light the lamps and worship them.",
+            "te": "కలశం ఏర్పాటు చేసి దీపారాధన చేయండి."
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Prana Pratishtha",
+            "te": "ప్రాణ ప్రతిష్ఠ"
+          },
+          "instruction": {
+            "en": "Consecrate life into the clay idol with the dhyana and mula mantra.",
+            "te": "మట్టి విగ్రహంలో ప్రాణ ప్రతిష్ఠ చేయండి."
+          },
+          "mantra": {
+            "sa": "वक्रतुण्ड महाकाय सूर्यकोटि समप्रभ । निर्विघ्नं कुरु मे देव सर्वकार्येषु सर्वदा ॥",
+            "transliteration": "Vakratunda Mahakaya Suryakoti Samaprabha | Nirvighnam Kuru Me Deva Sarvakaryeshu Sarvada ||",
+            "meaning": {
+              "en": "O curved-trunk, mighty God radiant as a million suns, make all my endeavours free of obstacles, always."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Shodashopachara Puja",
+            "te": "షోడశోపచార పూజ"
+          },
+          "instruction": {
+            "en": "Offer the sixteen services from avahana to mantrapushpa.",
+            "te": "ఆవాహన నుండి మంత్రపుష్పం వరకు షోడశోపచారాలు సమర్పించండి."
+          },
+          "detailsRef": "shodashopachara"
+        },
+        {
+          "order": 5,
+          "title": {
+            "en": "Ekavimshati Patra Puja",
+            "te": "ఏకవింశతి పత్ర పూజ"
+          },
+          "instruction": {
+            "en": "Worship Ganesha with 21 different leaves, naming each as you offer it.",
+            "te": "21 రకాల పత్రితో, ఒక్కొక్కటి పేరు చెబుతూ వినాయకుని పూజించండి."
+          },
+          "detailsRef": "ganesha_patra"
+        },
+        {
+          "order": 6,
+          "title": {
+            "en": "Durva Yugma Puja (21)",
+            "te": "గరిక పూజ (21)"
+          },
+          "instruction": {
+            "en": "Offer 21 pairs of durva grass with the Ganesha names.",
+            "te": "21 గరికలతో అర్చన చేయండి."
+          }
+        },
+        {
+          "order": 7,
+          "title": {
+            "en": "Ashtottara Shatanamavali",
+            "te": "అష్టోత్తర శతనామావళి"
+          },
+          "instruction": {
+            "en": "Recite the 108 names of Ganesha with kumkum/flowers.",
+            "te": "గణేశ అష్టోత్తర శతనామాలతో అర్చన చేయండి."
+          },
+          "detailsRef": "ganesha_ashtottara"
+        },
+        {
+          "order": 8,
+          "title": {
+            "en": "Modak Naivedya",
+            "te": "మోదక నైవేద్యం"
+          },
+          "instruction": {
+            "en": "Offer 21 modak and other naivedya with fruits and jaggery.",
+            "te": "21 మోదకాలు, పండ్లు, బెల్లం నైవేద్యం సమర్పించండి."
+          }
+        },
+        {
+          "order": 9,
+          "title": {
+            "en": "Vrata Katha Parayana",
+            "te": "వ్రత కథ పారాయణ"
+          },
+          "instruction": {
+            "en": "Read the Vinayaka Vrata Katha and the story of the Syamantaka jewel; take akshata on the head at the end.",
+            "te": "వినాయక వ్రత కథ, శమంతకమణి కథ చదివి, అక్షతలు తలపై వేసుకోండి."
+          }
+        },
+        {
+          "order": 10,
+          "title": {
+            "en": "Mangala Harati",
+            "te": "మంగళ హారతి"
+          },
+          "instruction": {
+            "en": "Offer camphor aarti singing Sukhkarta Dukhharta / Jai Ganesha.",
+            "te": "కర్పూర మంగళ హారతి ఇవ్వండి."
+          }
+        },
+        {
+          "order": 11,
+          "title": {
+            "en": "Visarjan (on the final day)",
+            "te": "నిమజ్జనం"
+          },
+          "instruction": {
+            "en": "On the concluding day, offer a farewell puja and immerse the idol in water with respect, praying for an early return.",
+            "te": "చివరి రోజు ఉద్వాసన పూజ చేసి, విగ్రహాన్ని నీటిలో నిమజ్జనం చేయండి."
+          }
+        }
       ]
     }
   },
   "prasadam": [
     {
       "id": "ukadiche-modak",
-      "name": { "en": "Ukadiche Modak (steamed rice modak)", "te": "ఉడికించిన మోదకం" },
+      "name": {
+        "en": "Ukadiche Modak (steamed rice modak)",
+        "te": "ఉడికించిన మోదకం"
+      },
       "type": "sweet",
       "serves": "makes ~21",
       "ingredients": [
-        { "item": { "en": "Rice flour", "te": "బియ్యప్పిండి" }, "quantity": "1 cup" },
-        { "item": { "en": "Grated coconut", "te": "కొబ్బరి తురుము" }, "quantity": "1 cup" },
-        { "item": { "en": "Jaggery", "te": "బెల్లం" }, "quantity": "3/4 cup" },
-        { "item": { "en": "Cardamom, ghee, pinch of salt", "te": "యాలకులు, నెయ్యి, ఉప్పు" }, "quantity": "to taste" }
+        {
+          "item": {
+            "en": "Rice flour",
+            "te": "బియ్యప్పిండి"
+          },
+          "quantity": "1 cup"
+        },
+        {
+          "item": {
+            "en": "Grated coconut",
+            "te": "కొబ్బరి తురుము"
+          },
+          "quantity": "1 cup"
+        },
+        {
+          "item": {
+            "en": "Jaggery",
+            "te": "బెల్లం"
+          },
+          "quantity": "3/4 cup"
+        },
+        {
+          "item": {
+            "en": "Cardamom, ghee, pinch of salt",
+            "te": "యాలకులు, నెయ్యి, ఉప్పు"
+          },
+          "quantity": "to taste"
+        }
       ],
       "steps": [
-        { "en": "Cook coconut and jaggery with cardamom into a soft filling (puran); cool." },
-        { "en": "Bring water with ghee and salt to a boil, add rice flour, stir to a soft dough; knead while warm." },
-        { "en": "Shape small cups, fill with the coconut-jaggery mixture, and pleat closed into a modak." },
-        { "en": "Steam 10-12 minutes; offer warm with a drizzle of ghee." }
+        {
+          "en": "Cook coconut and jaggery with cardamom into a soft filling (puran); cool."
+        },
+        {
+          "en": "Bring water with ghee and salt to a boil, add rice flour, stir to a soft dough; knead while warm."
+        },
+        {
+          "en": "Shape small cups, fill with the coconut-jaggery mixture, and pleat closed into a modak."
+        },
+        {
+          "en": "Steam 10-12 minutes; offer warm with a drizzle of ghee."
+        }
       ],
-      "offering_note": { "en": "Ganesha's most beloved offering." }
+      "offering_note": {
+        "en": "Ganesha's most beloved offering."
+      }
     },
     {
       "id": "kudumulu",
-      "name": { "en": "Undrallu / Kudumulu (savory rava dumplings)", "te": "ఉండ్రాళ్లు" },
+      "name": {
+        "en": "Undrallu / Kudumulu (savory rava dumplings)",
+        "te": "ఉండ్రాళ్లు"
+      },
       "type": "steamed",
       "serves": "4",
       "ingredients": [
-        { "item": { "en": "Rice rava", "te": "బియ్యం రవ్వ" }, "quantity": "1 cup" },
-        { "item": { "en": "Chana dal (soaked)", "te": "శనగపప్పు" }, "quantity": "2 tbsp" },
-        { "item": { "en": "Mustard, cumin, curry leaves, green chilli, ghee, salt", "te": "ఆవాలు, జీలకర్ర, కరివేపాకు, పచ్చిమిర్చి, నెయ్యి, ఉప్పు" }, "quantity": "for tempering" }
+        {
+          "item": {
+            "en": "Rice rava",
+            "te": "బియ్యం రవ్వ"
+          },
+          "quantity": "1 cup"
+        },
+        {
+          "item": {
+            "en": "Chana dal (soaked)",
+            "te": "శనగపప్పు"
+          },
+          "quantity": "2 tbsp"
+        },
+        {
+          "item": {
+            "en": "Mustard, cumin, curry leaves, green chilli, ghee, salt",
+            "te": "ఆవాలు, జీలకర్ర, కరివేపాకు, పచ్చిమిర్చి, నెయ్యి, ఉప్పు"
+          },
+          "quantity": "for tempering"
+        }
       ],
       "steps": [
-        { "en": "Temper spices and soaked chana dal in ghee; add water and salt." },
-        { "en": "Stir in rice rava to a soft dough; rest covered." },
-        { "en": "Roll into small balls and steam 10-12 minutes." }
+        {
+          "en": "Temper spices and soaked chana dal in ghee; add water and salt."
+        },
+        {
+          "en": "Stir in rice rava to a soft dough; rest covered."
+        },
+        {
+          "en": "Roll into small balls and steam 10-12 minutes."
+        }
       ],
-      "offering_note": { "en": "The classic Vinayaka Chavithi naivedya in Andhra/Telangana." }
+      "offering_note": {
+        "en": "The classic Vinayaka Chavithi naivedya in Andhra/Telangana."
+      }
     },
     {
       "id": "motichoor-ladoo",
-      "name": { "en": "Motichoor Ladoo", "te": "మోతీచూర్ లడ్డు" },
+      "name": {
+        "en": "Motichoor Ladoo",
+        "te": "మోతీచూర్ లడ్డు"
+      },
       "type": "sweet",
       "serves": "makes ~15",
       "ingredients": [
-        { "item": { "en": "Gram flour (besan)", "te": "శనగపిండి" }, "quantity": "1 cup" },
-        { "item": { "en": "Sugar", "te": "చక్కెర" }, "quantity": "1 cup" },
-        { "item": { "en": "Ghee/oil for frying, cardamom, saffron", "te": "నెయ్యి/నూనె, యాలకులు, కుంకుమపువ్వు" }, "quantity": "as needed" }
+        {
+          "item": {
+            "en": "Gram flour (besan)",
+            "te": "శనగపిండి"
+          },
+          "quantity": "1 cup"
+        },
+        {
+          "item": {
+            "en": "Sugar",
+            "te": "చక్కెర"
+          },
+          "quantity": "1 cup"
+        },
+        {
+          "item": {
+            "en": "Ghee/oil for frying, cardamom, saffron",
+            "te": "నెయ్యి/నూనె, యాలకులు, కుంకుమపువ్వు"
+          },
+          "quantity": "as needed"
+        }
       ],
       "steps": [
-        { "en": "Make a thin besan batter and fry tiny boondi drops; drain." },
-        { "en": "Prepare one-string sugar syrup with cardamom and saffron." },
-        { "en": "Soak the boondi in syrup, then shape into ladoos while warm." }
+        {
+          "en": "Make a thin besan batter and fry tiny boondi drops; drain."
+        },
+        {
+          "en": "Prepare one-string sugar syrup with cardamom and saffron."
+        },
+        {
+          "en": "Soak the boondi in syrup, then shape into ladoos while warm."
+        }
       ],
-      "offering_note": { "en": "A popular festive sweet offered alongside modak." }
+      "offering_note": {
+        "en": "A popular festive sweet offered alongside modak."
+      }
     }
   ],
   "primary_mantra": {
     "sa": "ॐ गं गणपतये नमः",
     "transliteration": "Om Gam Ganapataye Namaha",
-    "meaning": { "en": "Salutations to Lord Ganesha, remover of obstacles." }
+    "meaning": {
+      "en": "Salutations to Lord Ganesha, remover of obstacles."
+    }
   },
-  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Vinayaka Vrata Katha narration." },
+  "audio": {
+    "katha_track_id": null,
+    "narration_language": "te",
+    "duration_seconds": null,
+    "note": "Populate with a Supabase Storage path for the Vinayaka Vrata Katha narration."
+  },
   "source": "Compiled for the Pavitra app; follows the standard South-Indian Vinayaka Chavithi tradition.",
   "disclaimer": "Regional and family practices vary. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
   "created_at": "2026-08-14T00:00:00Z"

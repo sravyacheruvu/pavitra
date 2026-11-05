@@ -196,13 +196,9 @@ export default function PanchangamScreen() {
           ))}
         </View>
 
-        {/* ── Alerts CTA ───────────────────────────────── */}
+        {/* ── Muhurtam note ────────────────────────────── */}
         <View className="px-5 pt-5">
-          <Pressable className="w-full flex-row items-center justify-center rounded-full bg-veranda-coral py-3.5" style={cardGlow}>
-            <Ionicons name="notifications" size={19} color="#fff" />
-            <Text className="ml-2 font-bold text-white">{t("setAlerts")}</Text>
-          </Pressable>
-          <Text className="mt-2 px-1 text-center text-[11px] text-veranda-teakSubtle/70">{t("muhurtamNote")}</Text>
+          <Text className="px-1 text-center text-[11px] text-veranda-teakSubtle/70">{t("muhurtamNote")}</Text>
         </View>
       </ScrollView>
     </Screen>

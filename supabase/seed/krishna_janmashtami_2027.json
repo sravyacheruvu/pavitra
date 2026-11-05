@@ -30,90 +30,414 @@
     "te": "శ్రీ కృష్ణ జన్మాష్టమి దేవకీ వసుదేవులకు అర్ధరాత్రి జన్మించిన కృష్ణుని జన్మదినం. పగలంతా ఉపవాసం ఉండి, ఉయ్యాల కట్టి, బుడిబుడి అడుగులు వేసి, వెన్న, అటుకులు, ఉండ్రాళ్లు నైవేద్యం సమర్పిస్తారు. అర్ధరాత్రి జన్మ పూజ ముఖ్యం.",
     "sa": "श्रावणकृष्णाष्टम्यां रोहिणीयुक्ते निशीथे श्रीकृष्णजन्मोत्सवः।"
   },
-  "regions": ["Andhra Pradesh", "Telangana", "Tamil Nadu", "Karnataka", "Maharashtra", "Uttar Pradesh", "All India"],
-  "languages": ["en", "te", "sa"],
+  "regions": [
+    "Andhra Pradesh",
+    "Telangana",
+    "Tamil Nadu",
+    "Karnataka",
+    "Maharashtra",
+    "Uttar Pradesh",
+    "All India"
+  ],
+  "languages": [
+    "en",
+    "te",
+    "sa"
+  ],
   "samagri": [
-    { "id": "krishna-idol", "name": { "en": "Baby Krishna (Bala Krishna) idol & cradle (uyyala)", "te": "బాల కృష్ణ విగ్రహం, ఉయ్యాల" }, "quantity": "1", "category": "idol", "essential": true },
-    { "id": "peetham-cloth", "name": { "en": "Peetham with new cloth, decorations", "te": "పీఠం, కొత్త వస్త్రం, అలంకరణ" }, "quantity": "1", "category": "seat", "essential": true },
-    { "id": "tulasi", "name": { "en": "Tulasi leaves & garland", "te": "తులసి దళాలు, మాల" }, "quantity": "1 set", "category": "leaves", "essential": true },
-    { "id": "butter-milk", "name": { "en": "Fresh butter, milk, curd, honey (panchamrita)", "te": "వెన్న, పాలు, పెరుగు, తేనె (పంచామృతం)" }, "quantity": "1 set", "category": "naivedya", "essential": true },
-    { "id": "aval", "name": { "en": "Aval (poha / atukulu), sugar, jaggery", "te": "అటుకులు, పంచదార, బెల్లం" }, "quantity": "1 set", "category": "naivedya", "essential": true },
-    { "id": "flowers", "name": { "en": "Flowers & garlands (esp. tulasi, jasmine)", "te": "పూలు, మాలలు" }, "quantity": "assorted", "category": "flowers", "essential": true },
-    { "id": "turmeric-kumkum", "name": { "en": "Turmeric, kumkum, akshata, sandalwood", "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం" }, "quantity": "1 set", "category": "auspicious", "essential": true },
-    { "id": "rice-flour", "name": { "en": "Rice flour paste for Krishna's footprints", "te": "బుడిబుడి అడుగులకు బియ్యప్పిండి" }, "quantity": "as needed", "category": "decoration", "essential": false },
-    { "id": "lamp", "name": { "en": "Oil lamp, camphor, incense, peacock feather", "te": "దీపం, కర్పూరం, అగరవత్తులు, నెమలి పింఛం" }, "quantity": "1 set", "category": "light", "essential": true },
-    { "id": "fruits-coconut", "name": { "en": "Fruits, coconut, bananas", "te": "పండ్లు, కొబ్బరికాయ, అరటిపండ్లు" }, "quantity": "assorted", "category": "offering", "essential": true }
+    {
+      "id": "krishna-idol",
+      "name": {
+        "en": "Baby Krishna (Bala Krishna) idol & cradle (uyyala)",
+        "te": "బాల కృష్ణ విగ్రహం, ఉయ్యాల"
+      },
+      "quantity": "1",
+      "category": "idol",
+      "essential": true
+    },
+    {
+      "id": "peetham-cloth",
+      "name": {
+        "en": "Peetham with new cloth, decorations",
+        "te": "పీఠం, కొత్త వస్త్రం, అలంకరణ"
+      },
+      "quantity": "1",
+      "category": "seat",
+      "essential": true
+    },
+    {
+      "id": "tulasi",
+      "name": {
+        "en": "Tulasi leaves & garland",
+        "te": "తులసి దళాలు, మాల"
+      },
+      "quantity": "1 set",
+      "category": "leaves",
+      "essential": true
+    },
+    {
+      "id": "butter-milk",
+      "name": {
+        "en": "Fresh butter, milk, curd, honey (panchamrita)",
+        "te": "వెన్న, పాలు, పెరుగు, తేనె (పంచామృతం)"
+      },
+      "quantity": "1 set",
+      "category": "naivedya",
+      "essential": true
+    },
+    {
+      "id": "aval",
+      "name": {
+        "en": "Aval (poha / atukulu), sugar, jaggery",
+        "te": "అటుకులు, పంచదార, బెల్లం"
+      },
+      "quantity": "1 set",
+      "category": "naivedya",
+      "essential": true
+    },
+    {
+      "id": "flowers",
+      "name": {
+        "en": "Flowers & garlands (esp. tulasi, jasmine)",
+        "te": "పూలు, మాలలు"
+      },
+      "quantity": "assorted",
+      "category": "flowers",
+      "essential": true
+    },
+    {
+      "id": "turmeric-kumkum",
+      "name": {
+        "en": "Turmeric, kumkum, akshata, sandalwood",
+        "te": "పసుపు, కుంకుమ, అక్షతలు, గంధం"
+      },
+      "quantity": "1 set",
+      "category": "auspicious",
+      "essential": true
+    },
+    {
+      "id": "rice-flour",
+      "name": {
+        "en": "Rice flour paste for Krishna's footprints",
+        "te": "బుడిబుడి అడుగులకు బియ్యప్పిండి"
+      },
+      "quantity": "as needed",
+      "category": "decoration",
+      "essential": false
+    },
+    {
+      "id": "lamp",
+      "name": {
+        "en": "Oil lamp, camphor, incense, peacock feather",
+        "te": "దీపం, కర్పూరం, అగరవత్తులు, నెమలి పింఛం"
+      },
+      "quantity": "1 set",
+      "category": "light",
+      "essential": true
+    },
+    {
+      "id": "fruits-coconut",
+      "name": {
+        "en": "Fruits, coconut, bananas",
+        "te": "పండ్లు, కొబ్బరికాయ, అరటిపండ్లు"
+      },
+      "quantity": "assorted",
+      "category": "offering",
+      "essential": true
+    }
   ],
   "vidhi": {
     "sankshipta": {
-      "label": { "en": "Sankshipta (Quick)", "te": "సంక్షిప్త విధి" },
+      "label": {
+        "en": "Sankshipta (Quick)",
+        "te": "సంక్షిప్త విధి"
+      },
       "duration_minutes": 25,
-      "description": { "en": "A concise midnight Krishna puja with the Ashtakshari mantra and butter naivedya." },
+      "description": {
+        "en": "A concise midnight Krishna puja with the Ashtakshari mantra and butter naivedya."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Sankalpam & fast", "te": "సంకల్పం & ఉపవాసం" }, "instruction": { "en": "Bathe, keep the day fast, decorate the cradle and take the sankalpa for the janmashtami vrata.", "te": "స్నానం చేసి, ఉపవాసం ఉండి, ఉయ్యాల అలంకరించి సంకల్పం చెప్పుకోండి." } },
-        { "order": 2, "title": { "en": "Avahana at midnight", "te": "అర్ధరాత్రి ఆవాహన" }, "instruction": { "en": "At nishita (midnight), place Bala Krishna in the cradle and invoke him with the Ashtakshari.", "te": "అర్ధరాత్రి బాల కృష్ణుని ఉయ్యాలలో ఉంచి అష్టాక్షరీతో ఆవాహన చేయండి." }, "mantra": { "sa": "ॐ नमो भगवते वासुदेवाय", "transliteration": "Om Namo Bhagavate Vasudevaya", "meaning": { "en": "Salutations to Lord Vasudeva (Krishna)." } } },
-        { "order": 3, "title": { "en": "Pancha Upachara & Cradle Seva", "te": "పంచోపచార & ఉయ్యాల సేవ" }, "instruction": { "en": "Offer gandha, tulasi, flowers, dhupa and deepa, and gently rock the cradle singing a lullaby.", "te": "గంధం, తులసి, పూలు, ధూప దీపాలు సమర్పించి ఉయ్యాల ఊపండి." } },
-        { "order": 4, "title": { "en": "Butter & Aval Naivedya", "te": "వెన్న & అటుకుల నైవేద్యం" }, "instruction": { "en": "Offer fresh butter, aval, panchamrita and fruits — Krishna's beloved foods.", "te": "వెన్న, అటుకులు, పంచామృతం, పండ్లు నైవేద్యం." } },
-        { "order": 5, "title": { "en": "Aarti & Distribution", "te": "హారతి & పంపిణీ" }, "instruction": { "en": "Offer camphor aarti, break the fast and distribute the butter-aval prasadam.", "te": "కర్పూర హారతి ఇచ్చి, ఉపవాసం విరమించి ప్రసాదం పంచండి." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Sankalpam & fast",
+            "te": "సంకల్పం & ఉపవాసం"
+          },
+          "instruction": {
+            "en": "Bathe, keep the day fast, decorate the cradle and take the sankalpa for the janmashtami vrata.",
+            "te": "స్నానం చేసి, ఉపవాసం ఉండి, ఉయ్యాల అలంకరించి సంకల్పం చెప్పుకోండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Avahana at midnight",
+            "te": "అర్ధరాత్రి ఆవాహన"
+          },
+          "instruction": {
+            "en": "At nishita (midnight), place Bala Krishna in the cradle and invoke him with the Ashtakshari.",
+            "te": "అర్ధరాత్రి బాల కృష్ణుని ఉయ్యాలలో ఉంచి అష్టాక్షరీతో ఆవాహన చేయండి."
+          },
+          "mantra": {
+            "sa": "ॐ नमो भगवते वासुदेवाय",
+            "transliteration": "Om Namo Bhagavate Vasudevaya",
+            "meaning": {
+              "en": "Salutations to Lord Vasudeva (Krishna)."
+            }
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Pancha Upachara & Cradle Seva",
+            "te": "పంచోపచార & ఉయ్యాల సేవ"
+          },
+          "instruction": {
+            "en": "Offer gandha, tulasi, flowers, dhupa and deepa, and gently rock the cradle singing a lullaby.",
+            "te": "గంధం, తులసి, పూలు, ధూప దీపాలు సమర్పించి ఉయ్యాల ఊపండి."
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Butter & Aval Naivedya",
+            "te": "వెన్న & అటుకుల నైవేద్యం"
+          },
+          "instruction": {
+            "en": "Offer fresh butter, aval, panchamrita and fruits — Krishna's beloved foods.",
+            "te": "వెన్న, అటుకులు, పంచామృతం, పండ్లు నైవేద్యం."
+          }
+        },
+        {
+          "order": 5,
+          "title": {
+            "en": "Aarti & Distribution",
+            "te": "హారతి & పంపిణీ"
+          },
+          "instruction": {
+            "en": "Offer camphor aarti, break the fast and distribute the butter-aval prasadam.",
+            "te": "కర్పూర హారతి ఇచ్చి, ఉపవాసం విరమించి ప్రసాదం పంచండి."
+          }
+        }
       ]
     },
     "sampurna": {
-      "label": { "en": "Sampurna (Full)", "te": "సంపూర్ణ విధి" },
+      "label": {
+        "en": "Sampurna (Full)",
+        "te": "సంపూర్ణ విధి"
+      },
       "duration_minutes": 80,
-      "description": { "en": "The full worship with shodashopachara, Krishna Ashtottara and the janma celebration at midnight." },
+      "description": {
+        "en": "The full worship with shodashopachara, Krishna Ashtottara and the janma celebration at midnight."
+      },
       "steps": [
-        { "order": 1, "title": { "en": "Purification & Sankalpam", "te": "శుద్ధి & సంకల్పం" }, "instruction": { "en": "Clean the space, draw Krishna's little footprints leading in, perform achamana and take the vrata sankalpa.", "te": "స్థలం శుభ్రపరచి, బుడిబుడి అడుగులు వేసి, ఆచమనం చేసి సంకల్పం చెప్పుకోండి." } },
-        { "order": 2, "title": { "en": "Ganapati & Kalasha Puja", "te": "గణపతి & కలశ పూజ" }, "instruction": { "en": "Worship Ganapati, establish the kalasham and light the lamps.", "te": "గణపతి పూజ, కలశ స్థాపన, దీపారాధన." } },
-        { "order": 3, "title": { "en": "Dhyana & Avahana", "te": "ధ్యానం & ఆవాహన" }, "instruction": { "en": "Meditate on Sri Krishna and invoke him into the idol/cradle.", "te": "శ్రీ కృష్ణుని ధ్యానించి ఆవాహన చేయండి." }, "mantra": { "sa": "कृष्णाय वासुदेवाय हरये परमात्मने । प्रणतक्लेशनाशाय गोविन्दाय नमो नमः ॥", "transliteration": "Krishnaya Vasudevaya Haraye Paramatmane | Pranata-klesha-nashaya Govindaya Namo Namaha ||", "meaning": { "en": "Salutations again and again to Govinda — Krishna, son of Vasudeva, destroyer of the sorrows of those who bow to him." } } },
-        { "order": 4, "title": { "en": "Shodashopachara Puja", "te": "షోడశోపచార పూజ" }, "instruction": { "en": "Offer the sixteen services from avahana to mantrapushpa with tulasi.", "te": "ఆవాహన నుండి మంత్రపుష్పం వరకు షోడశోపచారాలు, తులసి సమర్పించండి." } },
-        { "order": 5, "title": { "en": "Krishna Ashtottara", "te": "కృష్ణ అష్టోత్తరం" }, "instruction": { "en": "Recite the 108 names of Sri Krishna with tulasi and flowers.", "te": "శ్రీ కృష్ణ అష్టోత్తర శతనామావళి అర్చన." } },
-        { "order": 6, "title": { "en": "Nishita Janma Puja", "te": "నిశీథ జన్మ పూజ" }, "instruction": { "en": "At midnight, celebrate the birth: place Bala Krishna in the cradle, ring the bell, blow the conch and rock the uyyala.", "te": "అర్ధరాత్రి జన్మోత్సవం — బాల కృష్ణుని ఉయ్యాలలో ఉంచి, గంట, శంఖం మోగించి ఊపండి." } },
-        { "order": 7, "title": { "en": "Bhagavata / Gita Parayana", "te": "భాగవత / గీత పారాయణ" }, "instruction": { "en": "Read the Krishna janma chapter of the Bhagavata or a Gita passage.", "te": "భాగవత దశమ స్కంధం జన్మ ఘట్టం లేదా గీత పఠనం." } },
-        { "order": 8, "title": { "en": "Butter, Aval & Naivedya", "te": "వెన్న, అటుకులు & నైవేద్యం" }, "instruction": { "en": "Offer fresh butter, aval, undralu, panchamrita and fruits.", "te": "వెన్న, అటుకులు, ఉండ్రాళ్లు, పంచామృతం, పండ్లు నైవేద్యం." } },
-        { "order": 9, "title": { "en": "Mangala Harati & Paarana", "te": "మంగళ హారతి & పారణ" }, "instruction": { "en": "Offer camphor aarti, sing bhajans, break the fast and share prasadam.", "te": "కర్పూర హారతి, భజనలు చేసి ఉపవాసం విరమించి ప్రసాదం పంచండి." } }
+        {
+          "order": 1,
+          "title": {
+            "en": "Purification & Sankalpam",
+            "te": "శుద్ధి & సంకల్పం"
+          },
+          "instruction": {
+            "en": "Clean the space, draw Krishna's little footprints leading in, perform achamana and take the vrata sankalpa.",
+            "te": "స్థలం శుభ్రపరచి, బుడిబుడి అడుగులు వేసి, ఆచమనం చేసి సంకల్పం చెప్పుకోండి."
+          }
+        },
+        {
+          "order": 2,
+          "title": {
+            "en": "Ganapati & Kalasha Puja",
+            "te": "గణపతి & కలశ పూజ"
+          },
+          "instruction": {
+            "en": "Worship Ganapati, establish the kalasham and light the lamps.",
+            "te": "గణపతి పూజ, కలశ స్థాపన, దీపారాధన."
+          }
+        },
+        {
+          "order": 3,
+          "title": {
+            "en": "Dhyana & Avahana",
+            "te": "ధ్యానం & ఆవాహన"
+          },
+          "instruction": {
+            "en": "Meditate on Sri Krishna and invoke him into the idol/cradle.",
+            "te": "శ్రీ కృష్ణుని ధ్యానించి ఆవాహన చేయండి."
+          },
+          "mantra": {
+            "sa": "कृष्णाय वासुदेवाय हरये परमात्मने । प्रणतक्लेशनाशाय गोविन्दाय नमो नमः ॥",
+            "transliteration": "Krishnaya Vasudevaya Haraye Paramatmane | Pranata-klesha-nashaya Govindaya Namo Namaha ||",
+            "meaning": {
+              "en": "Salutations again and again to Govinda — Krishna, son of Vasudeva, destroyer of the sorrows of those who bow to him."
+            }
+          }
+        },
+        {
+          "order": 4,
+          "title": {
+            "en": "Shodashopachara Puja",
+            "te": "షోడశోపచార పూజ"
+          },
+          "instruction": {
+            "en": "Offer the sixteen services from avahana to mantrapushpa with tulasi.",
+            "te": "ఆవాహన నుండి మంత్రపుష్పం వరకు షోడశోపచారాలు, తులసి సమర్పించండి."
+          },
+          "detailsRef": "shodashopachara"
+        },
+        {
+          "order": 5,
+          "title": {
+            "en": "Krishna Ashtottara",
+            "te": "కృష్ణ అష్టోత్తరం"
+          },
+          "instruction": {
+            "en": "Recite the 108 names of Sri Krishna with tulasi and flowers.",
+            "te": "శ్రీ కృష్ణ అష్టోత్తర శతనామావళి అర్చన."
+          }
+        },
+        {
+          "order": 6,
+          "title": {
+            "en": "Nishita Janma Puja",
+            "te": "నిశీథ జన్మ పూజ"
+          },
+          "instruction": {
+            "en": "At midnight, celebrate the birth: place Bala Krishna in the cradle, ring the bell, blow the conch and rock the uyyala.",
+            "te": "అర్ధరాత్రి జన్మోత్సవం — బాల కృష్ణుని ఉయ్యాలలో ఉంచి, గంట, శంఖం మోగించి ఊపండి."
+          }
+        },
+        {
+          "order": 7,
+          "title": {
+            "en": "Bhagavata / Gita Parayana",
+            "te": "భాగవత / గీత పారాయణ"
+          },
+          "instruction": {
+            "en": "Read the Krishna janma chapter of the Bhagavata or a Gita passage.",
+            "te": "భాగవత దశమ స్కంధం జన్మ ఘట్టం లేదా గీత పఠనం."
+          }
+        },
+        {
+          "order": 8,
+          "title": {
+            "en": "Butter, Aval & Naivedya",
+            "te": "వెన్న, అటుకులు & నైవేద్యం"
+          },
+          "instruction": {
+            "en": "Offer fresh butter, aval, undralu, panchamrita and fruits.",
+            "te": "వెన్న, అటుకులు, ఉండ్రాళ్లు, పంచామృతం, పండ్లు నైవేద్యం."
+          }
+        },
+        {
+          "order": 9,
+          "title": {
+            "en": "Mangala Harati & Paarana",
+            "te": "మంగళ హారతి & పారణ"
+          },
+          "instruction": {
+            "en": "Offer camphor aarti, sing bhajans, break the fast and share prasadam.",
+            "te": "కర్పూర హారతి, భజనలు చేసి ఉపవాసం విరమించి ప్రసాదం పంచండి."
+          }
+        }
       ]
     }
   },
   "prasadam": [
     {
       "id": "aval-payasam",
-      "name": { "en": "Aval / Atukula Payasam (poha kheer)", "te": "అటుకుల పాయసం" },
+      "name": {
+        "en": "Aval / Atukula Payasam (poha kheer)",
+        "te": "అటుకుల పాయసం"
+      },
       "type": "sweet",
       "serves": "4",
       "ingredients": [
-        { "item": { "en": "Aval (thin poha)", "te": "అటుకులు" }, "quantity": "1 cup" },
-        { "item": { "en": "Milk", "te": "పాలు" }, "quantity": "3 cups" },
-        { "item": { "en": "Jaggery or sugar, cardamom, ghee, cashews, raisins", "te": "బెల్లం/పంచదార, యాలకులు, నెయ్యి, జీడిపప్పు, ఎండుద్రాక్ష" }, "quantity": "to taste" }
+        {
+          "item": {
+            "en": "Aval (thin poha)",
+            "te": "అటుకులు"
+          },
+          "quantity": "1 cup"
+        },
+        {
+          "item": {
+            "en": "Milk",
+            "te": "పాలు"
+          },
+          "quantity": "3 cups"
+        },
+        {
+          "item": {
+            "en": "Jaggery or sugar, cardamom, ghee, cashews, raisins",
+            "te": "బెల్లం/పంచదార, యాలకులు, నెయ్యి, జీడిపప్పు, ఎండుద్రాక్ష"
+          },
+          "quantity": "to taste"
+        }
       ],
       "steps": [
-        { "en": "Roast aval lightly in ghee; roast cashews and raisins." },
-        { "en": "Simmer milk, add aval and cook till soft, then sweeten with jaggery/sugar." },
-        { "en": "Finish with cardamom and the fried nuts; offer warm." }
+        {
+          "en": "Roast aval lightly in ghee; roast cashews and raisins."
+        },
+        {
+          "en": "Simmer milk, add aval and cook till soft, then sweeten with jaggery/sugar."
+        },
+        {
+          "en": "Finish with cardamom and the fried nuts; offer warm."
+        }
       ],
-      "offering_note": { "en": "Aval is Krishna's beloved offering, recalling Sudama's humble gift." }
+      "offering_note": {
+        "en": "Aval is Krishna's beloved offering, recalling Sudama's humble gift."
+      }
     },
     {
       "id": "seepu-seedai",
-      "name": { "en": "Butter & Sugar-candy (makhan-mishri)", "te": "వెన్న - మిశ్రి" },
+      "name": {
+        "en": "Butter & Sugar-candy (makhan-mishri)",
+        "te": "వెన్న - మిశ్రి"
+      },
       "type": "offering",
       "serves": "prasad",
       "ingredients": [
-        { "item": { "en": "Fresh white butter", "te": "తాజా వెన్న" }, "quantity": "1/2 cup" },
-        { "item": { "en": "Sugar candy (mishri), tulasi", "te": "పటిక బెల్లం (మిశ్రి), తులసి" }, "quantity": "to taste" }
+        {
+          "item": {
+            "en": "Fresh white butter",
+            "te": "తాజా వెన్న"
+          },
+          "quantity": "1/2 cup"
+        },
+        {
+          "item": {
+            "en": "Sugar candy (mishri), tulasi",
+            "te": "పటిక బెల్లం (మిశ్రి), తులసి"
+          },
+          "quantity": "to taste"
+        }
       ],
       "steps": [
-        { "en": "Whip fresh butter soft and mix in crushed sugar candy." },
-        { "en": "Garnish with a tulasi leaf and offer to Bala Krishna." }
+        {
+          "en": "Whip fresh butter soft and mix in crushed sugar candy."
+        },
+        {
+          "en": "Garnish with a tulasi leaf and offer to Bala Krishna."
+        }
       ],
-      "offering_note": { "en": "Makhan-mishri — the butter-thief's favourite naivedya." }
+      "offering_note": {
+        "en": "Makhan-mishri — the butter-thief's favourite naivedya."
+      }
     }
   ],
   "primary_mantra": {
     "sa": "ॐ नमो भगवते वासुदेवाय",
     "transliteration": "Om Namo Bhagavate Vasudevaya",
-    "meaning": { "en": "Salutations to Lord Vasudeva — the twelve-syllable Dvadashakshari mantra of Krishna." }
+    "meaning": {
+      "en": "Salutations to Lord Vasudeva — the twelve-syllable Dvadashakshari mantra of Krishna."
+    }
   },
-  "audio": { "katha_track_id": null, "narration_language": "te", "duration_seconds": null, "note": "Populate with a Supabase Storage path for the Krishna janma katha narration." },
+  "audio": {
+    "katha_track_id": null,
+    "narration_language": "te",
+    "duration_seconds": null,
+    "note": "Populate with a Supabase Storage path for the Krishna janma katha narration."
+  },
   "source": "Compiled for the Pavitra app; follows the standard South-Indian Sri Krishnashtami (Gokulashtami) tradition.",
   "disclaimer": "Regional and family practices vary. Treat as a respectful general guide, not a substitute for family or priestly tradition.",
   "created_at": "2026-09-25T00:00:00Z"

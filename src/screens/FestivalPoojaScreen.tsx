@@ -6,7 +6,8 @@ import type { NativeStackScreenProps } from "@react-navigation/native-stack";
 import { Card, Pill, SectionHeader } from "../components/ui";
 import { AskAssistant } from "../components/AskAssistant";
 import { veranda } from "../theme/colors";
-import { FESTIVALS, FestivalDoc, Vidhi, VidhiStep, formatFestivalDate } from "../data/festivalContent";
+import { FESTIVALS, FestivalDoc, Vidhi, VidhiStep, formatFestivalDate, observedDateFor } from "../data/festivalContent";
+import { useLocation } from "../services/location";
 import { ENUMERATIONS, Enumeration } from "../data/enumerations";
 import type { RootStackParamList } from "../navigation/types";
 import { useLang, useT, pick, UILang } from "../i18n";
@@ -63,6 +64,7 @@ function useWakeLock() {
 export default function FestivalPoojaScreen({ route, navigation }: Props) {
   const { lang } = useLang();
   const t = useT();
+  const { location } = useLocation();
   const festival = useMemo<FestivalDoc | undefined>(
     () => FESTIVALS.find((f) => f.id === route.params.festivalId),
     [route.params.festivalId]
@@ -114,7 +116,7 @@ export default function FestivalPoojaScreen({ route, navigation }: Props) {
             <Text className="mt-0.5 text-veranda-teakSubtle">{festival.name.en}</Text>
           ) : null}
           <Text className="mt-1 text-xs text-veranda-teakSubtle/80">
-            {formatFestivalDate(festival.observed_on.date)}
+            {formatFestivalDate(observedDateFor(festival, location))}
             {festival.observed_on.tithi ? ` · ${term(festival.observed_on.masa, angaDev(festival.observed_on.masa))} ${term(festival.observed_on.tithi, angaDev(festival.observed_on.tithi))}` : ""}
           </Text>
         </View>
