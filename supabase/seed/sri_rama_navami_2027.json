@@ -291,7 +291,8 @@
           "instruction": {
             "en": "Recite the 108 names of Sri Rama with tulasi and flowers.",
             "te": "శ్రీ రామ అష్టోత్తర శతనామావళి అర్చన."
-          }
+          },
+          "detailsRef": "rama_ashtottara"
         },
         {
           "order": 6,

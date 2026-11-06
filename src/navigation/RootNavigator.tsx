@@ -33,11 +33,10 @@ export default function RootNavigator() {
   if (!ready || authLoading)
     return <View style={{ flex: 1, backgroundColor: veranda.parchment }} />;
 
-  // 1) pick a language, 2) enter the app.
-  // NOTE: Auth (sign in / sign up) is temporarily disabled while Supabase is
-  // paused. To re-enable, set AUTH_ENABLED = true — the AuthScreen gate below
-  // and all auth code (AuthProvider, AuthScreen) remain intact.
-  const AUTH_ENABLED = false;
+  // 1) pick a language, 2) sign in / sign up, 3) enter the app.
+  // Supabase is active again, so the AuthScreen gate is enabled. To bypass auth
+  // (e.g. an open demo build), set AUTH_ENABLED = false.
+  const AUTH_ENABLED = true;
 
   if (!onboarded) {
     return (

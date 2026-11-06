@@ -45,3 +45,4 @@ yarn-error.*
 
 *.tgz
 _to_delete/
+Claude outputs/
