@@ -612,6 +612,48 @@ const STRINGS: Record<string, StringSet> = {
     "bn": "নিশ্চিত করতে ইমেল দেখুন, তারপর লগ ইন করুন.",
     "mr": "पुष्टीसाठी ईमेल तपासा, नंतर लॉग इन करा."
   },
+  "forgotPassword": {
+    "en": "Forgot password?",
+    "hi": "पासवर्ड भूल गए?",
+    "te": "పాస్‌వర్డ్ మర్చిపోయారా?"
+  },
+  "resetPassword": {
+    "en": "Reset password",
+    "hi": "पासवर्ड रीसेट करें",
+    "te": "పాస్‌వర్డ్ రీసెట్ చేయండి"
+  },
+  "resetPasswordIntro": {
+    "en": "Enter your email and we'll send you a link to set a new password.",
+    "te": "మీ ఇమెయిల్ ఇవ్వండి, కొత్త పాస్‌వర్డ్ సెట్ చేయడానికి లింక్ పంపుతాం."
+  },
+  "sendResetLink": {
+    "en": "Send reset link",
+    "hi": "रीसेट लिंक भेजें",
+    "te": "రీసెట్ లింక్ పంపండి"
+  },
+  "resetLinkSent": {
+    "en": "If an account exists for that email, a reset link is on its way. Check your inbox and spam folder.",
+    "te": "ఆ ఇమెయిల్‌కు ఖాతా ఉంటే, రీసెట్ లింక్ పంపబడింది. మీ ఇన్‌బాక్స్/స్పామ్ చూడండి."
+  },
+  "setNewPassword": {
+    "en": "Set a new password",
+    "hi": "नया पासवर्ड सेट करें",
+    "te": "కొత్త పాస్‌వర్డ్ సెట్ చేయండి"
+  },
+  "updatePassword": {
+    "en": "Update password",
+    "hi": "पासवर्ड अपडेट करें",
+    "te": "పాస్‌వర్డ్ నవీకరించండి"
+  },
+  "passwordUpdated": {
+    "en": "Password updated — you're all set.",
+    "te": "పాస్‌వర్డ్ నవీకరించబడింది."
+  },
+  "backToLogin": {
+    "en": "Back to log in",
+    "hi": "लॉग इन पर वापस जाएं",
+    "te": "లాగిన్‌కు తిరిగి"
+  },
   "pleaseWait": {
     "en": "Please wait…",
     "hi": "कृपया प्रतीक्षा करें…",

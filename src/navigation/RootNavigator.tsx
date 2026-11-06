@@ -27,7 +27,7 @@ const navTheme: Theme = {
  */
 export default function RootNavigator() {
   const { ready, onboarded } = useLang();
-  const { session, loading: authLoading } = useAuth();
+  const { session, loading: authLoading, recovery } = useAuth();
 
   // Avoid a flash of the wrong screen while AsyncStorage / session load.
   if (!ready || authLoading)
@@ -47,7 +47,9 @@ export default function RootNavigator() {
     );
   }
 
-  if (AUTH_ENABLED && !session) {
+  // A password-reset link lands here: show the "set a new password" screen even
+  // though Supabase has created a temporary recovery session.
+  if (AUTH_ENABLED && (recovery || !session)) {
     return (
       <>
         <StatusBar style="dark" />

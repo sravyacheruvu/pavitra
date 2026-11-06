@@ -1,6 +1,6 @@
 import "react-native-url-polyfill/auto";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { AppState } from "react-native";
+import { AppState, Platform } from "react-native";
 import { createClient } from "@supabase/supabase-js";
 
 // Read from EXPO_PUBLIC_* env vars so keys aren't hardcoded.
@@ -21,8 +21,9 @@ export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
     storage: AsyncStorage,
     autoRefreshToken: true,
     persistSession: true,
-    // Required for React Native — there is no browser URL to parse for a session.
-    detectSessionInUrl: false,
+    // On web, parse the URL so password-reset / confirmation links are handled.
+    // On native there is no browser URL, so leave it off.
+    detectSessionInUrl: Platform.OS === "web",
   },
 });
 
